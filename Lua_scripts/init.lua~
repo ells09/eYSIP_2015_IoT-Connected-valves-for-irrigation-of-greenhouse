@@ -10,7 +10,7 @@
 --configure wifi 
 
 wifi.setmode(wifi.STATION)
-wifi.sta.config('Connectify-MyWiFi','987654321')
+wifi.sta.config('your-ssid','your-passwd')
 wifi.sta.connect()
 
 --configure gpio pins according to revised pin map

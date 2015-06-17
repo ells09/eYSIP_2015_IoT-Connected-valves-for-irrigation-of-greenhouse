@@ -2,7 +2,7 @@
 
 --program name : subscribe.lua
 --author name :Kevin Dsouza
---This program subscribes to a particular topic
+--This program subscribes to a particular message
 
  --#################################################   
 
