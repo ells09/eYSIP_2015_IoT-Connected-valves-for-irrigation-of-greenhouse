@@ -1,0 +1,3994 @@
+%!PS-Adobe-3.0
+%cupsJobTicket: media=A4
+%cupsJobTicket: sides=one-sided
+%%Creator: Wine PostScript Driver
+%%Title: Schematic1.asc
+%%BoundingBox: 18 18 576 823
+%%Pages: (atend)
+%%Orientation: Portrait
+%%EndComments
+%%BeginProlog
+/tmpmtrx matrix def
+/hatch {
+  pathbbox
+  /b exch def /r exch def /t exch def /l exch def /gap 32 def
+  l cvi gap idiv gap mul
+  gap
+  r cvi gap idiv gap mul
+  {t moveto 0 b t sub rlineto}
+  for
+} bind def
+/B {pop pop pop pop} def
+/N {newpath} def
+/havetype42gdir {version cvi 2015 ge} bind def
+%%EndProlog
+%%BeginSetup
+mark {
+%%BeginFeature: *PageSize A4
+<</PageSize[595 842]/ImagingBBox null>>setpagedevice
+%%EndFeature
+} stopped cleartomark
+mark {
+%%BeginFeature: *Duplex None
+<</Duplex false>>setpagedevice
+%%EndFeature
+} stopped cleartomark
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+/pgsave save def
+72 300 div 72 300 div scale
+75 3433 translate
+1 -1 scale
+0 rotate
+%%EndPageSetup
+0.00 0.00 0.50 setrgbcolor
+1 setlinewidth 1 setlinejoin 1 setlinecap
+[] 0 setdash
+1749 1095 moveto
+1743 1088 lineto
+stroke
+gsave
+1743 1088 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1743 1088 moveto
+1738 1081 lineto
+stroke
+gsave
+1738 1081 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1738 1081 moveto
+1734 1073 lineto
+stroke
+gsave
+1734 1073 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1734 1073 moveto
+1732 1064 lineto
+stroke
+gsave
+1732 1064 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1732 1064 moveto
+1731 1055 lineto
+stroke
+gsave
+1731 1055 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1731 1055 moveto
+1731 1046 lineto
+stroke
+gsave
+1731 1046 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1731 1046 moveto
+1733 1037 lineto
+stroke
+gsave
+1733 1037 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1733 1037 moveto
+1735 1029 lineto
+stroke
+gsave
+1735 1029 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1735 1029 moveto
+1740 1021 lineto
+stroke
+gsave
+1740 1021 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1740 1021 moveto
+1745 1013 lineto
+stroke
+gsave
+1745 1013 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1745 1013 moveto
+1751 1007 lineto
+stroke
+gsave
+1751 1007 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1751 1007 moveto
+1758 1001 lineto
+stroke
+gsave
+1758 1001 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1758 1001 moveto
+1766 997 lineto
+stroke
+gsave
+1766 997 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1766 997 moveto
+1774 994 lineto
+stroke
+gsave
+1774 994 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1774 994 moveto
+1783 992 lineto
+stroke
+gsave
+1783 992 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1783 992 moveto
+1792 991 lineto
+stroke
+gsave
+1792 991 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1792 991 moveto
+1801 992 lineto
+stroke
+gsave
+1801 992 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1801 992 moveto
+1810 994 lineto
+stroke
+gsave
+1810 994 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1810 994 moveto
+1818 997 lineto
+stroke
+gsave
+1818 997 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1818 997 moveto
+1826 1001 lineto
+stroke
+gsave
+1826 1001 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1826 1001 moveto
+1833 1007 lineto
+stroke
+gsave
+1833 1007 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1833 1007 moveto
+1839 1013 lineto
+stroke
+gsave
+1839 1013 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1839 1013 moveto
+1844 1021 lineto
+stroke
+gsave
+1844 1021 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1844 1021 moveto
+1848 1029 lineto
+stroke
+gsave
+1848 1029 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1848 1029 moveto
+1851 1037 lineto
+stroke
+gsave
+1851 1037 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1851 1037 moveto
+1853 1046 lineto
+stroke
+gsave
+1853 1046 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1853 1046 moveto
+1853 1055 lineto
+stroke
+gsave
+1853 1055 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1853 1055 moveto
+1852 1064 lineto
+stroke
+gsave
+1852 1064 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1852 1064 moveto
+1849 1073 lineto
+stroke
+gsave
+1849 1073 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1849 1073 moveto
+1846 1081 lineto
+stroke
+gsave
+1846 1081 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1846 1081 moveto
+1841 1088 lineto
+stroke
+gsave
+1841 1088 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1841 1088 moveto
+1835 1095 lineto
+stroke
+gsave
+1835 1095 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1840 1095 moveto
+1835 1090 lineto
+stroke
+gsave
+1835 1090 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1835 1090 moveto
+1831 1083 lineto
+stroke
+gsave
+1831 1083 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1831 1083 moveto
+1828 1077 lineto
+stroke
+gsave
+1828 1077 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1828 1077 moveto
+1825 1070 lineto
+stroke
+gsave
+1825 1070 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1825 1070 moveto
+1823 1063 lineto
+stroke
+gsave
+1823 1063 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1823 1063 moveto
+1822 1055 lineto
+stroke
+gsave
+1822 1055 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1822 1055 moveto
+1822 1048 lineto
+stroke
+gsave
+1822 1048 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1822 1048 moveto
+1823 1040 lineto
+stroke
+gsave
+1823 1040 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1823 1040 moveto
+1825 1033 lineto
+stroke
+gsave
+1825 1033 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1825 1033 moveto
+1828 1026 lineto
+stroke
+gsave
+1828 1026 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1828 1026 moveto
+1832 1019 lineto
+stroke
+gsave
+1832 1019 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1832 1019 moveto
+1836 1013 lineto
+stroke
+gsave
+1836 1013 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1836 1013 moveto
+1841 1008 lineto
+stroke
+gsave
+1841 1008 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1841 1008 moveto
+1847 1003 lineto
+stroke
+gsave
+1847 1003 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1847 1003 moveto
+1853 999 lineto
+stroke
+gsave
+1853 999 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1853 999 moveto
+1860 996 lineto
+stroke
+gsave
+1860 996 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1860 996 moveto
+1867 993 lineto
+stroke
+gsave
+1867 993 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1867 993 moveto
+1874 992 lineto
+stroke
+gsave
+1874 992 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1874 992 moveto
+1882 991 lineto
+stroke
+gsave
+1882 991 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1882 991 moveto
+1889 991 lineto
+stroke
+gsave
+1889 991 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1889 991 moveto
+1897 993 lineto
+stroke
+gsave
+1897 993 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1897 993 moveto
+1904 995 lineto
+stroke
+gsave
+1904 995 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1904 995 moveto
+1911 998 lineto
+stroke
+gsave
+1911 998 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1911 998 moveto
+1917 1001 lineto
+stroke
+gsave
+1917 1001 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1917 1001 moveto
+1923 1006 lineto
+stroke
+gsave
+1923 1006 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1923 1006 moveto
+1929 1011 lineto
+stroke
+gsave
+1929 1011 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1929 1011 moveto
+1933 1017 lineto
+stroke
+gsave
+1933 1017 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1933 1017 moveto
+1937 1023 lineto
+stroke
+gsave
+1937 1023 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1937 1023 moveto
+1940 1030 lineto
+stroke
+gsave
+1940 1030 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1940 1030 moveto
+1942 1037 lineto
+stroke
+gsave
+1942 1037 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1942 1037 moveto
+1944 1045 lineto
+stroke
+gsave
+1944 1045 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1944 1045 moveto
+1944 1052 lineto
+stroke
+gsave
+1944 1052 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1639 1052 moveto
+1640 1045 lineto
+stroke
+gsave
+1640 1045 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1640 1045 moveto
+1641 1037 lineto
+stroke
+gsave
+1641 1037 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1641 1037 moveto
+1643 1030 lineto
+stroke
+gsave
+1643 1030 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1643 1030 moveto
+1647 1023 lineto
+stroke
+gsave
+1647 1023 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1647 1023 moveto
+1650 1017 lineto
+stroke
+gsave
+1650 1017 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1650 1017 moveto
+1655 1011 lineto
+stroke
+gsave
+1655 1011 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1655 1011 moveto
+1660 1006 lineto
+stroke
+gsave
+1660 1006 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1660 1006 moveto
+1666 1001 lineto
+stroke
+gsave
+1666 1001 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1666 1001 moveto
+1673 998 lineto
+stroke
+gsave
+1673 998 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1673 998 moveto
+1680 995 lineto
+stroke
+gsave
+1680 995 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1680 995 moveto
+1687 993 lineto
+stroke
+gsave
+1687 993 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1687 993 moveto
+1694 991 lineto
+stroke
+gsave
+1694 991 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1694 991 moveto
+1702 991 lineto
+stroke
+gsave
+1702 991 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1702 991 moveto
+1709 992 lineto
+stroke
+gsave
+1709 992 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1709 992 moveto
+1717 993 lineto
+stroke
+gsave
+1717 993 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1717 993 moveto
+1724 996 lineto
+stroke
+gsave
+1724 996 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1724 996 moveto
+1730 999 lineto
+stroke
+gsave
+1730 999 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1730 999 moveto
+1737 1003 lineto
+stroke
+gsave
+1737 1003 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1737 1003 moveto
+1742 1008 lineto
+stroke
+gsave
+1742 1008 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1742 1008 moveto
+1747 1013 lineto
+stroke
+gsave
+1747 1013 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1747 1013 moveto
+1752 1019 lineto
+stroke
+gsave
+1752 1019 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1752 1019 moveto
+1755 1026 lineto
+stroke
+gsave
+1755 1026 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1755 1026 moveto
+1758 1033 lineto
+stroke
+gsave
+1758 1033 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1758 1033 moveto
+1760 1040 lineto
+stroke
+gsave
+1760 1040 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1760 1040 moveto
+1761 1048 lineto
+stroke
+gsave
+1761 1048 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1761 1048 moveto
+1761 1055 lineto
+stroke
+gsave
+1761 1055 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1761 1055 moveto
+1760 1063 lineto
+stroke
+gsave
+1760 1063 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1760 1063 moveto
+1759 1070 lineto
+stroke
+gsave
+1759 1070 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1759 1070 moveto
+1756 1077 lineto
+stroke
+gsave
+1756 1077 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1756 1077 moveto
+1753 1083 lineto
+stroke
+gsave
+1753 1083 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1753 1083 moveto
+1748 1090 lineto
+stroke
+gsave
+1748 1090 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.50 setrgbcolor
+1748 1090 moveto
+1743 1095 lineto
+stroke
+gsave
+1743 1095 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.50 setrgbcolor
+fill
+grestore
+0.00 0.00 0.00 setrgbcolor
+25 dict begin
+ /FontName /Arial-BoldMT def
+ /Encoding 256 array 0 1 255{1 index exch /.notdef put} for def
+ /PaintType 0 def
+ /FontMatrix [1 2048 div 0 0 1 2048 div 0 0] def
+ /FontBBox [-1286 -771 4165 2146] def
+ /FontType 1 def
+ /Private 7 dict begin
+  /RD {string currentfile exch readhexstring pop} def
+  /ND {def} def
+  /NP {put} def
+  /MinFeature {16 16} def
+  /BlueValues [] def
+  /password 5839 def
+  /lenIV -1 def
+ currentdict end def
+ currentdict dup /Private get begin
+  /CharStrings 256 dict begin
+   /.notdef 4 RD 8b8b0d0e ND
+  currentdict end put
+ end
+currentdict end dup /FontName get exch definefont pop
+/Arial-BoldMT findfont
+[95 0 0 -95 0 0]
+makefont setfont
+1483 971 moveto
+%%glyph 002f
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g002f 39 RD
+f731ff000004e30d8b8b158bff000005
+ae05f7bc8b058bfffffffb4905f9748b
+058bfb8b05090e
+ND
+end end
+/g002f glyphshow
+%%glyph 0044
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0044 243 RD
+d4ff000004730df7b0f97615fb93b905
+a8f2bcd7d1bc08d1bcf3a4f71e8b08f7
+118be97cc86e08c86db765a45e08a45d
+97378bfb0e0888fbdc058b2e9046945f
+08945e9b5ca45808fbaa8b05849e82a6
+80b008869c88968990085b5c58685474
+08547451804d8a08fb018c35a84cc608
+4cc66bd68be6088bc799c1a8ba08a8ba
+b3afbfa408bea4d6a0ec9e08f717a4e6
+a2bea0088ba7058bc17eb270a20870a2
+5996418b08598b64816f78086f777468
+7a5a0809f80cfb7815677f527d3d7a08
+3d7a587b737b086671796a8b63088b64
+9a69a86e08a86eb17db88b08be8bbb9c
+b9ac08ada4a1aa96b00892a38fb98bce
+08090e
+ND
+end end
+/g0044 glyphshow
+%%glyph 0057
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0057 119 RD
+aaf93e0df8effaba158bfb7405fb548b
+058bfc40058b348d598f7d088e7c947f
+98820898829a869e8b08a58bb194bc9d
+08a3fb6e054a70417d388a08588c5e93
+629c08629c6ea178a60878a67daf84b9
+0885ac88cd8bee088bf86305fb158b05
+8bf77405f7158b058bf76705f7aef738
+058bfc0b05090e
+ND
+end end
+/g0057 glyphshow
+%%glyph 0046
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0046 149 RD
+e0ff000004730dfa70f98015fba95905
+82c276b56aa7086aa76099568b08458b
+5373625b08615a763a8bfb05088bfb12
+a032b65708b557c471d28b08c08bb79a
+adaa08ada9a3bf99d508f7a85c056efb
+13542c3a4a083a4afb016cfb1d8a08fb
+2f8cfb10bb2fed082eed5df71c8bf741
+088bf743b9f71de8ed08e8ecf711bcf7
+328b08f7158bf26fd85408d753c236ac
+fb0608090e
+ND
+end end
+/g0046 glyphshow
+%%glyph 004b
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g004b 129 RD
+f726ff000004e30df7adff000005ba15
+8bfcaf05e6f5f700c0f7128b08cc8bc5
+7fbf7308bf73b26ca66608a5669d6195
+5e08945e90448b2c088bfd0305fbad8b
+058bf8c5058bf70386d280a90880a979
+a3709d08709c6994628b085c8b628066
+7408667471697a5e087a5d82478b3208
+8bfca805fbad8b058bff000005ba0509
+0e
+ND
+end end
+/g004b glyphshow
+%%glyph 004c
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g004c 47 RD
+f727f8cd0d8bff000004b6158bf79805
+f7ad8b058bfb980509fbadfffffffb4a
+158bfaba05f7ad8b058bfeba05090e
+ND
+end end
+/g004c glyphshow
+%%glyph 0051
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0051 124 RD
+f725ff000004e30dfa5c8b15fbad8b05
+8bf8b2058bf70785d57fad087fac78a5
+709e08709e6a94658b085a8b607e6470
+08647071687d5f087c5f843a8bfb0b08
+8bfc7505fbad8b058bfaba05f7998b05
+8bfb3005e8f70cf708c7f7218b08c98b
+c480be7508be74b26fa66808a5689d64
+965f08955f904c8b3908090e
+ND
+end end
+/g0051 glyphshow
+%%glyph 004a
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g004a 238 RD
+dfff000004e30db04515f7d564059066
+98729e7c08a678b581c48a08d48cc296
+b0a008a49a9da398ab0894a38fb68bc9
+088bf72f0537fb072152fb148b08fb23
+8bfb05c738f70d084aea6af70b8bf722
+088bf746b6f71ce1e908e0e9f6baf713
+8b08f7178bf70151e0fb07088bf72905
+f79b8b058bfe4d058bfb11812e764d08
+764d6e5a6668086668596f4d77084c77
+3c812c8a08fb488cfb14aa40c80840c9
+65d98be9088b958b968c980809f78ff9
+03158bfb05a139b75708b656c171cb8b
+08d08bc5a6bac108bac0a3db8bf4088b
+f70274dd5ec0085ec051a6468b08488b
+53716057085f56753b8b2008090e
+ND
+end end
+/g004a glyphshow
+%%glyph 0039
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0039 47 RD
+8aff000005560df8a08b15fca0ff0000
+05ba05f7d58b05f807fed105f7fbfad1
+05f7ce8b05fca1fffffffa4605090e
+ND
+end end
+/g0039 glyphshow
+/g0044 glyphshow
+%%glyph 004f
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g004f 28 RD
+f727f8cd0d8b8b158bff000005ba05f7
+ad8b058bfffffffa4605090e
+ND
+end end
+/g004f glyphshow
+%%glyph 0059
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0059 59 RD
+96ff000004730df8408b15fc40faba05
+f7bb8b05f75cfcb205c5fb49059ab995
+a98f9a0894a995a996a908f75ef8b205
+f7b58b05fc3afeba05090e
+ND
+end end
+/g0059 glyphshow
+%%glyph 0048
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0048 153 RD
+ccff000004730df94df7e615f7ac5c05
+6724523d3e56083d552a71fb098a08fb
+4d8cfb1cc632f70d0845ec68f70e8bf7
+27088bf744b9f71ee7ef08e7eef708bd
+f7218b08f7328bf71157e62308e622b7
+fb3487fb6b08fd548b058d38a24ab65d
+08b65cc174cc8b08b78bb097a9a308a9
+a3a2b29ac008099bf7b01589dc76c963
+b60863b55aa0528b084e8b5875635e08
+635e774f8c3e08090e
+ND
+end end
+/g0048 glyphshow
+0.00 0.00 1.00 setrgbcolor
+1 setlinewidth 1 setlinejoin 1 setlinecap
+[] 0 setdash
+1632 2333 moveto
+1769 2333 lineto
+stroke
+gsave
+1769 2333 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1769 2333 moveto
+1700 2402 lineto
+stroke
+gsave
+1700 2402 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1700 2402 moveto
+1632 2333 lineto
+stroke
+gsave
+1632 2333 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1388 2333 moveto
+1525 2333 lineto
+stroke
+gsave
+1525 2333 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1525 2333 moveto
+1456 2402 lineto
+stroke
+gsave
+1456 2402 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1456 2402 moveto
+1388 2333 lineto
+stroke
+gsave
+1388 2333 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+0.00 0.00 0.00 setrgbcolor
+/Arial-BoldMT findfont
+[95 0 0 -95 0 0]
+makefont setfont
+104 1450 moveto
+/g0039 glyphshow
+%%glyph 0026
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0026 163 RD
+ecff000005c70dfa72f8af15f7b33005
+5ffb3442fb0b253e08243dfb1665fb31
+8a08fb578cfb34cdfb11f71908fb11f7
+194cf7498bf77b088bf788caf752f712
+f71b08f712f71bf73acef7618b08f747
+8bf72656f7042108ce4cbd31acfb0908
+fbb945057ad767c754b70854b748a13c
+8b08fb018b3364483d08473d69fb128b
+fb43088bfb4dacfb18ce3c08ce3ce164
+f68b08da8bcea4c4bd08c4bdb3daa4f6
+08090e
+ND
+end end
+/g0026 glyphshow
+/g0026 glyphshow
+0.00 0.00 0.78 setrgbcolor
+/Arial-BoldMT findfont
+[64 0 0 -64 0 0]
+makefont setfont
+1060 1227 moveto
+/g002f glyphshow
+%%glyph 0030
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0030 83 RD
+f725ff000006aa0d8b8b158bff000005
+ba05f84f8b05f79efe7c05f79bfa7c05
+f8508b058bfffffffa4605fba78b058b
+ff0000048205fbb7fffffffb7e05fbb1
+8b05fbb6ff00000482058bfffffffb7e
+05090e
+ND
+end end
+/g0030 glyphshow
+%%glyph 001a
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g001a 82 RD
+e2ff000004730d8bff000004a1158bf7
+9905fa558b058bfb60053c3d3afb0439
+fb260839fb264dfb2f60fb380860fb39
+75fb278cfb1508fba38b0590f75fb5f7
+62daf76708daf767f4f750f718f73a08
+090e
+ND
+end end
+/g001a glyphshow
+%%glyph 001b
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g001b 262 RD
+deff000004730df789f9ab1542aa57b5
+6ac1086ac07ac68bcb088bf701b1e6d8
+d208d7d2f700aff7218b08f71f8bf701
+67d84408d844b1308bfb01088b47794f
+685608685659624b6f08dc6ac95cb64c
+08b54ca0438b39088bfb1b60fb023536
+083436fb0762fb238a08fb198cfb03ad
+32d10822de57f7058bf724088bda9fd4
+b2ce08b2cdc9bee0af0809c5f7af158b
+539b5fab6c08aa6cb57bc08b08c08bb6
+9babab08abaa9bb78bc3088bc07bb56c
+ab086baa619b578b08558b607b6b6b08
+6b6b7b618b56080971fd08158b3e9f4e
+b36008b260bd75c68b08c58bbba0b1b5
+08b1b49ec78bda088bd078c264b50864
+b45aa0508b08468b58736a5c08695c7a
+578b5408090e
+ND
+end end
+/g001b glyphshow
+%%glyph 0013
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0013 191 RD
+e1ff000004730df870ff000005c015f7
+228bf70358db2608eafb0cbbfb5b8bfb
+aa088bfba95bfb5c2bfb0d083c27fb03
+5afb228a08fb238cfb07c134f7020834
+f7015ff7588bf7ad088bf7a8bbf75beb
+f70d08daeff703bdf7228b08098bfb7d
+15698b6d80707608707577647c530878
+4281fb0e8bfb40088bfb4094fb0a9c4b
+089c4aa160a67608a576a980ad8b08ad
+8ba996a6a108a6a09fb29ac3089ed395
+f70e8bf740088bf74082f70a7acc087a
+cb75b671a10870a06d96698b08090e
+ND
+end end
+/g0013 glyphshow
+%%glyph 0018
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0018 150 RD
+e6ff000004730d8bf80d15f7aca80593
+4ca359b26608b266b978be8b08c68bbc
+a3b4bb08b4ba9fd38beb088be577cf63
+b80862b857a14a8b083a8b43674b4408
+fb78ac05f724f98f05f97b8b058bfb9b
+05fca68b055ffb8d05caaacb9bcc8b08
+f7118bf45ee23008e230b6fb098bfb25
+088bfb0d6820452c082cfb15fb194bfb
+3d8a08fb1b8cfb03ae36d40836d458ec
+7af70f08090e
+ND
+end end
+/g0018 glyphshow
+0.00 0.00 0.78 setrgbcolor
+/Arial-BoldMT findfont
+[95 0 0 -95 0 0]
+-900 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2037 1967 moveto
+/g002f glyphshow
+2037 1911 moveto
+%%glyph 0037
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0037 50 RD
+b7ff000004e30df8478b158bff000004
+c205fc478b058bf78c05ff0000048d8b
+058bfb8c05fc468b058bfffffffb3e05
+090e
+ND
+end end
+/g0037 glyphshow
+2037 1856 moveto
+%%glyph 0015
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0015 157 RD
+beff000004730dfa6df799158bfb9905
+fe6d8b0596eeabe8c0e408c0e3f5f709
+f731f72608f713f70ad8dba8b508b2c5
+9ec48bc4088bca7abb6aad0869ac5c9c
+508b08508b5d79686808686877508639
+08fbaca7059cf72fbff703e3ce08e3ce
+f702adf7188b08f7258bf70564de3d08
+de3db42a8bfb08088b497f4c74500873
+4f654c584a0869604e4c323a08323a53
+55747008737078717c7208090e
+ND
+end end
+/g0015 glyphshow
+2037 1805 moveto
+%%glyph 001c
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g001c 207 RD
+ccff000004730da7f7e715f7a4a90592
+549c62a77008a770b07eb98b08c58bbc
+a6b4c008b4c0a5f70396f73c08443933
+62218b08fb078b27b838e40837e461f7
+078bf723088bf729b7f70ce4e608e3e6
+f704b8f71d8b08f7298bf70e52eafb07
+08eafb07bbfb528bfb9b088bfba059fb
+5528fb0b0828fb0bfb1651fb338a08fb
+078c2fa944c80844c85ee677f70d0809
+f910f8fa158be676d162bd0861bd5ba4
+548b08578b607769620868627a478b2e
+088b2c9e46b05f08b05eba75c38b08c1
+8bb9a0b0b608b0b69dc98bde08090e
+ND
+end end
+/g001c glyphshow
+2037 1754 moveto
+%%glyph 0016
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0016 211 RD
+d8ff000004730d8bf81915f7a4ac0594
+46a256b16608b166b979c18b08c58bbc
+a1b3b708b2b79fc68bd6088bd278c365
+b40865b45da0548b08678b6084597d08
+aaf77905d789c59cb3ae08b3ae9fb98b
+c5088bbc7cb36ea8086ea8649a5a8b08
+5b8b627a696a08696a765a844b08fb97
+b7059de4a6d2b0c008afc0beb4ccaa08
+cca9d39adc8b08f71e8bf7035fde3308
+d043ad3a8b30088bfb154525fb213e08
+df79ce63be4c08bd4ca4408b32088bfb
+155cfb012d30082d30fb095ffb208a08
+fb198cfb02b034d80834d758ef7df70f
+08090e
+ND
+end end
+/g0016 glyphshow
+2037 1703 moveto
+%%glyph 0027
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0027 162 RD
+f728ff000005c70d8bff000005ba15f8
+b18b05f70e8be882cb7808e172d55ec8
+4a08c84aba3cab2e08ab2d9bfb088bfb
+1d088bfb0d7c236d3408662057354749
+0858594564346f084a763381fb018b08
+fcc18b0509f7bcff000004c2158bfe5f
+05f7718b05de8bc690b09408bb97b39f
+aba808aaa8a5ba9fcd089fcc95e58bf7
+05088bf70581e277c80877c86fba67ad
+0867ad5da254970862943a90fb0d8b08
+090e
+ND
+end end
+/g0027 glyphshow
+0.00 0.00 0.78 setrgbcolor
+/Arial-BoldMT findfont
+[95 0 0 -95 0 0]
+-900 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1183 2019 moveto
+%%glyph 0028
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0028 60 RD
+f729ff000005560d8b8b158bff000005
+ba05fad38b058bfb8c05fdab8b058bfb
+d905f9748b058bfb8b05fd748b058bfc
+2305f9c78b058bfb8b05090e
+ND
+end end
+/g0028 glyphshow
+1183 1958 moveto
+%%glyph 0036
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0036 232 RD
+d5ff000005560d8bf87115f7b4a7059c
+2aaf44c05e08c05ed274e58b08ea8bd3
+9fbcb408bbb3a3ba8bc1088bae81a877
+a40876a368a0589d0868973ca0fb0faa
+08fb33b2fb03bc4bc40831dc5eed8bf7
+08088bd6a0d1b6cc08b5ccc8bcdbad08
+daadeb9cf7058b08f74c8bf71f63e83a
+08e83abb2090fb1b08fbbc7e057ed670
+c262ac0861ac4c9b388b08358b48795a
+68086c747b6d8b65088b689a6ea87208
+b06ce66af7246908f72469f668d06708
+d066c15ab24c08b24c9e3d8b2e088b37
+743c5c42085c42495436680836682079
+fb138a08fb4d8cfb23b528e10828e04f
+f71178f73808090e
+ND
+end end
+/g0036 glyphshow
+1183 1897 moveto
+%%glyph 0033
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0033 144 RD
+f729ff000005560d8b8b158bff000005
+ba05f86f8b05f7488bf70984c27c08df
+75d15bc44208c441a72c8bfb09088b31
+7b3f6a4e086a4e625b59680858685873
+578008447d2584fb1a8b08fb558b058b
+fcbd05098bff000004c2158bfc3405f7
+368b05f7098bd993b29a08b29aaaa3a2
+ac08a1ac96b18bb6088bc07bb76cae08
+6cae63a05b94086892448e208b08090e
+ND
+end end
+/g0033 glyphshow
+1183 1836 moveto
+/g001b glyphshow
+1183 1785 moveto
+/g0015 glyphshow
+1183 1734 moveto
+%%glyph 0019
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0019 208 RD
+e2ff000004730dfa4cfae715fba46d05
+84c37ab46fa6086fa667985e8b08508b
+5970625608625671fb0380fb3d08d1de
+e2b4f38b08f7098bf05edf3208de32b5
+fb088bfb21088bfb2a5ffb0c33300833
+30fb055ffb1e8a08fb288cfb0ec42cf7
+07082cf7075bf7508bf79a088bf7a1bd
+f755eef70b08eef70bf715c6f7338b08
+f7038be86cd44d08d44cb9319ffb0b08
+09fd11fcf9158b30a044b55a08b559bb
+72c18b08bf8bb69faeb408aeb49ccd8b
+e8088bea78d166b80866b75ca1538b08
+558b5d766661086660784d8b3808090e
+ND
+end end
+/g0019 glyphshow
+1183 1683 moveto
+/g0019 glyphshow
+0.00 0.00 1.00 setrgbcolor
+1 setlinewidth 1 setlinejoin 1 setlinecap
+[] 0 setdash
+1273 1113 moveto
+1029 1113 lineto
+stroke
+gsave
+1029 1113 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1639 1235 moveto
+1639 1052 lineto
+stroke
+gsave
+1639 1052 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1761 1235 moveto
+1639 1235 lineto
+stroke
+gsave
+1639 1235 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1944 1235 moveto
+1944 1052 lineto
+stroke
+gsave
+1944 1052 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1944 1235 moveto
+1822 1235 lineto
+stroke
+gsave
+1822 1235 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1029 1296 moveto
+1029 1113 lineto
+stroke
+gsave
+1029 1113 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1090 1296 moveto
+1029 1296 lineto
+stroke
+gsave
+1029 1296 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1151 1296 moveto
+1090 1296 lineto
+stroke
+gsave
+1090 1296 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1212 1296 moveto
+1151 1296 lineto
+stroke
+gsave
+1151 1296 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1273 1296 moveto
+1273 1113 lineto
+stroke
+gsave
+1273 1113 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1273 1296 moveto
+1212 1296 lineto
+stroke
+gsave
+1212 1296 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1212 1357 moveto
+1212 1296 lineto
+stroke
+gsave
+1212 1296 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2249 1357 moveto
+1212 1357 lineto
+stroke
+gsave
+1212 1357 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+480 1418 moveto
+297 1418 lineto
+stroke
+gsave
+297 1418 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+724 1418 moveto
+480 1418 lineto
+stroke
+gsave
+480 1418 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1090 1418 moveto
+1090 1296 lineto
+stroke
+gsave
+1090 1296 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1090 1418 moveto
+724 1418 lineto
+stroke
+gsave
+724 1418 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1151 1479 moveto
+1151 1296 lineto
+stroke
+gsave
+1151 1296 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1395 1479 moveto
+1151 1479 lineto
+stroke
+gsave
+1151 1479 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 1540 moveto
+968 1540 lineto
+stroke
+gsave
+968 1540 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 1540 moveto
+1883 1540 lineto
+stroke
+gsave
+1883 1540 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+724 1601 moveto
+724 1418 lineto
+stroke
+gsave
+724 1418 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1601 moveto
+968 1540 lineto
+stroke
+gsave
+968 1540 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1601 moveto
+724 1601 lineto
+stroke
+gsave
+724 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 1601 moveto
+1334 1540 lineto
+stroke
+gsave
+1334 1540 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1395 1601 moveto
+1395 1479 lineto
+stroke
+gsave
+1395 1479 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1395 1601 moveto
+1334 1601 lineto
+stroke
+gsave
+1334 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1456 1601 moveto
+1395 1601 lineto
+stroke
+gsave
+1395 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1601 moveto
+1883 1540 lineto
+stroke
+gsave
+1883 1540 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1601 moveto
+1517 1601 lineto
+stroke
+gsave
+1517 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 1601 moveto
+2127 1540 lineto
+stroke
+gsave
+2127 1540 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2249 1601 moveto
+2249 1357 lineto
+stroke
+gsave
+2249 1357 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2249 1601 moveto
+2127 1601 lineto
+stroke
+gsave
+2127 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1662 moveto
+968 1601 lineto
+stroke
+gsave
+968 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1662 moveto
+907 1662 lineto
+stroke
+gsave
+907 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 1662 moveto
+1334 1601 lineto
+stroke
+gsave
+1334 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1456 1662 moveto
+1456 1601 lineto
+stroke
+gsave
+1456 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1456 1662 moveto
+1334 1662 lineto
+stroke
+gsave
+1334 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1662 moveto
+1883 1601 lineto
+stroke
+gsave
+1883 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1662 moveto
+1578 1662 lineto
+stroke
+gsave
+1578 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 1662 moveto
+2127 1601 lineto
+stroke
+gsave
+2127 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2188 1662 moveto
+2127 1662 lineto
+stroke
+gsave
+2127 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1723 moveto
+968 1662 lineto
+stroke
+gsave
+968 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1723 moveto
+907 1723 lineto
+stroke
+gsave
+907 1723 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 1723 moveto
+1334 1662 lineto
+stroke
+gsave
+1334 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1517 1723 moveto
+1517 1601 lineto
+stroke
+gsave
+1517 1601 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1517 1723 moveto
+1334 1723 lineto
+stroke
+gsave
+1334 1723 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1822 1723 moveto
+1822 1235 lineto
+stroke
+gsave
+1822 1235 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1723 moveto
+1883 1662 lineto
+stroke
+gsave
+1883 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1723 moveto
+1822 1723 lineto
+stroke
+gsave
+1822 1723 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 1723 moveto
+2127 1662 lineto
+stroke
+gsave
+2127 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2188 1723 moveto
+2127 1723 lineto
+stroke
+gsave
+2127 1723 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1784 moveto
+968 1723 lineto
+stroke
+gsave
+968 1723 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1784 moveto
+907 1784 lineto
+stroke
+gsave
+907 1784 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 1784 moveto
+1334 1723 lineto
+stroke
+gsave
+1334 1723 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1395 1784 moveto
+1334 1784 lineto
+stroke
+gsave
+1334 1784 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1784 moveto
+1883 1723 lineto
+stroke
+gsave
+1883 1723 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1784 moveto
+1700 1784 lineto
+stroke
+gsave
+1700 1784 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 1784 moveto
+2127 1723 lineto
+stroke
+gsave
+2127 1723 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2188 1784 moveto
+2127 1784 lineto
+stroke
+gsave
+2127 1784 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1845 moveto
+968 1784 lineto
+stroke
+gsave
+968 1784 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1845 moveto
+907 1845 lineto
+stroke
+gsave
+907 1845 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 1845 moveto
+1334 1784 lineto
+stroke
+gsave
+1334 1784 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1578 1845 moveto
+1578 1662 lineto
+stroke
+gsave
+1578 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1578 1845 moveto
+1334 1845 lineto
+stroke
+gsave
+1334 1845 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1700 1845 moveto
+1700 1784 lineto
+stroke
+gsave
+1700 1784 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1845 moveto
+1883 1784 lineto
+stroke
+gsave
+1883 1784 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1845 moveto
+1700 1845 lineto
+stroke
+gsave
+1700 1845 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 1845 moveto
+2127 1784 lineto
+stroke
+gsave
+2127 1784 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2188 1845 moveto
+2127 1845 lineto
+stroke
+gsave
+2127 1845 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1906 moveto
+968 1845 lineto
+stroke
+gsave
+968 1845 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1906 moveto
+907 1906 lineto
+stroke
+gsave
+907 1906 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 1906 moveto
+1334 1845 lineto
+stroke
+gsave
+1334 1845 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1578 1906 moveto
+1334 1906 lineto
+stroke
+gsave
+1334 1906 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1761 1906 moveto
+1761 1235 lineto
+stroke
+gsave
+1761 1235 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1906 moveto
+1883 1845 lineto
+stroke
+gsave
+1883 1845 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1906 moveto
+1761 1906 lineto
+stroke
+gsave
+1761 1906 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 1906 moveto
+2127 1845 lineto
+stroke
+gsave
+2127 1845 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2188 1906 moveto
+2127 1906 lineto
+stroke
+gsave
+2127 1906 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1967 moveto
+968 1906 lineto
+stroke
+gsave
+968 1906 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 1967 moveto
+907 1967 lineto
+stroke
+gsave
+907 1967 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 1967 moveto
+1334 1906 lineto
+stroke
+gsave
+1334 1906 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1395 1967 moveto
+1334 1967 lineto
+stroke
+gsave
+1334 1967 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1578 1967 moveto
+1578 1906 lineto
+stroke
+gsave
+1578 1906 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1967 moveto
+1883 1906 lineto
+stroke
+gsave
+1883 1906 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 1967 moveto
+1578 1967 lineto
+stroke
+gsave
+1578 1967 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 1967 moveto
+2127 1906 lineto
+stroke
+gsave
+2127 1906 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2188 1967 moveto
+2127 1967 lineto
+stroke
+gsave
+2127 1967 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 2028 moveto
+968 1967 lineto
+stroke
+gsave
+968 1967 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 2028 moveto
+907 2028 lineto
+stroke
+gsave
+907 2028 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 2028 moveto
+1334 1967 lineto
+stroke
+gsave
+1334 1967 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1395 2028 moveto
+1334 2028 lineto
+stroke
+gsave
+1334 2028 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 2028 moveto
+1883 1967 lineto
+stroke
+gsave
+1883 1967 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 2028 moveto
+1639 2028 lineto
+stroke
+gsave
+1639 2028 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 2028 moveto
+2127 1967 lineto
+stroke
+gsave
+2127 1967 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2188 2028 moveto
+2127 2028 lineto
+stroke
+gsave
+2127 2028 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+968 2089 moveto
+968 2028 lineto
+stroke
+gsave
+968 2028 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 2089 moveto
+1334 2028 lineto
+stroke
+gsave
+1334 2028 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1334 2089 moveto
+968 2089 lineto
+stroke
+gsave
+968 2089 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1883 2089 moveto
+1883 2028 lineto
+stroke
+gsave
+1883 2028 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 2089 moveto
+2127 2028 lineto
+stroke
+gsave
+2127 2028 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+2127 2089 moveto
+1883 2089 lineto
+stroke
+gsave
+1883 2089 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+480 2150 moveto
+480 1418 lineto
+stroke
+gsave
+480 1418 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1639 2150 moveto
+1639 2028 lineto
+stroke
+gsave
+1639 2028 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1639 2150 moveto
+480 2150 lineto
+stroke
+gsave
+480 2150 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1456 2333 moveto
+1456 1662 lineto
+stroke
+gsave
+1456 1662 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+0.00 0.00 1.00 setrgbcolor
+1700 2333 moveto
+1700 1845 lineto
+stroke
+gsave
+1700 1845 moveto
+0 0 rlineto
+0 0 rlineto
+0 0 rlineto
+closepath
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+gsave
+465 1403 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+709 1403 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+953 1586 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+953 1647 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+953 1708 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+953 1769 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+953 1830 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+953 1891 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+953 1952 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+953 2013 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1075 1281 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1136 1281 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1197 1281 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1319 1586 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1319 1647 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1319 1708 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1319 1769 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1319 1830 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1319 1891 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1319 1952 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1319 2013 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1380 1586 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1441 1647 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1685 1830 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1868 1586 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1868 1647 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1868 1708 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1868 1769 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1868 1830 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1868 1891 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1868 1952 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+1868 2013 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+2112 1586 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+2112 1647 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+2112 1708 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+2112 1769 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+2112 1830 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+2112 1891 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+2112 1952 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+gsave
+2112 2013 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+0.00 0.00 0.78 setrgbcolor
+/Arial-BoldMT findfont
+[50 0 0 -50 0 0]
+makefont setfont
+459 3351 moveto
+%%glyph 0003
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0003 5 RD
+8bf8cd0d0e
+ND
+end end
+/g0003 glyphshow
+%%glyph 0010
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0010 23 RD
+f707f93e0d59f81b158bf7ad05f8bc8b
+058bfbad05090e
+ND
+end end
+/g0010 glyphshow
+/g0010 glyphshow
+/g0010 glyphshow
+/g0003 glyphshow
+/g0003 glyphshow
+/g0026 glyphshow
+%%glyph 001d
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g001d 41 RD
+f75df93e0d8bf9a1158bf7ad05f7ad8b
+058bfbad0509fbadfda1158bf7ad05f7
+ad8b058bfbad05090e
+ND
+end end
+/g001d glyphshow
+%%glyph 003f
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g003f 29 RD
+88f8cd0d8bff000005d315f7638b05f8
+03fffffffa1405fb678b05090e
+ND
+end end
+/g003f glyphshow
+%%glyph 0058
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0058 121 RD
+f721ff000004e30df9558b158bf73305
+6452595f4c6a084c6b487b458a08448c
+4b9a52aa0852aa62b772c40872c47ed9
+8bef088bf93405f7ad8b058bfc7c058b
+fb29902f966a0895699e70a67808a677
+ae81b58b08bb8bb698b1a608b1a5a5ac
+99b20899b292ea8bf72c088bf85405f7
+ad8b058bfeba05090e
+ND
+end end
+/g0058 glyphshow
+%%glyph 0056
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0056 201 RD
+bbff000004730d8bf7c315f7aeb60597
+54a362b06f08b06ebe7dcd8b08d48bc1
+98b0a608a49e97a48baa088ba0849d7e
+99087d986c985a9608fb77bdfb23b94e
+b40837c461db8bf1088be7afd8d4ca08
+d4caf704aaf72d8b08f7258bf70073d2
+5c08d25cbb45a62e08fb9d5a0580b475
+ab6ca1086ba15e96508b08418b56816b
+7608767c80788b74088b77947a9e7d08
+a478e371f72a6908f72969f461c65a08
+c659a8458b32088b2a62373a45083a45
+fb0d69fb338a08fb258cfb06a737c608
+36c654da71f008090e
+ND
+end end
+/g0056 glyphshow
+/g0048 glyphshow
+%%glyph 0055
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0055 82 RD
+f71bf9b10df7ad8b15fbad8b058bfaba
+05f7998b058bfb2b05b8d2b3baafa208
+aea2b496b88b08cb8bc979c6680834fb
+89055caa5f9a628b08648b6980707608
+707575647c52087b5283fb0a8bfb4908
+090e
+ND
+end end
+/g0055 glyphshow
+/g0056 glyphshow
+/g003f glyphshow
+%%glyph 004e
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g004e 65 RD
+f71dff000004730d8b8b158bff000005
+ba05f7ad8b058bfd9e05f7ddf80a05f7
+ee8b05fbfffc1805f819fd3605fbc38b
+05fb9ff87105fb17fb1d058bfbe80509
+0e
+ND
+end end
+/g004e glyphshow
+/g0048 glyphshow
+/g0059 glyphshow
+/g004c glyphshow
+/g0051 glyphshow
+/g003f glyphshow
+/g0027 glyphshow
+/g0048 glyphshow
+/g0056 glyphshow
+/g004e glyphshow
+/g0057 glyphshow
+%%glyph 0052
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0052 153 RD
+ddff000004e30d8bf8b6158be8a2e6b9
+e208b9e2cccee0b908dfb9e9a2f38b08
+f7358bf71757f22308f222befb188bfb
+33088bfb3557fb192422082321fb1757
+fb318a082a8c2ea133b60832b748cc5d
+e0085de074f28bf70e0809f7b47c158b
+22a43abd5308bd53c96fd48b08d48bc9
+a7bdc308bcc3a4dc8bf6088bf372db5a
+c30859c34da7428b08428b4d6f595308
+5953723a8b2208090e
+ND
+end end
+/g0052 glyphshow
+%%glyph 0053
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0053 157 RD
+f71fff000004e30d8bfaba15f79a8b05
+8bfb3005adc0b9b7c5ac08c5accb9cd2
+8b08f70f8bf45be12a08e12ab6fb1a8b
+fb41088bfb4560fb1e3429083428225b
+fb0f8a08508c56965ca2085ba259b356
+c4088bfcab05fbad8b0509f7aafa4d15
+8bfb0ba333ba5208ba52c56ecf8b08cc
+8bc2a5b6c008b6bfa1e18bf70b088bf7
+0375de5ec1085ec154a6498b08468b52
+715e56085e56743c8b2308090e
+ND
+end end
+/g0053 glyphshow
+/g003f glyphshow
+%%glyph 0047
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0047 150 RD
+dfff000004e30dfaa18b15fb998b058b
+f73005604e585e506e08506e4f7c4f8a
+08fb0e8c23bb34ee0834ed5ff71d8bf7
+44088bf748b5f71de0e908e0e8f6baf7
+158b08f70b8bf15ae228088bf8a405f7
+ad8b0509fd82fe24158bfb059b39aa58
+08b842cb66dc8b08cc8bc2a7b8c208b8
+c2a2dd8bf701088bf70e75e35fc1085f
+c053a6468b08488b54715e56085e5674
+3b8b2208090e
+ND
+end end
+/g0047 glyphshow
+/g0052 glyphshow
+/g0046 glyphshow
+/g0058 glyphshow
+%%glyph 0050
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0050 190 RD
+f712ff0000071d0d8bfaba15f7978b05
+8bfb2505e8f705f702c3f7148b08cf8b
+c67dbd6f08bd6fb461ab5208bac4bdb5
+c1a708c1a7c599c88b08d98bcd7bc16c
+08c16bb35ca64e089e5e95418b26088b
+fd3b05fbad8b058bf8f3058bf481cf78
+aa0871b3639f558b08648b667f687308
+687372687c5d087c5c83428b27088bfc
+9205fbad8b058bf8da058bf286ce81a9
+0881a97ca1769a08769a6e92678b0860
+8b647f687408687473697c5f087c5f83
+428b25088bfc9805fbad8b05090e
+ND
+end end
+/g0050 glyphshow
+/g0048 glyphshow
+/g0051 glyphshow
+/g0057 glyphshow
+/g0056 glyphshow
+/g003f glyphshow
+/g0036 glyphshow
+/g0046 glyphshow
+/g004b glyphshow
+/g0048 glyphshow
+/g0050 glyphshow
+/g0044 glyphshow
+/g0057 glyphshow
+/g004c glyphshow
+/g0046 glyphshow
+%%glyph 0014
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0014 53 RD
+f736ff000004730df9188b15fbad8b05
+8bfab705242bfb0d44fb1f5d088bf793
+05d4a3dbb9e1ce08e1cec6d9abe408f7
+788b05090e
+ND
+end end
+/g0014 glyphshow
+%%glyph 0011
+/Arial-BoldMT findfont dup
+/Private get begin
+/CharStrings get begin
+/g0011 22 RD
+f727f8cd0d8b8b158bf7ad05f7ad8b05
+8bfbad05090e
+ND
+end end
+/g0011 glyphshow
+/g0044 glyphshow
+/g0056 glyphshow
+/g0046 glyphshow
+/g0003 glyphshow
+/g0003 glyphshow
+/g0010 glyphshow
+/g0010 glyphshow
+/g0010 glyphshow
+/g0003 glyphshow
+pgsave restore
+showpage
+%%Trailer
+%%Pages: 1
+%%EOF
