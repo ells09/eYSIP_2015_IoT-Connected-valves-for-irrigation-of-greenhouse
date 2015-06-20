@@ -1,4 +1,4 @@
-update=Friday 19 June 2015 12:27:17 PM IST
+update=Saturday 20 June 2015 08:57:00 AM IST
 last_client=eeschema
 [eeschema]
 version=1
@@ -40,3 +40,9 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=/home/kevin/kicad/libraries/kicad-ESP8266/ESP8266
+LibName32=/home/kevin/kicad/libraries/ft232rl
+LibName33=ftdi
+LibName34=/home/kevin/kicad/libraries/usb-b
+LibName35=/home/kevin/kicad/libraries/ft232bm
+LibName36=/home/kevin/kicad/libraries/usb-a-pcb
+LibName37=/home/kevin/kicad/libraries/USB
