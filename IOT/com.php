@@ -50,23 +50,29 @@ $results=mysql_query($query);
 		while($row = mysql_fetch_assoc($results))
 		{
 			
-				command($macid,$q);	//switch 			
+				command($macid,$q);	//switch 
+							
 				//echo "Switch OFF"; //update button status
-				$update="UPDATE devices set action='$q'"; //this is for updating running status off devices
-
-				//echo "</br>".$query;
-				if(!mysql_query($update,mysql_connect($dbhost, $dbuser, $dbpass)))
-					echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+				
 			
            	    	
 		}
+	if($q==1)
+		echo "Switch OFF";
+	else 
+		echo "Switch ON";
+	$update="UPDATE devices set action='$q'"; //this is for updating running status off devices
+
+	//echo "</br>".$query;
+	if(!mysql_query($update,mysql_connect($dbhost, $dbuser, $dbpass)))
+	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
 	}
 
 }
 
 function command($macid,$action) //for sending mqtt commands
 {
-//$mqtt->setAuth('sskaje', '123123');
+
 $mqtt = new spMQTT('tcp://localhost:1883/');
 $connected = $mqtt->connect();
 if (!$connected) {
