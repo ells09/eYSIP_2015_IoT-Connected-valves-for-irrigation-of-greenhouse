@@ -49,7 +49,8 @@ $results=mysql_query($query);
 	{
 		while($row = mysql_fetch_assoc($results))
 		{
-			
+				$macid=$row['macid'];
+				
 				command($macid,$q);	//switch 
 							
 				//echo "Switch OFF"; //update button status
@@ -61,7 +62,7 @@ $results=mysql_query($query);
 		echo "Switch OFF";
 	else 
 		echo "Switch ON";
-	$update="UPDATE devices set action='$q'"; //this is for updating running status off devices
+	$update="UPDATE devices SET action='$q'"; //this is for updating running status off devices
 
 	//echo "</br>".$query;
 	if(!mysql_query($update,mysql_connect($dbhost, $dbuser, $dbpass)))

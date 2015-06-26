@@ -31,8 +31,20 @@ if (mysql_num_rows($results) > 0)
 				
 				if($currenttime>=$start and $currenttime<$stop and $action==1)
 				{
-					
-					command($macid,$action);
+					$task="SELECT * FROM devices"; //starting every valves
+					$result=mysql_query($query);
+						if (mysql_num_rows($result) > 0) 
+						{
+							while($rows = mysql_fetch_assoc($results))
+							{
+									$macid=$rows['macid'];			
+									command($macid,$action);	//switch 
+							
+									//echo "Switch OFF"; //update button status
+				
+			
+						   	    	
+							}
 					$query = "UPDATE tasks SET action ='0' WHERE id='$id'";
 					$action=0;//doing this because dont want to again fetch from table
 					//setting start NUll so that it wont check
@@ -41,7 +53,7 @@ if (mysql_num_rows($results) > 0)
 						echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
 					else
 						echo "</br>Task upadated to stop</br>";
-					$query = "UPDATE devices SET action ='1' WHERE macid='$macid'"; //updating action status in device table also
+					$query="UPDATE devices SET action='1'"; //this is for updating running status off devices
 					echo "</br>".$query;
 					if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 						echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
@@ -58,15 +70,27 @@ if (mysql_num_rows($results) > 0)
 				
 				if($currenttime>=$stop and $action==0)
 				{
-					command($macid,$action);
-					//$query = "DELETE FROM tasks WHERE macid='$macid' and action='0'"; //deleting the final entry
+					$task="SELECT * FROM devices"; //stopping every valves
+					$result=mysql_query($query);
+						if (mysql_num_rows($result) > 0) 
+						{
+							while($rows = mysql_fetch_assoc($results))
+							{
+									$macid=$rows['macid'];			
+									command($macid,$action);	//switch 
+							
+									//echo "Switch ON"; //update button status
+				
+			
+						   	    	
+							}
 					$query = "UPDATE tasks SET action ='1' WHERE id='$id'"; //resetting to 1 for next day execution
 					echo $query;
 					if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 						echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
 					else
 						echo "</br>Task upadated for next day</br>";
-					$query = "UPDATE devices SET action ='0' WHERE macid='$macid'"; //updating action status in device table also
+					$query="UPDATE devices SET action='0'"; //this is for updating running status off devices
 					echo "</br>".$query;
 					if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 						echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
