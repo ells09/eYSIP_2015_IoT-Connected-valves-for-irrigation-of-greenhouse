@@ -20,22 +20,21 @@ if (mysql_num_rows($results) > 0)
 	   while($row = mysql_fetch_assoc($results)) 
 		{	
 			$id=$row['id'];
-			$macid=$row['macid'];
 			$start=$row['start'];
 			$stop=$row['stop'];
 			$action=$row['action'];
            	    	$currenttime=date('Hi');
-			
+			//echo $currenttime;
 			if($start!=NULL)
 			{
 				
 				if($currenttime>=$start and $currenttime<$stop and $action==1)
 				{
 					$task="SELECT * FROM devices"; //starting every valves
-					$result=mysql_query($query);
+					$result=mysql_query($task);
 						if (mysql_num_rows($result) > 0) 
 						{
-							while($rows = mysql_fetch_assoc($results))
+							while($rows = mysql_fetch_assoc($result))
 							{
 									$macid=$rows['macid'];			
 									command($macid,$action);	//switch 
@@ -45,6 +44,7 @@ if (mysql_num_rows($results) > 0)
 			
 						   	    	
 							}
+						}
 					$query = "UPDATE tasks SET action ='0' WHERE id='$id'";
 					$action=0;//doing this because dont want to again fetch from table
 					//setting start NUll so that it wont check
@@ -84,6 +84,7 @@ if (mysql_num_rows($results) > 0)
 			
 						   	    	
 							}
+						}
 					$query = "UPDATE tasks SET action ='1' WHERE id='$id'"; //resetting to 1 for next day execution
 					echo $query;
 					if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
