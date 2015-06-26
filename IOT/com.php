@@ -39,6 +39,30 @@ $results=mysql_query($query);
 	
 
 }
+else 
+{
+mysql_select_db($dbname) or die(mysql_error());
+
+$query="SELECT * FROM devices";
+$results=mysql_query($query);
+	if (mysql_num_rows($results) > 0) 
+	{
+		while($row = mysql_fetch_assoc($results))
+		{
+			
+				command($macid,$q);	//switch 			
+				echo "Switch OFF"; //update button status
+				$update="UPDATE devices set action='$q'"; //this is for updating running status off devices
+
+				//echo "</br>".$query;
+				if(!mysql_query($update,mysql_connect($dbhost, $dbuser, $dbpass)))
+					echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+			
+           	    	
+		}
+	}
+
+}
 
 function command($macid,$action) //for sending mqtt commands
 {

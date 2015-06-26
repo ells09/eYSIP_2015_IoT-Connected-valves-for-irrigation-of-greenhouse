@@ -64,15 +64,15 @@ Your browser doesnt support javascript</noscript>
 <h3>Valve Controls</h3>
 <form action="">
 <?php
-
+echo " <button id='all' type='button' onclick='showUser(this.value)' value='1'>Switch all ON</button>";
+	echo " <button id='all' type='button' onclick='showUser(this.value)' value='0'>Switch all OFF</button><hr>";
 mysql_select_db($dbname) or die(mysql_error());
 	
 $query="SELECT * FROM devices";
 $results=mysql_query($query);
 if (mysql_num_rows($results) > 0) 
 {	$i=1;
-	echo " <button id='all' type='button' onclick='showUser(this.value)' value='1'>Switch all ON</button>";
-	echo " <button id='all' type='button' onclick='showUser(this.value)' value='0'>Switch all OFF</button><hr>";		
+			
 	while($row=mysql_fetch_assoc($results)) 
 	{	
 		$macid=$row['macid'];
