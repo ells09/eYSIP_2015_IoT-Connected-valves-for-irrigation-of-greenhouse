@@ -64,7 +64,21 @@ else
 
 }
 
-$query="SELECT * FROM tasks";
+
+if(isset($_GET['del'])) //deleting the entry
+{
+
+	$del = $_GET['del'];
+
+	$query = "DELETE FROM tasks WHERE id='$del'";
+
+	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+
+}
+
+
+$query="SELECT * FROM tasks"; //displaying scheduled tasks
 $results=mysql_query($query);
 if (mysql_num_rows($results) > 0) 
 {	$i=1;
@@ -74,7 +88,7 @@ if (mysql_num_rows($results) > 0)
 		$start=$row['start'];
 		$stop=$row['stop']; //online offline or new, 1, 0, 2
 		
-		echo "<b>Task ".$i."</b>&nbsp; &nbsp; Start time : '$start' &nbsp; &nbsp; Stop time : '$stop' <hr>";
+		echo "<b>Task ".$i."</b>&nbsp; &nbsp; Start time : '$start' &nbsp; &nbsp; Stop time : '$stop' &nbsp;<a href='?del=$id'><b>DELETE</b></a><hr>";
 		$i++;
 		
 		
