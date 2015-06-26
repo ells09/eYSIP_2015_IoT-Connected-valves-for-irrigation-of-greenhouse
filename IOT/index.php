@@ -11,7 +11,7 @@ error_reporting(-1); //for suppressing errors and notices
 <title>Led Test</title>
 <?php include 'favicon.php';?>
 <script type='text/javascript'>
-function showUser(str)
+function update(str)
 {
 
 if (window.XMLHttpRequest)
@@ -31,6 +31,46 @@ xmlhttp.onreadystatechange=function()
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
     document.getElementById(str).innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open('GET','com.php?q='+str,true);
+xmlhttp.send();
+}
+</script>
+<script type='text/javascript'>
+function updateall(str)
+{
+
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  var items = document.getElementsByClassName('item');
+	  for (var i = 0; i < items.length; ++i) 
+		{
+    			var item = items[i];  
+    			item.innerHTML = "Switching....";
+    		}
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+	var items = document.getElementsByClassName('item');
+	for (var i = 0; i < items.length; ++i) 
+		{
+    			var item = items[i];  
+    			item.innerHTML = xmlhttp.responseText;
+    		}
+	
+   
+
     }
   }
 xmlhttp.open('GET','com.php?q='+str,true);
@@ -62,10 +102,10 @@ Your browser doesnt support javascript</noscript>
 
     <div class=" span-12 append-4">
 <h3>Valve Controls</h3>
-<form action="">
+
 <?php
-echo " <button id='all' type='button' onclick='showUser(this.value)' value='1'>Switch all ON</button>";
-	echo " <button id='all' type='button' onclick='showUser(this.value)' value='0'>Switch all OFF</button><hr>";
+echo " <button id='1' type='button' onclick='updateall(this.value)' value='1'>Switch all ON</button>";
+	echo " <button id='0' type='button' onclick='updateall(this.value)' value='0'>Switch all OFF</button><hr>";
 mysql_select_db($dbname) or die(mysql_error());
 	
 $query="SELECT * FROM devices";
@@ -90,7 +130,7 @@ if (mysql_num_rows($results) > 0)
 		elseif($status==2) //new device
 			$status='<h4><b>New Device Found</b></h4>';
 
-		echo "<b>Valve ".$i."</b>&nbsp; &nbsp; <button id='$macid' type='button' onclick='showUser(this.value)' value='$macid'>Switch ".$action."</button> &nbsp; &nbsp; ".$status."<hr>";
+		echo "<b>Valve ".$i."</b>&nbsp; &nbsp; <button class='item' id='$macid' type='button' onclick='update(this.value)' value='$macid'>Switch ".$action."</button> &nbsp; &nbsp; ".$status."<hr>";
 		$i++;
 		
 		
@@ -102,7 +142,7 @@ echo "<h3>No Devices added yet</h3>";
 }
 ?>
 
-</form> 
+
 
 
     </div>

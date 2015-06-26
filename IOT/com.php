@@ -3,7 +3,7 @@ include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 spMQTTDebug::Enable();
 $q=$_GET["q"]; //q is the macid received
-if($q!=NULL or ($q!=0 and $q!=1) )
+if($q!=0 and $q!=1 )
 {
 //echo "Hello World".$q;
 mysql_select_db($dbname) or die(mysql_error());
@@ -51,7 +51,7 @@ $results=mysql_query($query);
 		{
 			
 				command($macid,$q);	//switch 			
-				echo "Switch OFF"; //update button status
+				//echo "Switch OFF"; //update button status
 				$update="UPDATE devices set action='$q'"; //this is for updating running status off devices
 
 				//echo "</br>".$query;
