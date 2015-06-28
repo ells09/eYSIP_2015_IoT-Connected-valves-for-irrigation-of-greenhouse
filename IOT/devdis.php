@@ -56,12 +56,14 @@ xmlhttp.send();
 Your browser doesnt support javascript</noscript>
 <body >
 
-<h2><?php echo " Simple Web based IOT"; ?></h2>
+
 
 <div  id='container' class='wrapper container'>
-
+<div class=" span-12 append-4"><a STYLE='text-decoration:none'href='index.php'>
+      <h1 style='color:#3B5998;font-weight:normal;'>IOT Based Valve control</h1></a>
+    </div>
     <div class=" span-12 append-4">
-<h3>Devices Added</h3>
+<h2 style='color:#3B5998;font-weight:normal;'>Devices Added</h2>
 <form action="">
 <?php
 
@@ -83,18 +85,21 @@ if (mysql_num_rows($results) > 0)
 			$battery="<span style='color: #FF0000;'><b>Replace battery</b></span>";
 
 		if($action==1) //changing into user readable form
-			$action='<b>Valve is Open</b>';
+			$action="<b><span style='color: #FFAA00;'>Valve is Open</b></span>";
 		else
-			$action='<b>Valve is Closed</b>';
+			$action="<b><span style='color: #AA6600;'>Valve is Closed</span></b>";
 		
 		if($status==0) //offline
-			$status='<h4><b>Device offline, please check..</b></h4>';
+			$status="<b><span style='color: #FF0000;'>Device offline, please check..</span></b>";
 		elseif($status==1) //online
-			$status='ONLINE';
+			$status="<b><span style='color: #00CC00;'>ONLINE</span></b>";
 		elseif($status==2) //new device
-			$status='<h4><b>New Device Found</b></h4>';
+			$status="<span style='color: #0088FF;'><b>New Device Found</b></span>";
 
-		echo "<h3><b>Valve ".$i."</b> </h3><b>Device MAC ID</b>:".$macid. "</br>".$action."</br> <b>Battery status : </b> ".$battery." </br><b>Connectivity : </b> ".$status." <hr>";
+		echo "<h3 style='color:#3B5998;font-weight:normal;'><b>Valve ".$i."</b> ".$status."</h3><b style='color:#3B5998;font-weight:normal;
+    '>Device MAC ID</b> :<span style='color:#3B5998;font-weight:normal;
+    '> ".$macid. "</span></br>".$action."</br> <b style='color:#3B5998;font-weight:normal;
+    '>Battery status : </b> ".$battery." </br> <hr></span>";
 		$i++;
 		
 		

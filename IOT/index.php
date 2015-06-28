@@ -96,12 +96,15 @@ xmlhttp.send();
 Your browser doesnt support javascript</noscript>
 <body >
 
-<h2><?php echo " Simple Web based IOT"; ?></h2>
 
 <div  id='container' class='wrapper container'>
-
+<div class=" span-12 append-4" ><a STYLE='text-decoration:none'href='index.php'>
+      <h1 style='color:#3B5998;font-weight:normal;
+    '>IOT Based Valve control</h1></a>
+    </div>
     <div class=" span-12 append-4">
-<h3>Valve Controls</h3>
+<h2 style='color:#3B5998;font-weight:normal;
+    '>Valve Controls</h2>
 
 <?php
 echo " <button id='1' type='button' onclick='updateall(this.value)' value='1'>Switch all ON</button>";
@@ -124,13 +127,14 @@ if (mysql_num_rows($results) > 0)
 			$action='ON';
 		
 		if($status==0) //offline
-			$status='<h4><b>Device offline, please check..</b></h4>';
+			$status="<b><span style='color: #FF0000;'>Device offline, please check..</span></b>";
 		elseif($status==1) //online
-			$status='<b>ONLINE</b>';
+			$status="<b><span style='color: #00CC00;'>ONLINE</span></b>";
 		elseif($status==2) //new device
-			$status='<h4><b>New Device Found</b></h4>';
+			$status="<span style='color: #0088FF;'><b>New Device Found</b></span>";
 
-		echo "<b>Valve ".$i."</b>&nbsp; &nbsp; <button class='item' id='$macid' type='button' onclick='update(this.value)' value='$macid'>Switch ".$action."</button> &nbsp; &nbsp; ".$status."<hr>";
+		echo "<b style='color:#3B5998;font-weight:bold;
+    '>Valve ".$i."</b>&nbsp; &nbsp; <button class='item' id='$macid' type='button' onclick='update(this.value)' value='$macid'>Switch ".$action."</button> &nbsp; &nbsp; ".$status."<hr>";
 		$i++;
 		
 		

@@ -2,7 +2,7 @@
 include_once 'iotdb.php';?>
 <?php
 date_default_timezone_set('Asia/Kolkata');//setting IST
-echo "Time is ".date('Hi');?>
+//echo "Time is ".date('Hi');?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -27,18 +27,24 @@ echo "Time is ".date('Hi');?>
 <noscript>
 Your browser doesnt support javascript</noscript>
 <body >
-<h2><?php echo " Schedules"; ?></h2>
+
 
 <div  id='container' class='wrapper container'>
+<div class=" span-12 append-4"><a STYLE='text-decoration:none'href='index.php'>
+      <h1 style='color:#3B5998;font-weight:normal;'>IOT Based Valve control</h1></a>
+    </div>
 
     <div class=" span-12 append-4">
 <?php 
 echo"
 <form action='#' method='post'>
-<h3>Add Schedule</h3>
-Start time:
+<h2 style='color:#3B5998;font-weight:normal;
+    ' >Add Schedule</h2>
+<span style='color:#3B5998;font-weight:normal;
+    '>Start time:</span>
 <input type='text' id='start' name='start'/>
-Stop time:
+<span style='color:#3B5998;font-weight:normal;
+    '>Stop time:</span>
 <input type='text' id='stop' name='stop'/>
 <input type='submit' name='submit' value='Submit' />
 </form>";
