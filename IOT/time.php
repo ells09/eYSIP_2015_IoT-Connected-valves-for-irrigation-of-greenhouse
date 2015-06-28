@@ -57,7 +57,7 @@ $stop = $_POST['stop'];
 if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
 else
-	echo "</br><b>New Time schedule added</b>";//marked online
+	echo "</br><span class='success'><b>New Time schedule added</b></span>";//marked online
 //mark the device online
 //mysql_close();
 //$mqtt->close();
@@ -73,7 +73,7 @@ if(isset($_GET['del'])) //deleting the entry
 	$query = "DELETE FROM tasks WHERE id='$del'";
 
 	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+	echo "INSERT failed: $query<br/><div class='error'>".mysql_error()."</div><br/><br/>";
 
 }
 
@@ -96,7 +96,7 @@ if (mysql_num_rows($results) > 0)
 }
 else
 {
-	echo "<h3>No Tasks scheduled yet.</h3>";
+	echo "</br><div class='notice'><b>No Tasks scheduled yet.</b></div>";
 }
 
  ?>  

@@ -78,9 +78,9 @@ if (mysql_num_rows($results) > 0)
 		$battery=$row['battery'];
 		$status=$row['status']; //online offline or new, 1, 0, 2
 		if($battery==1) //changing into user readable form
-			$battery='Healthy';
+			$battery="<span style='color: #00CC00;'><b>Healthy</b></span>";
 		else
-			$battery='<h4><b>Replace battery</b></h4>';
+			$battery="<span style='color: #FF0000;'><b>Replace battery</b></span>";
 
 		if($action==1) //changing into user readable form
 			$action='<b>Valve is Open</b>';
