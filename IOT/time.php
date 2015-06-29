@@ -22,8 +22,16 @@ date_default_timezone_set('Asia/Kolkata');//setting IST
 <script type='text/javascript' src='script/jquery-1.9.1.min.js'></script>
 <script type='text/javascript' src='script/jquery-ui-1.7.2.custom.min.js'></script>
 <script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
-
-
+<script type='text/javascript'>
+$(document).ready(function () {
+  $('.time').hide();
+  $('#period').show();
+  $('#time').change(function () {
+    $('.time').hide();
+    $('#'+$(this).val()).show();
+  })
+});
+</script>
 <noscript>
 Your browser doesnt support javascript</noscript>
 <body >
@@ -35,25 +43,54 @@ Your browser doesnt support javascript</noscript>
     </div>
 
     <div class=" span-12 append-4">
-<?php 
-echo"
-<form action='#' method='post'>
-<h2 style='color:#3B5998;font-weight:normal;
-    ' >Add Schedule</h2>
+<h2 style='color:#3B5998;font-weight:normal;' >Add Schedule</h2>
+<select id="time">
+  <option value="period">Period</option>
+  <option value="duration">Duration</option>
+  <option value="option3">-</option>
+  <option value="option4">--</option>
+</select>
+<div id='period' class="time">
+<pre>
+<form action='' method='post'>
+
 <span style='color:#3B5998;font-weight:normal;
-    '>Start time:</span>
+    '>Start time:(hhmm)</span>
 <input type='text' id='start' name='start'/>
 <span style='color:#3B5998;font-weight:normal;
-    '>Stop time:</span>
+    '>Stop time:(hhmm)</span>
 <input type='text' id='stop' name='stop'/>
-<input type='submit' name='submit' value='Submit' />
-</form>";
+<input type='submit' name='submit' value='Submit' /></pre>
+</form>
+</div>
+<div id='duration' class="time">
+<pre>
+<form action='' method='post'>
+
+<span style='color:#3B5998;font-weight:normal;
+    '>Start time:(hhmm)</span>
+<input type='text' id='start' name='start'/>
+<span style='color:#3B5998;font-weight:normal;
+    '>Duration:(mm)</span>
+<input type='text' id='duration' name='duration'/>
+<input type='submit' name='submit' value='Submit' /></pre>
+</form>
+</pre>
+</div>
+<div>
+</div>
+<?php
 mysql_select_db($dbname) or die(mysql_error());
 if(isset($_POST['submit']))
 {
 
 $start = $_POST['start'];
 $stop = $_POST['stop'];
+$duration =$_POST['duration'];
+if($stop==NULL)
+{
+	$stop=$start+$duration;
+}
 
 
 	$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
@@ -94,7 +131,7 @@ if (mysql_num_rows($results) > 0)
 		$start=$row['start'];
 		$stop=$row['stop']; //online offline or new, 1, 0, 2
 		
-		echo "<b>Task ".$i."</b>&nbsp; &nbsp; Start time : '$start' &nbsp; &nbsp; Stop time : '$stop' &nbsp;<a href='?del=$id'><b>DELETE</b></a><hr>";
+		echo "<span style='color:#3B5998;font-weight:normal;'><b>Task ".$i."</b>&nbsp; &nbsp; Start time : $start &nbsp; &nbsp; Stop time : $stop </span>&nbsp;<a href='?del=$id'><b>DELETE</b></a><hr>";
 		$i++;
 		
 		

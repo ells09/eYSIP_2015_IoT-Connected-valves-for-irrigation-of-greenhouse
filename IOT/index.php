@@ -127,11 +127,11 @@ if (mysql_num_rows($results) > 0)
 			$action='ON';
 		
 		if($status==0) //offline
-			$status="<b><span style='color: #FF0000;'>Device offline, please check..</span></b>";
+			$status="<span style='color: #FF0000;'>Device offline, please check..</span>";
 		elseif($status==1) //online
-			$status="<b><span style='color: #00CC00;'>ONLINE</span></b>";
+			$status="<span style='color: #00CC00;'>ONLINE</span>";
 		elseif($status==2) //new device
-			$status="<span style='color: #0088FF;'><b>New Device Found</b></span>";
+			$status="<span style='color: #0088FF;'>New Device Found</span>";
 
 		echo "<b style='color:#3B5998;font-weight:bold;
     '>Valve ".$i."</b>&nbsp; &nbsp; <button class='item' id='$macid' type='button' onclick='update(this.value)' value='$macid'>Switch ".$action."</button> &nbsp; &nbsp; ".$status."<hr>";
