@@ -22,7 +22,7 @@ $results=mysql_query($query);
 				$query = "UPDATE devices SET action ='1', status='1' WHERE macid='$macid'"; //updating action status in device table and also chanign new device status
 				//echo "</br>".$query;
 				if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-					echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+					echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";
 			}
 			else
 			{
@@ -31,7 +31,7 @@ $results=mysql_query($query);
 				$query = "UPDATE devices SET action ='0' WHERE macid='$macid'"; //updating action status in device table 
 				//echo "</br>".$query;
 				if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-					echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+					echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";
 			}
            	    	
 		}
@@ -66,7 +66,7 @@ $results=mysql_query($query);
 
 	//echo "</br>".$query;
 	if(!mysql_query($update,mysql_connect($dbhost, $dbuser, $dbpass)))
-	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+	echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";
 	}
 
 }

@@ -47,7 +47,7 @@ Your browser doesnt support javascript</noscript>
 <select id="time">
   <option value="period">Period</option>
   <option value="duration">Duration</option>
-  <option value="option3">-</option>
+  <option value="frequency">Frequency</option>
   <option value="option4">--</option>
 </select>
 <div id='period' class="time">
@@ -60,8 +60,9 @@ Your browser doesnt support javascript</noscript>
 <span style='color:#3B5998;font-weight:normal;
     '>Stop time:(hhmm)</span>
 <input type='text' id='stop' name='stop'/>
-<input type='submit' name='submit' value='Submit' /></pre>
+<input type='submit' name='submit' value='Submit' />
 </form>
+</pre>
 </div>
 <div id='duration' class="time">
 <pre>
@@ -73,11 +74,25 @@ Your browser doesnt support javascript</noscript>
 <span style='color:#3B5998;font-weight:normal;
     '>Duration:(mm)</span>
 <input type='text' id='duration' name='duration'/>
-<input type='submit' name='submit' value='Submit' /></pre>
+<input type='submit' name='submit' value='Submit' />
 </form>
 </pre>
 </div>
-<div>
+<div id='frequency' class="time">
+<pre> 
+<form action='' method='post'>
+<span style='color:#3B5998;font-weight:normal;
+    '>Start time:(hhmm)</span>
+<input type='text' id='start' name='start'/>
+<span style='color:#3B5998;font-weight:normal;
+    '>Frequency:(No. repetitions in a day)</span>
+<input type='text' id='frequency' name='frequency'/>
+<span style='color:#3B5998;font-weight:normal;
+    '>Duration:(mm)</span>
+<input type='text' id='duration' name='duration'/>
+<input type='submit' name='submit' value='Submit' />
+</form>
+</pre>
 </div>
 <?php
 mysql_select_db($dbname) or die(mysql_error());
@@ -86,12 +101,17 @@ if(isset($_POST['submit']))
 
 $start = $_POST['start'];
 $stop = $_POST['stop'];
+$frequency =$_POST['frequency'];
 $duration =$_POST['duration'];
 if($stop==NULL)
 {
 	$stop=$start+$duration;
 }
 
+if($frequency==NULL)
+{
+	
+}
 
 	$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
 //if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
@@ -100,10 +120,8 @@ if($stop==NULL)
 if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
 else
-	echo "</br><span class='success'><b>New Time schedule added</b></span>";//marked online
-//mark the device online
-//mysql_close();
-//$mqtt->close();
+	echo "</br><span class='success'><b>New Time schedule added</b></span>";
+
 
 }
 

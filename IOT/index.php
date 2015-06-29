@@ -8,7 +8,7 @@ error_reporting(-1); //for suppressing errors and notices
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Led Test</title>
+<title>Homepage</title>
 <?php include 'favicon.php';?>
 <script type='text/javascript'>
 function update(str)
