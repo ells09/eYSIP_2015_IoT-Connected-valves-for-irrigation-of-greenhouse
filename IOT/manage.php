@@ -79,6 +79,35 @@ xmlhttp.open('GET','managedev.php?edit='+macid,true);
 xmlhttp.send();
 }
 </script>
+<script type='text/javascript'>
+function update(macid)
+{
+var gid=document.getElementById("groupadd").value;
+alert(macid);
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  document.getElementById(macid).innerHTML="loading...";
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById(macid).innerHTML=macid;
+    }
+  }
+xmlhttp.open('GET','managedev.php?update='+macid+'&gid='+id,true);
+//alert(macid);
+xmlhttp.send();
+}
+</script>
 <noscript>
 Your browser doesnt support javascript</noscript>
 <body >
@@ -140,7 +169,7 @@ if (mysql_num_rows($results) > 0)
 		//$group=$row['name'];
 		
 		
-		echo "<span id='$macid' style='color:#3B5998;font-weight:normal;'><b>".$i.".</b>&nbsp; &nbsp; <b>$macid </b>&nbsp; &nbsp; <a href="."javascript:edit('$macid')".">edit</a></span><hr>";
+		echo "".$i.".<span id='$macid' style='color:#3B5998;font-weight:normal;'><b></b>&nbsp; &nbsp;<b>MAC id:</b> $macid &nbsp; &nbsp; <a href="."javascript:edit('$macid')".">edit</a></span><hr>";
 		$i++;
 		
 		

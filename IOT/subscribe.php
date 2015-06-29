@@ -63,7 +63,7 @@ function default_subscribe_callback($mqtt, $topic, $com) {
 	{
 	echo "</br>Match not found</br>";
 	//inserting the new found device into the device folder
-	$query="INSERT INTO devices VALUES". "(DEFAULT,'$com',2,NULL, DEFAULT,NULL)";
+	$query="INSERT INTO devices VALUES". "(DEFAULT,'$com',NULL,2,NULL, DEFAULT,NULL)";
 	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 		echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
 	else
