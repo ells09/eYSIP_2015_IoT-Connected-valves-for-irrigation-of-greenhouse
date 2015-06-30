@@ -228,11 +228,12 @@ if(isset($_POST['submit']))
 			//echo $query;
 			if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 				echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-			else
-				echo "</br><span class='success'><b>New Time schedule added</b></span>";
+			
+				
 			
 			$i=$i+$repeath*100;		
-		}	
+		}
+		echo "</br><span class='success'><b>New Time schedule added</b></span>";	
 	}
 		if($repeath==NULL)
 			if($start==$stop)

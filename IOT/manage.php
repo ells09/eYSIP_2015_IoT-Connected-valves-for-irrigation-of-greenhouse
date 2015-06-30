@@ -108,6 +108,34 @@ xmlhttp.open('GET','managedev.php?update='+macid+'&gid='+gid,true);
 xmlhttp.send();
 }
 </script>
+<script type='text/javascript'>
+function del(str)
+{
+
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  document.getElementById(macid).innerHTML="deleting...";
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("groups").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open('GET','managedev.php?del='+str,true);
+//alert(macid);
+xmlhttp.send();
+}
+</script>
 <noscript>
 Your browser doesnt support javascript</noscript>
 <body >
@@ -141,7 +169,7 @@ if (mysql_num_rows($results) > 0)
 		$group=$row['name'];
 		
 		
-		echo "<span style='color:#3B5998;font-weight:normal;'><b>".$i.".</b>&nbsp; &nbsp; <b>$group </b>&nbsp; &nbsp;</span><hr>";
+		echo "<span style='color:#3B5998;font-weight:normal;'><b>".$i.".</b>&nbsp; &nbsp; <b>$group </b>&nbsp; &nbsp;<a href="."javascript:del('$group')".">delete</a></span><hr>";
 		$i++;
 		
 		
@@ -166,10 +194,16 @@ if (mysql_num_rows($results) > 0)
 	echo "</br></br><h2>Items available</h2>";		
 	while($row=mysql_fetch_assoc($results)) 
 	{	$macid=$row['macid'];
+		$group=$row['group'];
 		//$group=$row['name'];
+		$query="SELECT name FROM groups WHERE id='$group'";
+		$grps=mysql_query($query);
+		$grp=mysql_fetch_assoc($grps);
+		$name=$grp['name'];
+		if($name=='')
+			$name="Not allotted";
 		
-		
-		echo "".$i.". <span id='$macid' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $macid &nbsp; &nbsp; <a href="."javascript:edit('$macid')".">edit</a></span><hr>";
+		echo "".$i.". <span id='$macid' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $macid &nbsp; &nbsp;<b>Group:</b> $name &nbsp; &nbsp;<a href="."javascript:edit('$macid')".">edit</a></span><hr>";
 		$i++;
 		
 		

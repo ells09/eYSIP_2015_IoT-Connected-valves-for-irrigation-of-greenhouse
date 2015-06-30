@@ -6,6 +6,7 @@ $macid=$_GET['edit'];
 $id=$_GET['id'];
 $update=$_GET['update'];
 $gid=$_GET['gid'];
+$del=$_GET['del'];
 if($q!=null)
 {
 	
@@ -62,11 +63,48 @@ if($update!=null)
 {
 	
 	mysql_select_db($dbname) or die(mysql_error());
+	$query="SELECT name FROM groups WHERE id='$gid'";
+	$grps=mysql_query($query);
+	$grp=mysql_fetch_assoc($grps);
+	$name=$grp['name'];
+	if($name=='')
+		$name="Not allotted";
 	$query = "UPDATE devices SET devices.group = '$gid' WHERE devices.macid = '$update'"; //updating item with group id
 				
 	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 		echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";
-	echo " <span id='$update' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $update &nbsp; &nbsp; <a href="."javascript:edit('$update')".">edit</a></span>";
+	echo " <span id='$update' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $update &nbsp; &nbsp;<b>Group:</b> $name&nbsp; &nbsp; <a href="."javascript:edit('$update')".">edit</a></span>";
+	
+	
+}
+
+if($del!=null)
+{
+	
+	$query = "DELETE FROM groups WHERE name='$del'";
+
+	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+	echo "INSERT failed: $query<br/><div class='error'>".mysql_error()."</div><br/><br/>";
+	$query="SELECT * FROM groups"; //displaying groups
+	$results=mysql_query($query);
+	if (mysql_num_rows($results) > 0) 
+	{	$i=1;
+		echo "</br></br><h2>Groups available</h2>";		
+		while($row=mysql_fetch_assoc($results)) 
+		{	//$id=$row['id'];
+			$group=$row['name'];
+		
+		
+			echo "<span style='color:#3B5998;font-weight:normal;'><b>".$i.".</b>&nbsp; &nbsp; <b>$group </b>&nbsp; &nbsp;<a href="."javascript:del('$group')".">delete</a><hr>";
+			$i++;
+		
+		
+		}
+	}
+	else
+	{
+		echo "</br><div class='notice'><b>No groups created yet.</b></div>";
+	}
 	
 	
 }
