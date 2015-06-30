@@ -117,7 +117,7 @@ function normalize($startm,$duration)
 
 function display()
 {
-	$dbname='iot';
+	$dbname='iot'; //this bottleneck is gving me pain...
 	mysql_select_db($dbname) or die(mysql_error());
 	$query="SELECT * FROM tasks"; //displaying scheduled tasks
 	$results=mysql_query($query);
