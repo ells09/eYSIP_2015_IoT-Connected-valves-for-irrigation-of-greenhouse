@@ -10,13 +10,22 @@ if($q!=null)
 {
 	
 	mysql_select_db($dbname) or die(mysql_error());
-	$query="INSERT into groups VALUES(DEFAULT,'$q')";
+	$query="SELECT * FROM groups where"."(name='$q')";
 	$results=mysql_query($query);
-
-	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-		echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+	if (mysql_num_rows($results) > 0) 
+	{
+	echo "<span class='error'>Enter Unique group name</span>";
+	}
 	else
-		echo "</br><span class='success'><b>'$q' added</b></span></br>";
+	{
+		$query="INSERT into groups VALUES(DEFAULT,'$q')";
+		
+		if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+			echo "INSERT failed: $query".mysql_error()."<br/>";
+		else
+			echo "</br><span class='success'><b>'$q' added</b></span></br>";
+		
+	}	
 	
 
 	$query="SELECT * FROM groups"; //displaying groups
@@ -51,9 +60,15 @@ echo "<span id='$macid' style='color:#3B5998;font-weight:normal;'>&nbsp;<b>Allot
 
 if($update!=null)
 {
-echo "hello";
-//mysql_select_db($dbname) or die(mysql_error());
-//$query="UPDATE devices SET group='$gid' WHERE macid='$update'"; //displaying groups
+	
+	mysql_select_db($dbname) or die(mysql_error());
+	$query = "UPDATE devices SET devices.group = '$gid' WHERE devices.macid = '$update'"; //updating item with group id
+				
+	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+		echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";
+	echo " <span id='$update' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $update &nbsp; &nbsp; <a href="."javascript:edit('$update')".">edit</a></span>";
+	
+	
 }
 
 function groups()

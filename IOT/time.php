@@ -56,9 +56,47 @@ Your browser doesnt support javascript</noscript>
 
 <span style='color:#3B5998;font-weight:normal;
     '>Start time:(hhmm)</span>
+
+<?php
+echo "Hrs:<select id='starth'>";
+$i=0; 
+while($i<=24)
+{
+echo "<option value='$i'>$i</option>";
+$i++;
+} 
+echo "</select>";
+echo " Mins:<select id='startm'>";
+$j=0; 
+while($j<=60)
+{
+echo "<option value='$j'>$j</option>";
+$j=$j+5;
+} 
+echo "</select>";
+?>
+
 <input type='text' id='start' name='start'/>
 <span style='color:#3B5998;font-weight:normal;
     '>Stop time:(hhmm)</span>
+<?php
+echo "Hrs:<select id='stoph'>";
+$i=0; 
+while($i<=24)
+{
+echo "<option value='$i'>$i</option>";
+$i++;
+} 
+echo "</select>";
+echo " Mins:<select id='stopm'>";
+$j=0; 
+while($j<=60)
+{
+echo "<option value='$j'>$j</option>";
+$j=$j+5;
+} 
+echo "</select>";
+?>
 <input type='text' id='stop' name='stop'/>
 <input type='submit' name='submit' value='Submit' />
 </form>
@@ -99,28 +137,31 @@ mysql_select_db($dbname) or die(mysql_error());
 if(isset($_POST['submit']))
 {
 
-$start = $_POST['start'];
-$stop = $_POST['stop'];
-$frequency =$_POST['frequency'];
-$duration =$_POST['duration'];
-if($stop==NULL)
-{
-	$stop=$start+$duration;
-}
+	$starth = $_POST['starth'];
+	$startm = $_POST['startm'];
+	$stop = $_POST['stop'];
+	$frequency =$_POST['frequency'];
+	$duration =$_POST['duration'];
+	$start=$starth*100+$startm;
+	echo "Hello".$startm;
+	if($stop==NULL)
+	{
+		$stop=$start+$duration;
+	}
 
-if($frequency==NULL)
-{
+	if($frequency==NULL)
+	{
 	
-}
+	}
 
-	$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
-//if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-//	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-	//echo $query;
-if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-else
-	echo "</br><span class='success'><b>New Time schedule added</b></span>";
+		$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
+	//if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+	//	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+		//echo $query;
+	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+		echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+	else
+		echo "</br><span class='success'><b>New Time schedule added</b></span>";
 
 
 }

@@ -47,7 +47,7 @@ xmlhttp.onreadystatechange=function()
   }
 var group = document.getElementById("group").value;
 xmlhttp.open('GET','managedev.php?q='+group,true);
-alert("Hello! I am an alert box!!");
+//alert("Hello! I am an alert box!!");
 xmlhttp.send();
 }
 </script>
@@ -83,7 +83,7 @@ xmlhttp.send();
 function update(macid)
 {
 var gid=document.getElementById("groupadd").value;
-alert(macid);
+//alert(macid);
 if (window.XMLHttpRequest)
   {
   xmlhttp=new XMLHttpRequest();
@@ -100,10 +100,10 @@ xmlhttp.onreadystatechange=function()
 	  }
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-    document.getElementById(macid).innerHTML=macid;
+    document.getElementById(macid).innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open('GET','managedev.php?update='+macid+'&gid='+id,true);
+xmlhttp.open('GET','managedev.php?update='+macid+'&gid='+gid,true);
 //alert(macid);
 xmlhttp.send();
 }
@@ -169,7 +169,7 @@ if (mysql_num_rows($results) > 0)
 		//$group=$row['name'];
 		
 		
-		echo "".$i.".<span id='$macid' style='color:#3B5998;font-weight:normal;'><b></b>&nbsp; &nbsp;<b>MAC id:</b> $macid &nbsp; &nbsp; <a href="."javascript:edit('$macid')".">edit</a></span><hr>";
+		echo "".$i.". <span id='$macid' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $macid &nbsp; &nbsp; <a href="."javascript:edit('$macid')".">edit</a></span><hr>";
 		$i++;
 		
 		
