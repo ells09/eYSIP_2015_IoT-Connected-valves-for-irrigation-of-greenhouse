@@ -54,11 +54,10 @@ Your browser doesnt support javascript</noscript>
 <pre>
 <form action='' method='post'>
 
-<span style='color:#3B5998;font-weight:normal;
-    '>Start time:(hhmm)</span>
+<span style='color:#3B5998;font-weight:normal;'>Start time:(hhmm)</span>
 
 <?php
-echo "Hrs:<select id='starth'>";
+echo "Hrs:<select id='starth' name='starth'>";
 $i=0; 
 while($i<=24)
 {
@@ -66,7 +65,7 @@ echo "<option value='$i'>$i</option>";
 $i++;
 } 
 echo "</select>";
-echo " Mins:<select id='startm'>";
+echo " Mins:<select id='startm' name='startm'>";
 $j=0; 
 while($j<=60)
 {
@@ -76,11 +75,10 @@ $j=$j+5;
 echo "</select>";
 ?>
 
-<input type='text' id='start' name='start'/>
-<span style='color:#3B5998;font-weight:normal;
-    '>Stop time:(hhmm)</span>
+</br><span style='color:#3B5998;font-weight:normal;
+    '>Stop time:(hhmm)</span></br>
 <?php
-echo "Hrs:<select id='stoph'>";
+echo "Hrs:<select id='stoph' name='stoph'>";
 $i=0; 
 while($i<=24)
 {
@@ -88,7 +86,7 @@ echo "<option value='$i'>$i</option>";
 $i++;
 } 
 echo "</select>";
-echo " Mins:<select id='stopm'>";
+echo " Mins:<select id='stopm' name='stopm'>";
 $j=0; 
 while($j<=60)
 {
@@ -97,7 +95,7 @@ $j=$j+5;
 } 
 echo "</select>";
 ?>
-<input type='text' id='stop' name='stop'/>
+
 <input type='submit' name='submit' value='Submit' />
 </form>
 </pre>
@@ -106,13 +104,38 @@ echo "</select>";
 <pre>
 <form action='' method='post'>
 
-<span style='color:#3B5998;font-weight:normal;
-    '>Start time:(hhmm)</span>
-<input type='text' id='start' name='start'/>
-<span style='color:#3B5998;font-weight:normal;
-    '>Duration:(mm)</span>
-<input type='text' id='duration' name='duration'/>
-<input type='submit' name='submit' value='Submit' />
+<span style='color:#3B5998;font-weight:normal;'>Start time:(hhmm)</span></br>
+<?php
+echo "Hrs:<select id='starth' name='starth'>";
+$i=0; 
+while($i<=24)
+{
+echo "<option value='$i'>$i</option>";
+$i++;
+} 
+echo "</select>";
+echo " Mins:<select id='startm' name='startm'>";
+$j=0; 
+while($j<=60)
+{
+echo "<option value='$j'>$j</option>";
+$j=$j+5;
+} 
+echo "</select>";
+?>
+</br></br><span style='color:#3B5998;font-weight:normal;'>Duration:(mm)</span></br>
+<?php
+
+echo "Mins:<select id='duration' name='duration'>";
+$j=5; 
+while($j<=60)
+{
+echo "<option value='$j'>$j</option>";
+$j=$j+5;
+} 
+echo "</select>";
+?>
+</br><input type='submit' name='submit' value='Submit' />
 </form>
 </pre>
 </div>
@@ -139,31 +162,48 @@ if(isset($_POST['submit']))
 
 	$starth = $_POST['starth'];
 	$startm = $_POST['startm'];
-	$stop = $_POST['stop'];
+	$stoph = $_POST['stoph'];
+	$stopm = $_POST['stopm'];
 	$frequency =$_POST['frequency'];
 	$duration =$_POST['duration'];
+	if($starth==24) //normalising time,, 24 is same as 00,, in 2400 and 0000
+		$starth=0;
+	if($stoph==24)
+		$stoph=0;
 	$start=$starth*100+$startm;
-	echo "Hello".$startm;
-	if($stop==NULL)
+	$stop=$stoph*100+$stopm;
+	
+	if($starth==24)
+		$starth=0;
+	if($stoph==24)
+		$stoph=0;
+	if($duration!=NULL)
 	{
-		$stop=$start+$duration;
+		$stop=$starth*100 + normalize($startm,$duration);
+		if($stop>2400)
+			$stop=$stop-2400;
 	}
 
 	if($frequency==NULL)
 	{
 	
 	}
-
-		$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
-	//if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-	//	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-		//echo $query;
-	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-		echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+	if($start==$stop)
+	{
+		echo"<span class='error'>$start, $stop,Start time and stop time cannot be same</span>";	
+	}
 	else
-		echo "</br><span class='success'><b>New Time schedule added</b></span>";
-
-
+		{		
+		$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
+		//if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+		//	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+			//echo $query;
+		if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+			echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+		else
+			echo "</br><span class='success'><b>New Time schedule added</b></span>";
+		
+		}
 }
 
 
@@ -215,6 +255,21 @@ else
 <div class='container footer'>
 <?php //include_once "footer.php";?><?php
 include_once "app.php";?></div>
+<?php
+function normalize($startm,$duration)
+{
+	$tot=$startm+$duration;
+	if ($tot>=60)
+		{
+			$tot=$tot-60;
+			$tot=100+$tot;
+			return $tot;
+		}
+	return $tot;
+
+
+}
+?>
 
 </body>
 </html>
