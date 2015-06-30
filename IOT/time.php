@@ -24,6 +24,16 @@ date_default_timezone_set('Asia/Kolkata');//setting IST
 <script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
 <script type='text/javascript'>
 $(document).ready(function () {
+  $('.choose').hide();
+  //$('#period').show();
+  $('#grps').change(function () {
+    $('.choose').show();
+    
+  })
+});
+</script>
+<script type='text/javascript'>
+$(document).ready(function () {
   $('.time').hide();
   $('#period').show();
   $('#time').change(function () {
@@ -31,6 +41,126 @@ $(document).ready(function () {
     $('#'+$(this).val()).show();
   })
 });
+</script>
+<script type='text/javascript'>
+function del(str)
+{
+
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  document.getElementById(str).innerHTML="Switching ....";
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("display").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open('GET','timetasker.php?del='+str,true);
+xmlhttp.send();
+}
+</script>
+<script type='text/javascript'>
+function period()
+{
+var grp=document.getElementById("grps").value;
+var starth=document.getElementById("starth").value;
+var startm=document.getElementById("startm").value;
+var stoph=document.getElementById("stoph").value;
+var stopm=document.getElementById("stopm").value;
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  document.getElementById(str).innerHTML="Switching ....";
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("display").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open('GET','timetasker.php?grp='+grp+'&starth='+starth+'&startm='+startm+'&stoph='+stoph+'&stopm='+stopm,true);
+xmlhttp.send();
+}
+</script>
+<script type='text/javascript'>
+function duration()
+{
+var grp=document.getElementById("grps").value;
+var starth=document.getElementById("dstarth").value;
+var startm=document.getElementById("dstartm").value;
+var duration=document.getElementById("dduration").value;
+
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  document.getElementById(str).innerHTML="Switching ....";
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("display").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open('GET','timetasker.php?grp='+grp+'&starth='+starth+'&startm='+startm+'&duration='+duration,true);
+xmlhttp.send();
+}
+</script>
+<script type='text/javascript'>
+function frequency()
+{
+var grp=document.getElementById("grps").value;
+var starth=document.getElementById("fstarth").value;
+var duration=document.getElementById("fduration").value;
+var repeath=document.getElementById("repeath").value;
+
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  document.getElementById(str).innerHTML="Switching ....";
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("display").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open('GET','timetasker.php?grp='+grp+'&starth='+starth+'&repeath='+repeath+'&duration='+duration,true);
+xmlhttp.send();
+}
 </script>
 <noscript>
 Your browser doesnt support javascript</noscript>
@@ -44,15 +174,33 @@ Your browser doesnt support javascript</noscript>
 
     <div class=" span-12 append-4">
 <h2 style='color:#3B5998;font-weight:normal;' >Add Schedule</h2>
-<select id="time">
+<b style='color:#3B5998;font-weight:bold;'>Choose Group</b> <select id="grps">
+<option selected="true" disabled='disabled'>Choose</option>
+<?php
+mysql_select_db($dbname) or die(mysql_error());
+$query="SELECT * FROM groups"; //displaying groups
+$results=mysql_query($query);
+if (mysql_num_rows($results) > 0) 
+	{		
+		while($row=mysql_fetch_assoc($results)) 
+		{	//$id=$row['id'];
+			$group=$row['name'];
+			$id=$row['id'];
+			echo " <option value='$id'>$group</option>";
+		}
+	}
+
+?>
+
+</select>
+<div class='choose'>
+<b style='color:#3B5998;font-weight:bold;'>Type of Schedule</b><select id="time">
   <option value="period">Period</option>
   <option value="duration">Duration</option>
   <option value="frequency">Frequency</option>
-  <option value="option4">--</option>
 </select>
 <div id='period' class="time">
 <pre>
-<form action='' method='post'>
 
 <span style='color:#3B5998;font-weight:normal;'>Start time:(hhmm)</span>
 
@@ -96,17 +244,16 @@ $j=$j+5;
 echo "</select>";
 ?>
 
-<input type='submit' name='submit' value='Submit' />
-</form>
+<input type='submit' name='submit' onclick='period()' value='Submit' />
 </pre>
 </div>
 <div id='duration' class="time">
 <pre>
-<form action='' method='post'>
+
 
 <span style='color:#3B5998;font-weight:normal;'>Start time:(hhmm)</span></br>
 <?php
-echo "Hrs:<select id='starth' name='starth'>";
+echo "Hrs:<select id='dstarth' name='starth'>";
 $i=0; 
 while($i<=24)
 {
@@ -114,7 +261,7 @@ echo "<option value='$i'>$i</option>";
 $i++;
 } 
 echo "</select>";
-echo " Mins:<select id='startm' name='startm'>";
+echo " Mins:<select id='dstartm' name='startm'>";
 $j=0; 
 while($j<=60)
 {
@@ -126,7 +273,7 @@ echo "</select>";
 </br></br><span style='color:#3B5998;font-weight:normal;'>Duration:(mm)</span></br>
 <?php
 
-echo "Mins:<select id='duration' name='duration'>";
+echo "Mins:<select id='dduration' name='duration'>";
 $j=5; 
 while($j<=60)
 {
@@ -135,17 +282,17 @@ $j=$j+5;
 } 
 echo "</select>";
 ?>
-</br><input type='submit' name='submit' value='Submit' />
-</form>
+</br><input type='submit' name='submit' onclick='duration()' value='Submit' />
+
 </pre>
 </div>
 <div id='frequency' class="time">
 <pre>
-<form action='' method='post'>
+
 
 <span style='color:#3B5998;font-weight:normal;'>Start time:(hhmm)</span></br>
 <?php
-echo "Hrs:<select id='starth' name='starth'>";
+echo "Hrs:<select id='fstarth' name='starth'>";
 $i=0; 
 while($i<=24)
 {
@@ -154,7 +301,7 @@ $i++;
 } 
 echo "</select>";
 echo "</br></br><span style='color:#3B5998;font-weight:normal;'>Duration:(mm)</span></br>";
-echo "Mins:<select id='duration' name='duration'>";
+echo "Mins:<select id='fduration' name='duration'>";
 $j=5; 
 while($j<=60)
 {
@@ -176,102 +323,15 @@ $i=$i+4;
 } 
 echo "</select>";
 ?>
-</br><input type='submit' name='submit' value='Submit' />
-</form>
+</br><input type='submit' name='submit' onclick='frequency()' value='Submit' />
+
 </pre>
 </div>
-<?php
-mysql_select_db($dbname) or die(mysql_error());
+</div>
 
-if(isset($_POST['submit']))
-{
-	
-	$starth = $_POST['starth'];
-	$startm = $_POST['startm'];
-	$stoph = $_POST['stoph'];
-	$stopm = $_POST['stopm'];
-	$frequency =$_POST['frequency'];
-	$duration =$_POST['duration'];
-	$repeath=$_POST['repeath'];
-	if($starth==24) //normalising time,, 24 is same as 00,, in 2400 and 0000
-		$starth=0;
-	if($stoph==24)
-		$stoph=0;
-	$start=$starth*100+$startm;
-	$stop=$stoph*100+$stopm;
-	
-	if($starth==24)
-		$starth=0;
-	if($stoph==24)
-		$stoph=0;
-	if($duration!=NULL and $repeath==NULL)
-	{
-		$stop=$starth*100 + normalize($startm,$duration);
-		if($stop>2400)
-			$stop=$stop-2400;
-	}
-
-	if($repeath!=NULL)
-	{	$i=$start;
-		
-		while($i<=2400)
-		{
-			$start=$i;
-			$stop=$start+$duration;
-			if($stop>2400)
-				break;
-			if($stop==2400)
-				$stop=0;
-			$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
-			//if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))		
-			//	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-			//echo $query;
-			if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-				echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-			
-				
-			
-			$i=$i+$repeath*100;		
-		}
-		echo "</br><span class='success'><b>New Time schedule added</b></span>";	
-	}
-		if($repeath==NULL)
-			if($start==$stop)
-			{
-				echo"<span class='error'>Start time and stop time cannot be same</span>";	
-			}
-			else
-			{
-				$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
-			//if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))		
-			//	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-			//echo $query;
-				if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-					echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-				else
-					echo "</br><span class='success'><b>New Time schedule added</b></span>";
-			}
-		
-}
-
-
-if(isset($_GET['del'])) //deleting the entry
-{
-
-	$del = $_GET['del'];
-
-	$query = "DELETE FROM tasks WHERE id='$del'";
-
-	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-	echo "INSERT failed: $query<br/><div class='error'>".mysql_error()."</div><br/><br/>";
-
-}
-
-
-display();
-
- ?>  
-
+<div id='display'>
+<?php display();?>
+</div>
      </div>
    
     <div class="span-5">
@@ -285,19 +345,6 @@ display();
 <?php //include_once "footer.php";?><?php
 include_once "app.php";?></div>
 <?php
-function normalize($startm,$duration)
-{
-	$tot=$startm+$duration;
-	if ($tot>=60)
-		{
-			$tot=$tot-60;
-			$tot=100+$tot;
-			return $tot;
-		}
-	return $tot;
-
-
-}
 
 
 
@@ -314,8 +361,9 @@ function display()
 		{	$id=$row['id'];
 			$start=$row['start'];
 			$stop=$row['stop']; //online offline or new, 1, 0, 2
+			$item=$row['item'];
 		
-			echo "<span style='color:#3B5998;font-weight:normal;'><b>Task ".$i."</b>&nbsp; &nbsp; Start time : $start &nbsp; &nbsp; Stop time : $stop </span>&nbsp;<a href='?del=$id'><b>DELETE</b></a><hr>";
+			echo "<span style='color:#3B5998;font-weight:normal;'><b>Task ".$i."</b>&nbsp; &nbsp;<b>Item:</b> $item&nbsp; &nbsp; Start time : $start &nbsp; &nbsp; Stop time : $stop </span>&nbsp;<a href='javascript:del($id)'><b>DELETE</b></a><hr>";
 			$i++;
 		
 		
