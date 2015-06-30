@@ -140,32 +140,59 @@ echo "</select>";
 </pre>
 </div>
 <div id='frequency' class="time">
-<pre> 
+<pre>
 <form action='' method='post'>
-<span style='color:#3B5998;font-weight:normal;
-    '>Start time:(hhmm)</span>
-<input type='text' id='start' name='start'/>
-<span style='color:#3B5998;font-weight:normal;
-    '>Frequency:(No. repetitions in a day)</span>
-<input type='text' id='frequency' name='frequency'/>
-<span style='color:#3B5998;font-weight:normal;
-    '>Duration:(mm)</span>
-<input type='text' id='duration' name='duration'/>
-<input type='submit' name='submit' value='Submit' />
+
+<span style='color:#3B5998;font-weight:normal;'>Start time:(hhmm)</span></br>
+<?php
+echo "Hrs:<select id='starth' name='starth'>";
+$i=0; 
+while($i<=24)
+{
+echo "<option value='$i'>$i</option>";
+$i++;
+} 
+echo "</select>";
+echo "</br></br><span style='color:#3B5998;font-weight:normal;'>Duration:(mm)</span></br>";
+echo "Mins:<select id='duration' name='duration'>";
+$j=5; 
+while($j<=60)
+{
+echo "<option value='$j'>$j</option>";
+$j=$j+5;
+} 
+echo "</select>";
+
+?>
+</br></br><span style='color:#3B5998;font-weight:normal;'>Repeat after every :(hh)</span></br>
+<?php
+
+echo "Hrs:<select id='repeath' name='repeath'>";
+$i=4; 
+while($i<=12)
+{
+echo "<option value='$i'>$i</option>";
+$i=$i+4;
+} 
+echo "</select>";
+?>
+</br><input type='submit' name='submit' value='Submit' />
 </form>
 </pre>
 </div>
 <?php
 mysql_select_db($dbname) or die(mysql_error());
+
 if(isset($_POST['submit']))
 {
-
+	
 	$starth = $_POST['starth'];
 	$startm = $_POST['startm'];
 	$stoph = $_POST['stoph'];
 	$stopm = $_POST['stopm'];
 	$frequency =$_POST['frequency'];
 	$duration =$_POST['duration'];
+	$repeath=$_POST['repeath'];
 	if($starth==24) //normalising time,, 24 is same as 00,, in 2400 and 0000
 		$starth=0;
 	if($stoph==24)
@@ -177,33 +204,53 @@ if(isset($_POST['submit']))
 		$starth=0;
 	if($stoph==24)
 		$stoph=0;
-	if($duration!=NULL)
+	if($duration!=NULL and $repeath==NULL)
 	{
 		$stop=$starth*100 + normalize($startm,$duration);
 		if($stop>2400)
 			$stop=$stop-2400;
 	}
 
-	if($frequency==NULL)
-	{
-	
-	}
-	if($start==$stop)
-	{
-		echo"<span class='error'>$start, $stop,Start time and stop time cannot be same</span>";	
-	}
-	else
-		{		
-		$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
-		//if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-		//	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-			//echo $query;
-		if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-			echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-		else
-			echo "</br><span class='success'><b>New Time schedule added</b></span>";
+	if($repeath!=NULL)
+	{	$i=$start;
 		
-		}
+		while($i<=2400)
+		{
+			$start=$i;
+			$stop=$start+$duration;
+			if($stop>2400)
+				break;
+			if($stop==2400)
+				$stop=0;
+			$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
+			//if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))		
+			//	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+			//echo $query;
+			if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+				echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+			else
+				echo "</br><span class='success'><b>New Time schedule added</b></span>";
+			
+			$i=$i+$repeath*100;		
+		}	
+	}
+		if($repeath==NULL)
+			if($start==$stop)
+			{
+				echo"<span class='error'>Start time and stop time cannot be same</span>";	
+			}
+			else
+			{
+				$query="INSERT INTO tasks VALUES". "(DEFAULT,'$start','$stop', '1')";
+			//if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))		
+			//	echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+			//echo $query;
+				if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+					echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+				else
+					echo "</br><span class='success'><b>New Time schedule added</b></span>";
+			}
+		
 }
 
 
@@ -220,26 +267,7 @@ if(isset($_GET['del'])) //deleting the entry
 }
 
 
-$query="SELECT * FROM tasks"; //displaying scheduled tasks
-$results=mysql_query($query);
-if (mysql_num_rows($results) > 0) 
-{	$i=1;
-	echo "</br></br><h2>Scheduled Tasks</h2>";		
-	while($row=mysql_fetch_assoc($results)) 
-	{	$id=$row['id'];
-		$start=$row['start'];
-		$stop=$row['stop']; //online offline or new, 1, 0, 2
-		
-		echo "<span style='color:#3B5998;font-weight:normal;'><b>Task ".$i."</b>&nbsp; &nbsp; Start time : $start &nbsp; &nbsp; Stop time : $stop </span>&nbsp;<a href='?del=$id'><b>DELETE</b></a><hr>";
-		$i++;
-		
-		
-	}
-}
-else
-{
-	echo "</br><div class='notice'><b>No Tasks scheduled yet.</b></div>";
-}
+display();
 
  ?>  
 
@@ -267,6 +295,35 @@ function normalize($startm,$duration)
 		}
 	return $tot;
 
+
+}
+
+
+
+function display()
+{
+	$dbname='iot';
+	mysql_select_db($dbname) or die(mysql_error());
+	$query="SELECT * FROM tasks"; //displaying scheduled tasks
+	$results=mysql_query($query);
+	if (mysql_num_rows($results) > 0) 
+	{	$i=1;
+		echo "</br></br><h2>Scheduled Tasks</h2>";		
+		while($row=mysql_fetch_assoc($results)) 
+		{	$id=$row['id'];
+			$start=$row['start'];
+			$stop=$row['stop']; //online offline or new, 1, 0, 2
+		
+			echo "<span style='color:#3B5998;font-weight:normal;'><b>Task ".$i."</b>&nbsp; &nbsp; Start time : $start &nbsp; &nbsp; Stop time : $stop </span>&nbsp;<a href='?del=$id'><b>DELETE</b></a><hr>";
+			$i++;
+		
+		
+		}
+	}
+	else
+	{
+		echo "</br><div class='notice'><b>No Tasks scheduled yet.</b></div>";
+	}
 
 }
 ?>
