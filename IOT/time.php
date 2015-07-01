@@ -362,8 +362,11 @@ function display()
 			$start=$row['start'];
 			$stop=$row['stop']; //online offline or new, 1, 0, 2
 			$item=$row['item'];
-		
-			echo "<span style='color:#3B5998;font-weight:normal;'><b>Task ".$i."</b>&nbsp; &nbsp;<b>Item:</b> $item&nbsp; &nbsp; Start time : $start &nbsp; &nbsp; Stop time : $stop </span>&nbsp;<a href='javascript:del($id)'><b>DELETE</b></a><hr>";
+			if($start>=2100 or $start<=300)
+				$status="<span style='color:#FF0000;font-weight:bold;'>Shouldn't water plants during night</span>";
+			else
+				$status='';
+			echo "<span style='color:#3B5998;font-weight:normal;'><b>Task ".$i."</b>&nbsp; &nbsp;<b>Item:</b> $item&nbsp; &nbsp; Start time : $start &nbsp; &nbsp; Stop time : $stop </span>&nbsp;<a href='javascript:del($id)'><b>DELETE</b></a> &nbsp; $status<hr>";
 			$i++;
 		
 		

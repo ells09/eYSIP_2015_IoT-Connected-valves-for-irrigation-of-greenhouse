@@ -3,7 +3,8 @@ include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 spMQTTDebug::Enable();
 $q=$_GET["q"]; //q is the macid received
-if($q!=0 and $q!=1 )
+$gid=$_GET['gid'];
+if($q!=0 and $q!=1 )//individual on/off
 {
 //echo "Hello World".$q;
 mysql_select_db($dbname) or die(mysql_error());
@@ -39,11 +40,11 @@ $results=mysql_query($query);
 	
 
 }
-else 
+else //switching whole group on/off
 {
 mysql_select_db($dbname) or die(mysql_error());
 
-$query="SELECT * FROM devices";
+$query="SELECT * FROM devices where devices.group='$gid'";
 $results=mysql_query($query);
 	if (mysql_num_rows($results) > 0) 
 	{
