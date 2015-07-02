@@ -75,7 +75,6 @@ $results=mysql_query($query);
 		while($row = mysql_fetch_assoc($results))
 		{
 				$macid=$row['macid'];
-				
 				command($macid,$q);	//switch 
 
 							
@@ -121,7 +120,7 @@ $mqtt->ping();
 $msg = str_repeat($action, 1);
 
 //echo "</br>esp/valve/".$macid;
-$mqtt->publish('esp/valve/'.$macid, $msg, 0, 1, 0, 1);
+$mqtt->publish('esp/'.$macid, $msg, 0, 1, 0, 1);
 //echo "</br>Success";
 }
 function normalize($startm,$duration)

@@ -2,12 +2,6 @@
 //include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 
-
-//$start_time = time(); //defining starting time
-//ini_set('display_errors', 'Off'); //for suppressing errors and notices
-//$start_time = time();
-//echo $start_time;
-
 $mqtt = new spMQTT('tcp://localhost:1883/');
 
 spMQTTDebug::Enable();
@@ -20,7 +14,7 @@ if (!$connected) {
 }
 
 
-$topics['esp/valve/battery'] = 1;
+$topics['esp/battery'] = 1;
 //$topics['esp/valve/state'] = 1;
 
 $mqtt->subscribe($topics);

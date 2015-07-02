@@ -44,8 +44,9 @@ if(isset($_GET['grp']))
 			
 			if($action==1) //changing into user readable form
 				$action='OFF';
-			else
+			elseif($action==0)
 				$action='ON';
+			
 		
 			if($status==0) //offline
 				$status="<span style='color: #FF0000;'>Device offline, please check..</span>";

@@ -23,7 +23,36 @@ date_default_timezone_set('Asia/Kolkata');//setting IST
 <script type='text/javascript' src='script/jquery-ui-1.7.2.custom.min.js'></script>
 <script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
 <script type='text/javascript'>
-function add()
+function addsen()
+{
+
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  document.getElementById("sensors").innerHTML="Adding...";
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("sensors").innerHTML=xmlhttp.responseText;
+    }
+  }
+var sensor = document.getElementById("sensor").value;
+xmlhttp.open('GET','managedev.php?sensor='+sensor,true);
+//alert("Hello! I am an alert box!!");
+xmlhttp.send();
+}
+</script>
+<script type='text/javascript'>
+function addgrp()
 {
 
 if (window.XMLHttpRequest)
@@ -82,7 +111,9 @@ xmlhttp.send();
 <script type='text/javascript'>
 function update(macid)
 {
+var sentyp=document.getElementById("sensoradd").value;
 var gid=document.getElementById("groupadd").value;
+var dname=document.getElementById("dname").value;
 //alert(macid);
 if (window.XMLHttpRequest)
   {
@@ -103,7 +134,7 @@ xmlhttp.onreadystatechange=function()
     document.getElementById(macid).innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open('GET','managedev.php?update='+macid+'&gid='+gid,true);
+xmlhttp.open('GET','managedev.php?update='+macid+'&gid='+gid+'&dname='+dname+'&sentyp='+sentyp,true);
 //alert(macid);
 xmlhttp.send();
 }
@@ -124,7 +155,7 @@ xmlhttp.onreadystatechange=function()
   {
 	if (xmlhttp.readyState==3 && xmlhttp.status==200)
 	  {
-	  document.getElementById(macid).innerHTML="deleting...";
+	  document.getElementById("groups").innerHTML="deleting...";
 	  }
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
@@ -132,6 +163,34 @@ xmlhttp.onreadystatechange=function()
     }
   }
 xmlhttp.open('GET','managedev.php?del='+str,true);
+//alert(macid);
+xmlhttp.send();
+}
+</script>
+<script type='text/javascript'>
+function dels(str)
+{
+
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  document.getElementById("sensors").innerHTML="deleting...";
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("sensors").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open('GET','managedev.php?dels='+str,true);
 //alert(macid);
 xmlhttp.send();
 }
@@ -149,10 +208,44 @@ Your browser doesnt support javascript</noscript>
     <div class=" span-12 append-4">
 <h2 style='color:#3B5998;font-weight:normal;' >Manage</h2>
 <pre>
+<span style='color:#3B5998;font-weight:normal;'>Add Sensor :</span>
+<input type='text' id='sensor' name='sensor'/>
+
+<button id='button' type='button' onclick='addsen();' value='add'>Add</button>
+
+</pre>
+<div id='sensors'>
+
+<?php
+mysql_select_db($dbname) or die(mysql_error());
+$query="SELECT * FROM sensors"; //displaying groups
+$results=mysql_query($query);
+if (mysql_num_rows($results) > 0) 
+{	$i=1;
+	echo "</br></br><h2>Sensors available</h2>";		
+	while($row=mysql_fetch_assoc($results)) 
+	{	//$id=$row['id'];
+		$sensor=$row['name'];
+		
+		
+		echo "<span style='color:#3B5998;font-weight:normal;'><b>".$i.".</b>&nbsp; &nbsp; <b>$sensor </b>&nbsp; &nbsp;<a href="."javascript:dels('$sensor')".">delete</a></span><hr>";
+		$i++;
+		
+		
+	}
+}
+else
+{
+	echo "</br><div class='notice'><b>No Sensors added yet.</b></div>";
+}
+
+ ?>  
+</div>
+<pre>
 <span style='color:#3B5998;font-weight:normal;'>Add Group :</span>
 <input type='text' id='group' name='group'/>
 
-<button id='button' type='button' onclick='add();' value='add'>Add</button>
+<button id='button' type='button' onclick='addgrp();' value='add'>Add</button>
 
 </pre>
 <div id='groups'>
@@ -211,7 +304,7 @@ if (mysql_num_rows($results) > 0)
 }
 else
 {
-	echo "</br><div class='notice'><b>No groups created yet.</b></div>";
+	echo "</br><div class='notice'><b>No devices added yet.</b></div>";
 }
 
  ?>  

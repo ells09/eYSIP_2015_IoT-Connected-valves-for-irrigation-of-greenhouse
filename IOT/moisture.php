@@ -2,12 +2,6 @@
 //include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 
-
-//$start_time = time(); //defining starting time
-//ini_set('display_errors', 'Off'); //for suppressing errors and notices
-//$start_time = time();
-//echo $start_time;
-
 $mqtt = new spMQTT('tcp://localhost:1883/');
 
 spMQTTDebug::Enable();
@@ -20,7 +14,7 @@ if (!$connected) {
 }
 
 
-$topics['esp'] = 1;
+$topics['esp/moisture'] = 1;
 //$topics['esp/valve/state'] = 1;
 
 $mqtt->subscribe($topics);
@@ -39,38 +33,22 @@ $mqtt->loop('default_subscribe_callback');
 function default_subscribe_callback($mqtt, $topic, $com) {
     printf("Message received: Topic=%s, Message=%s\n</br>", $topic, $com);
 	//entering macids into database
-	$dbhost  = 'localhost';    
+	$dbhost  = 'localhost';    //bottleneck for me,, included file cant work
 	$dbname  = 'iot'; 
 	$dbuser  = 'root';    
 	$dbpass  = 'jayant123';    
-
+	$macid   =substr($com,0,17);
+	$moval = substr($com,17);
 	mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());
-	$query="SELECT * FROM devices where"."(macid='$com')";
 	mysql_select_db($dbname) or die(mysql_error());
-	$results=mysql_query($query);
-	if (mysql_num_rows($results) > 0) 
-	{
-	  echo "</br>Match found</br>";
-	$query = "UPDATE devices SET status ='1' WHERE macid='$com'";
+	$query = "UPDATE devices SET status ='1', action='$moval' WHERE macid='$macid'";
 	echo $query;
 	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-		echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
+		echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";
 	else
-	echo "</br>Device status updated";//marked online
-	//mark the device online
-	}
-	else 
-	{
-	echo "</br>Match not found</br>";
-	//inserting the new found device into the device folder
-	$query="INSERT INTO devices VALUES". "(DEFAULT,NULL,'$com',NULL,2,NULL, DEFAULT,NULL)";
-	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-		echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
-	else
-	echo "New device added";
-}
+	echo "</br>Moisture status updated";//marked online and battery marked
 mysql_close();
-	//$mqtt->close(); //same with this line
+	$mqtt->close(); //same with this line
 	//$mqtt->unsubscribe($topics); //adding this line helped in removing the infinite wait
 	
 }
