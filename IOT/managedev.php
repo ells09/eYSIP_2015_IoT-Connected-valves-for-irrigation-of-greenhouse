@@ -68,8 +68,8 @@ if($update!=null)
 	$grp=mysql_fetch_assoc($grps);
 	$name=$grp['name'];
 	if($name=='')
-		$name="Not allotted";
-	$query = "UPDATE devices SET devices.group = '$gid' WHERE devices.macid = '$update'"; //updating item with group id
+		$name="<span style='color: #0088FF;'><b>New Device Found</b></span>";
+	$query = "UPDATE devices SET devices.group = '$gid', devices.status='1' WHERE devices.macid = '$update'"; //updating item with group id
 				
 	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 		echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";

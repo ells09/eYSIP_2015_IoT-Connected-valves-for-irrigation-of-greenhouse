@@ -10,6 +10,8 @@ $starth=date('H');
 $startm=date('i');
 $start=$starth*100+$startm;
 $stop=$starth*100+normalize($startm,$duration);
+if($stop>=2400)
+	$stop=$stop-2400;
 if($q!=0 and $q!=1 )//individual on/off
 {
 //echo "Hello World".$q;

@@ -11,7 +11,19 @@ $grp=$_GET["grp"];
 if(isset($_GET['grp']))
 {
 	echo " <button id='1' type='button' onclick='updateall(this.value)' value='1'>Switch all ON</button>";
-		echo " <button id='0' type='button' onclick='updateall(this.value)' value='0'>Switch all OFF</button><hr>";
+	echo " <button id='0' type='button' onclick='updateall(this.value)' value='0'>Switch all OFF</button>";
+	echo "</br></br><span style='color:#3B5998;font-weight:normal;'>Duration:(mm)</span></br>";
+
+	echo "Mins:<select id='duration' name='duration'>";
+	$j=5; 
+	while($j<=60)
+	{
+	echo "<option value='$j'>$j</option>";
+	$j=$j+5;
+	} 
+	echo "</select><hr>";
+	
+
 	mysql_select_db($dbname) or die(mysql_error());
 	$query="SELECT name FROM groups WHERE id='$grp'";
 	$grps=mysql_query($query);

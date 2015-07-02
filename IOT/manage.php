@@ -201,7 +201,7 @@ if (mysql_num_rows($results) > 0)
 		$grp=mysql_fetch_assoc($grps);
 		$name=$grp['name'];
 		if($name=='')
-			$name="Not allotted";
+			$name="<span style='color: #0088FF;'><b>New Device Found</b></span>";
 		
 		echo "".$i.". <span id='$macid' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $macid &nbsp; &nbsp;<b>Group:</b> $name &nbsp; &nbsp;<a href="."javascript:edit('$macid')".">edit</a></span><hr>";
 		$i++;

@@ -28,7 +28,7 @@ function showgrp(grp)
 {
 if (grp=='')
   {
-  document.getElementById('controls').innerHTML='hola';
+  document.getElementById('controls').innerHTML='';
   return;
   } 
 if (window.XMLHttpRequest)
@@ -58,7 +58,7 @@ xmlhttp.send();
 <script type='text/javascript'>
 function update(str)
 {
-var duration=5;
+var duration=document.getElementById('duration').value;
 //alert(duration);
 if (window.XMLHttpRequest)
   {
@@ -87,7 +87,7 @@ xmlhttp.send();
 function updateall(str)
 {
 var gid=document.getElementById('groups').value;
-var duration=5;
+var duration=document.getElementById('duration').value;
 
 if (window.XMLHttpRequest)
   {

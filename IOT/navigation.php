@@ -8,7 +8,7 @@ echo"
           <li id='disco'><a href='devdis.php'>Devices</a>
 <span id='disco'></span></li>
 <li id='manage'><a href='manage.php'>Manage</a><span id='manage'></span></li>
-<li id='others'><a href='#'>Others</a><span id='others'></span></li>";   
+";   
 
 echo"</ul></div>";
 ?>
