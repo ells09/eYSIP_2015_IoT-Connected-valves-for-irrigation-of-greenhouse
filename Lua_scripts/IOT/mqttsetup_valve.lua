@@ -6,7 +6,7 @@
 
 --#################################################
  
---program name : mqttSetup.lua
+--program name : mqttsetup_valve.lua
 --author name : Kevin Dsouza
 --This program creates a mqtt client and waits for the message
 
@@ -33,10 +33,24 @@ m:on('message', function(conn, topic, data)
 
 
 -- Use the data to turn the valve ON or OFF 
-  if data == "ON" then 
+  if data == "1" then 
     startValve() 
-  elseif data == "OFF" then 
+  elseif data == "0" then 
     stopValve()
+  elseif data == "2" then 
+     if (adc.read(0) < 200) then 
+        m:publish('esp/battery',macid .. '0',0,0, function(conn) print('battery status sent') end)
+     else
+        m:publish('esp/battery',macid .. '1',0,0, function(conn) print('battery status sent') end)
+     end 
+         
+  elseif data == "3" then 
+   flag = 0                           -- initializing the flag 
+   if flag == 0 then 
+       wifi.sta.disconnect()          -- disconnect from WiFi 
+       flag = 1 
+      -- print("here") 
+   end 
   end 
  
 end)
@@ -49,8 +63,8 @@ end)
 -- Example  :  startValve() 
 function startValve()
 
-gpio.write(pin4,gpio.HIGH)
-gpio.write(pin5,gpio.LOW)
+gpio.write(pin12,gpio.HIGH)
+gpio.write(pin14,gpio.LOW)
 
 doValve()
 end
@@ -63,8 +77,8 @@ end
 -- Example  :  stopValve() 
 function stopValve()
 
-gpio.write(pin4,gpio.LOW)
-gpio.write(pin5,gpio.HIGH)
+gpio.write(pin12,gpio.LOW)
+gpio.write(pin14,gpio.HIGH)
 
 doValve()
 end
@@ -77,9 +91,9 @@ end
 -- Example  :  doValve() 
 function doValve()
 
-  gpio.write(pin2,gpio.HIGH) 
+  gpio.write(pin13,gpio.HIGH) 
   tmr.delay(20000)
-  gpio.write(pin2,gpio.LOW)
+  gpio.write(pin13,gpio.LOW)
   
 end
 

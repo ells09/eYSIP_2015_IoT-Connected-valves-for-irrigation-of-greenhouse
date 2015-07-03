@@ -37,24 +37,24 @@ tmr.alarm(1, 5000, 1, function()
     else
         tmr.stop(1)
         print('IP is '..wifi.sta.getip())
-        dofile('mqttSetup.lua')                      --calling mqtt script 
+        dofile('mqttsetup_valve.lua')                      --calling mqtt script 
         tries = 0                                                              
         tmr.alarm(1, 1000, 1, function()
         
        
 --checking for mqtt connection
-           if not c and tries < 15 then 
+           if not c and tries < 50 then 
              tries = tries + 1                      -- incrementing the number of tries 
-             m:connect('192.168.43.184',1883, 0, 
+             m:connect('192.168.43.177',1883, 0, 
               function(conn) 
                 print('mqtt connected')
-                m:publish('esp/valve',macid,0,0,  function(conn)         -- publish the device macid to the broker to identify itself 
+                m:publish('esp',macid,0,0,  function(conn)         -- publish the device macid to the broker to identify itself 
                 
                 c = true
 
                 if c then
 
-                topic = 'esp/valve/'..wifi.sta.getmac()                  -- topic to subscribe to 
+                topic = 'esp/'..macid                 -- topic to subscribe to 
                 
                 m:subscribe(topic,0, 
                     function(conn) print('subscribing success') end)     -- subscribing to topic 
@@ -65,21 +65,11 @@ tmr.alarm(1, 5000, 1, function()
          
               end)
             
-          elseif tries >= 15 then                -- If the number of tries are greater than a certain threshold go to sleep 
+          elseif tries >= 50 then                -- If the number of tries are greater than a certain threshold go to sleep 
              node.dsleep(0)   
           end 
-
        
-       --   tmr.alarm(1,900000,1,function()
-       --       if (adc.read(0) < 725) then 
-         --         m:publish(topic,'0',0,0, function(conn) print('battery status sent') end)
      
-           --   else
-            --      m:publish(topic  ,'1',0,0, function(conn) print('battery status sent') end)
-     
-           --   end
-        --  end)
-
           if flag ==1 then 
           tmr.alarm(1,10000,1,function()
 

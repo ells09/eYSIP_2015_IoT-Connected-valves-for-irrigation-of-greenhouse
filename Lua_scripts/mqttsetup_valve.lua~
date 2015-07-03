@@ -6,7 +6,7 @@
 
 --#################################################
  
---program name : mqttSetup.lua
+--program name : mqttsetup_valve.lua
 --author name : Kevin Dsouza
 --This program creates a mqtt client and waits for the message
 
@@ -37,6 +37,13 @@ m:on('message', function(conn, topic, data)
     startValve() 
   elseif data == "OFF" then 
     stopValve()
+  elseif data == "sleep" then 
+   flag = 0                           -- initializing the flag 
+   if flag == 0 then 
+       wifi.sta.disconnect()          -- disconnect from WiFi 
+       flag = 1 
+      -- print("here") 
+   end 
   end 
  
 end)
