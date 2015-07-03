@@ -1,4 +1,12 @@
 <?php
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: subscribe.php
+*Author: Jayant Solanki
+*Runs continously in cli mode ,
+*subscribing to esp topic for getting macid from esp modules
+*/
 //include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 
@@ -36,6 +44,15 @@ $mqtt->loop('default_subscribe_callback');
  * @param string $topic
  * @param string $message
  */
+  /*
+ *
+ * Function Name: default_subscribe_callback($mqtt, $topic, $com)
+ * Input: $mqtt, fro sending mqtt connection, $topic, for sending topic, $com, for storing message
+ * Output: updates the table with new macid, used for device discovery
+ * Logic: msg format is 'macid'
+ * 
+ *
+ */
 function default_subscribe_callback($mqtt, $topic, $com) {
     printf("Message received: Topic=%s, Message=%s\n</br>", $topic, $com);
 	//entering macids into database
@@ -45,12 +62,12 @@ function default_subscribe_callback($mqtt, $topic, $com) {
 	$dbpass  = 'jayant123';    
 
 	mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());
-	$query="SELECT * FROM devices where"."(macid='$com')";
+	$query="SELECT * FROM devices where"."(macid='$com')"; //getting available macids from table to verify for redundancy
 	mysql_select_db($dbname) or die(mysql_error());
 	$results=mysql_query($query);
 	if (mysql_num_rows($results) > 0) 
 	{
-	  echo "</br>Match found</br>";
+	  echo "</br>Match found</br>"; //not a new device, just mark it online
 	$query = "UPDATE devices SET status ='1' WHERE macid='$com'";
 	echo $query;
 	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))

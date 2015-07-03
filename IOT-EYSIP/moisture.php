@@ -1,4 +1,12 @@
 <?php
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: moisture.php
+*Author: Jayant Solanki
+*Runs continously in cli mode ,
+*subscribing to esp topic for getting moisture status from esp modules
+*/
 //include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 
@@ -6,7 +14,7 @@ $mqtt = new spMQTT('tcp://192.168.43.177:1883/');
 
 spMQTTDebug::Enable();
 
-//$mqtt->setAuth('sskaje', '123123');
+
 $mqtt->setKeepalive(3600);
 $connected = $mqtt->connect();
 if (!$connected) {
@@ -19,7 +27,7 @@ $topics['esp/moisture'] = 1;
 
 $mqtt->subscribe($topics);
 
-#$mqtt->unsubscribe(array_keys($topics));
+
 
 $mqtt->loop('default_subscribe_callback');
 
@@ -29,6 +37,16 @@ $mqtt->loop('default_subscribe_callback');
  * @param spMQTT $mqtt
  * @param string $topic
  * @param string $message
+ */
+  /*
+ *
+ * Function Name: default_subscribe_callback($mqtt, $topic, $com)
+ * Input: $mqtt, fro sending mqtt connection, $topic, for sending topic, $com, for storing message
+ * Output: updates the moisture status to the corresponding macid in device table
+ * each msg has macid, which will enable the script to identify the device from which the msg came
+ * Logic: msg format is 'macid+moisturestatus'
+ * 
+ *
  */
 function default_subscribe_callback($mqtt, $topic, $com) {
     printf("Message received: Topic=%s, Message=%s\n</br>", $topic, $com);

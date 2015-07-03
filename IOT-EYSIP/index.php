@@ -1,5 +1,13 @@
 <?php 
-include_once 'iotdb.php';
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: index.php
+*Author: Jayant Solanki
+*This is the homepage of the website, which will basically show the maunal control options
+*for different sensors
+*/
+include_once 'iotdb.php'; //importing database config file.
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1); //for suppressing errors and notices
@@ -24,6 +32,15 @@ error_reporting(-1); //for suppressing errors and notices
 <script type='text/javascript' src='script/jquery-ui-1.7.2.custom.min.js'></script>
 <script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: showgrp(grp)
+ * Input: grp, stores group id
+ * Output: returns the sensors under the group id
+ * Logic: It is a AJAX call
+ * Example Call: showgrp(34)
+ *
+ */
 function showgrp(grp)
 {
 if (grp=='')
@@ -56,6 +73,15 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: update(str)
+ * Input: str, stores group id, duration, stores the time in minutes
+ * Output: send ON/OFF signal to the esp
+ * Logic: It is a AJAX call
+ * Example Call: update(12-14-AA-54-76-BB)
+ *
+ */
 function update(str)
 {
 var duration=document.getElementById('duration').value;
@@ -84,6 +110,15 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: updateall(str)
+ * Input: str, stores 0/1, duration, stores the time in minutes, gid, stores group id
+ * Output: send ON/OFF signal to all esp of one group
+ * Logic: It is a AJAX call
+ * Example Call: updateall(1)
+ *
+ */
 function updateall(str)
 {
 var gid=document.getElementById('groups').value;
@@ -142,7 +177,7 @@ Your browser doesnt support javascript</noscript>
 Select group <select name='groups' id='groups' onchange='showgrp(this.value)'>
 <option selected="true" disabled='disabled'>Choose</option>
 <?php 
-mysql_select_db($dbname) or die(mysql_error());
+mysql_select_db($dbname) or die(mysql_error()); //connecting to database
 $query="SELECT * FROM groups"; //displaying groups
 $results=mysql_query($query);
 if (mysql_num_rows($results) > 0) 
@@ -151,7 +186,7 @@ if (mysql_num_rows($results) > 0)
 		{	//$id=$row['id'];
 			$group=$row['name'];
 			$id=$row['id'];
-			echo " <option value='$id'>$group</option>";
+			echo " <option value='$id'>$group</option>"; //showing options for selecting a group
 		}
 	}
 ?>
@@ -164,7 +199,7 @@ if (mysql_num_rows($results) > 0)
     </div>
 
     <div class="span-5">
-         <?php include_once "navigation.php";?>
+         <?php include_once "navigation.php"; //including a navigation menu ?> 
     </div>
 </div> <!-- end of container div -->
    

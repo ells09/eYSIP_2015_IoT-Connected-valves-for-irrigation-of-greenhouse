@@ -1,4 +1,12 @@
 <?php
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: battery.php
+*Author: Jayant Solanki
+*Runs continously in cli mode ,
+*subscribing to esp/battery for getting battery status from esp modules
+*/
 //include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 
@@ -6,7 +14,7 @@ $mqtt = new spMQTT('tcp://192.168.43.177:1883/');
 
 spMQTTDebug::Enable();
 
-//$mqtt->setAuth('sskaje', '123123');
+
 $mqtt->setKeepalive(3600);
 $connected = $mqtt->connect();
 if (!$connected) {
@@ -30,6 +38,16 @@ $mqtt->loop('default_subscribe_callback');
  * @param string $topic
  * @param string $message
  */
+ /*
+ *
+ * Function Name: default_subscribe_callback($mqtt, $topic, $com)
+ * Input: $mqtt, fro sending mqtt connection, $topic, for sending topic, $com, for storing message
+ * Output: updates the battery status to the corresponding macid in device table
+ * each msg has macid, which will enable the script to identify the device from which the msg came
+ * Logic: msg format is 'macid+batterystatus'
+ * 
+ *
+ */
 function default_subscribe_callback($mqtt, $topic, $com) {
     printf("Message received: Topic=%s, Message=%s\n</br>", $topic, $com);
 	//entering macids into database
@@ -37,8 +55,8 @@ function default_subscribe_callback($mqtt, $topic, $com) {
 	$dbname  = 'iot'; 
 	$dbuser  = 'root';    
 	$dbpass  = 'jayant123';    
-	$macid   =substr($com,0,17);
-	$batstatus = substr($com,17);
+	$macid   =substr($com,0,17); // getting macid
+	$batstatus = substr($com,17); // getting battery status
 	mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());
 	mysql_select_db($dbname) or die(mysql_error());
 	$query = "UPDATE devices SET devices.status ='1', devices.battery='$batstatus' WHERE macid='$macid'";

@@ -1,5 +1,13 @@
 
 <?php
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: managedev.php
+*Author: Jayant Solanki
+*It is called in AJAX mode, performing administrator work for the user i.e., adding removing
+* sensors, groups, editing devices, alotting them groups and type of sensor
+*/
 include 'iotdb.php';
 $q=$_GET["q"]; //q is the group name received
 $macid=$_GET['edit'];
@@ -17,7 +25,7 @@ if($q!=null)
 	mysql_select_db($dbname) or die(mysql_error());
 	$query="SELECT * FROM groups where"."(name='$q')";
 	$results=mysql_query($query);
-	if (mysql_num_rows($results) > 0) 
+	if (mysql_num_rows($results) > 0) //check for unique group name
 	{
 	echo "<span class='error'>Enter Unique group name</span>";
 	}
@@ -62,7 +70,7 @@ if($sensor!=null)
 	mysql_select_db($dbname) or die(mysql_error());
 	$query="SELECT * FROM sensors where"."(name='$sensor')";
 	$results=mysql_query($query);
-	if (mysql_num_rows($results) > 0) 
+	if (mysql_num_rows($results) > 0) //sheck for unique sensor name
 	{
 	echo "<span class='error'>Enter Unique sensor name</span>";
 	}
@@ -78,7 +86,7 @@ if($sensor!=null)
 	}	
 	
 
-	$query="SELECT * FROM sensors"; //displaying groups
+	$query="SELECT * FROM sensors"; //displaying sensors
 	$results=mysql_query($query);
 	if (mysql_num_rows($results) > 0) 
 	{	$i=1;
@@ -101,14 +109,14 @@ if($sensor!=null)
 	
 
 }
-if($macid!=null)
+if($macid!=null) //update group and sensor type for slected deviceS
 {
 
 echo "<span id='$macid' style='color:#3B5998;font-weight:normal;'>&nbsp;<b>Allot group and sensor type</b>  </br><b>&nbsp; &nbsp;</b><input type='text' name='dname' id='dname'> <b>Name </b></br><b>MAC id:</b> $macid &nbsp; &nbsp; ".groups()."&nbsp;".sensors()."<button id='$macid' type='button' onclick="."update('$macid')".">Update</button></span><hr>";
 
 }
 
-if($update!=null)
+if($update!=null) //perform the updatation task
 {
 	
 	mysql_select_db($dbname) or die(mysql_error());
@@ -127,7 +135,7 @@ if($update!=null)
 	
 }
 
-if($del!=null)
+if($del!=null)//perform deletion task for group
 {
 	
 	$query = "DELETE FROM groups WHERE name='$del'";
@@ -157,7 +165,7 @@ if($del!=null)
 	
 	
 }
-if($dels!=null)
+if($dels!=null) //perfrom deletion task for sensors
 {
 	
 	$query = "DELETE FROM sensors WHERE name='$dels'";
@@ -187,7 +195,14 @@ if($dels!=null)
 	
 	
 }
-
+ /*
+ *
+ * Function Name: groups()
+ * Input: -
+ * Output: displays the selection menu for group
+ * 
+ *
+ */
 function groups()
 {
 $dbname='iot';
@@ -216,6 +231,14 @@ else
 echo "</select>";
 
 }
+ /*
+ *
+ * Function Name: sensors()
+ * Input: -
+ * Output: displays the selection menu for group
+ * 
+ *
+ */
 function sensors()
 {
 $dbname='iot';

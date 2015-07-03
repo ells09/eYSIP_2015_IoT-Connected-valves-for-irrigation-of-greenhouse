@@ -1,4 +1,12 @@
 <?php
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: tasks.php
+*Author: Jayant Solanki
+*Runs continously in cli mode , executing the scheduled tasks based upon start and stop time
+*
+*/
 include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 date_default_timezone_set('Asia/Kolkata');//setting IST
@@ -106,6 +114,16 @@ else
 echo "No scheduled tasks exist";
 }
 
+ /*
+ *
+ * Function Name: command($macid,$action)
+ * Input: $ macid for macid, and $action for defining 0/1 for OFF/ON commands
+ * Output: publish ON/OFF commands to esp device.
+ * each msg has macid, which will enable the script to generate a macid based topic(esp/macid)
+ * Logic: msg format is 0, 1, 2, for OFF, ON and battery status.
+ * 
+ *
+ */
 function command($macid,$action) //for sending mqtt commands
 {
 //$mqtt->setAuth('sskaje', '123123');
@@ -115,12 +133,12 @@ if (!$connected) {
     die(" Mosca MQTT Server is Offline\n");
 }
 
-$mqtt->ping();
+$mqtt->ping(); //keepalive check,, if false, then again reconnect to broker
 
 $msg = str_repeat($action, 1);
 
 //echo "</br>esp/valve/".$macid;
-$mqtt->publish('esp/valve/'.$macid, $msg, 0, 1, 0, 1);
+$mqtt->publish('esp/valve/'.$macid, $msg, 0, 1, 0, 1); //send command to esp module.
 echo "</br>Success";
 }
 
