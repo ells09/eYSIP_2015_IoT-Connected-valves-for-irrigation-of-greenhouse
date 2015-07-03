@@ -1,4 +1,11 @@
 <?php 
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: control.php
+*Author: Jayant Solanki
+*this is the page called in AJAX mode, displaying all the manual switch controls for esp modules
+*/
 include_once 'iotdb.php';
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
@@ -8,7 +15,7 @@ error_reporting(-1); //for suppressing errors and notices
 
 <?php
 $grp=$_GET["grp"];
-if(isset($_GET['grp']))
+if(isset($_GET['grp']))//group selection
 {
 	echo " <button id='1' type='button' onclick='updateall(this.value)' value='1'>Switch all ON</button>";
 	echo " <button id='0' type='button' onclick='updateall(this.value)' value='0'>Switch all OFF</button>";

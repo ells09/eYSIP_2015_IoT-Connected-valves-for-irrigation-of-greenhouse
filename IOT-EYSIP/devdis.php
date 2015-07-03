@@ -1,4 +1,11 @@
 <?php 
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: devdis.php
+*Author: Jayant Solanki
+*It is for displaying devices information
+*/
 include_once 'iotdb.php';
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
@@ -25,6 +32,15 @@ error_reporting(-1); //for suppressing errors and notices
 <script type='text/javascript' src='script/jquery-ui-1.7.2.custom.min.js'></script>
 <script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: showgrp(grp)
+ * Input: grp, stores group id
+ * Output: returns the sensors under the group id
+ * Logic: It is a AJAX call
+ * Example Call: showgrp(34)
+ *
+ */
 function showgrp(grp)
 {
 if (grp=='')
@@ -57,6 +73,15 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: checkbat(bat)
+ * Input: bat, stores group id
+ * Output: checks for battery status of sensors under group id
+ * Logic: It is a AJAX call
+ * Example Call: checkbat(34)
+ *
+ */
 function checkbat(bat)
 {
 if (bat=='')

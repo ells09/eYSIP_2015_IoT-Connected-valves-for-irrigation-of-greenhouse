@@ -1,4 +1,11 @@
 <?php
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: com.php
+*Author: Jayant Solanki
+*sends manual on/off command to esp devices, and also sets timeout for them
+*/
 include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 date_default_timezone_set('Asia/Kolkata');//setting IST
@@ -105,7 +112,16 @@ $results=mysql_query($query);
 	}
 
 }
-
+ /*
+ *
+ * Function Name: command($macid,$action)
+ * Input: $ macid for macid, and $action for defining 0/1 for OFF/ON commands
+ * Output: publish ON/OFF commands to esp device.
+ * each msg has macid, which will enable the script to generate a macid based topic(esp/macid)
+ * Logic: msg format is 0, 1, 2, for OFF, ON and battery status.
+ * 
+ *
+ */
 function command($macid,$action) //for sending mqtt commands
 {
 

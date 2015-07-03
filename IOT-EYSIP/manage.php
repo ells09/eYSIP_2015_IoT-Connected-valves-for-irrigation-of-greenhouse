@@ -1,4 +1,11 @@
 <?php 
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: manage.php
+*Author: Jayant Solanki
+*user interface for managing devices
+*/
 include_once 'iotdb.php';?>
 <?php
 date_default_timezone_set('Asia/Kolkata');//setting IST
@@ -23,6 +30,15 @@ date_default_timezone_set('Asia/Kolkata');//setting IST
 <script type='text/javascript' src='script/jquery-ui-1.7.2.custom.min.js'></script>
 <script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: addsen()
+ * Input: -
+ * Output: adds sensor in sensors table
+ * Logic: It is a AJAX call
+ * Example Call: addsen()
+ *
+ */
 function addsen()
 {
 
@@ -52,6 +68,15 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: addgrp()
+ * Input: -
+ * Output: adds group in groups table
+ * Logic: It is a AJAX call
+ * Example Call: addgrp()
+ *
+ */
 function addgrp()
 {
 
@@ -81,6 +106,15 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: edit()
+ * Input: -macid, for stroing mac id of esp modules
+ * Output: updates device table with group name, device name and sensor type
+ * Logic: It is a AJAX call
+ * Example Call: edit()
+ *
+ */
 function edit(macid)
 {
 
@@ -109,6 +143,15 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: update(macid)
+ * Input: -macid, for stroing mac id of esp modules
+ * Output: updates device table with group name, device name and sensor type
+ * Logic: It is a AJAX call
+ * Example Call: update(12-1A-34-54-DC-AA)
+ *
+ */
 function update(macid)
 {
 var sentyp=document.getElementById("sensoradd").value;
@@ -140,6 +183,15 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: del(str)
+ * Input: -str, for stroing group id
+ * Output: deletes the group
+ * Logic: It is a AJAX call
+ * Example Call: del(12-1A-34-54-DC-AA)
+ *
+ */
 function del(str)
 {
 
@@ -168,6 +220,15 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: dels(str)
+ * Input: -str, for stroing sensor id
+ * Output: deletes the sensor
+ * Logic: It is a AJAX call
+ * Example Call: dels(12-1A-34-54-DC-AA)
+ *
+ */
 function dels(str)
 {
 

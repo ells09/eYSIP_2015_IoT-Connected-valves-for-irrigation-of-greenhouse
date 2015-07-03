@@ -1,4 +1,11 @@
 <?php
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: dd.php
+*Author: Jayant Solanki
+*It is called in JAX mode by devdis.php for displaying devices information
+*/
 include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 spMQTTDebug::Enable();
@@ -39,6 +46,16 @@ if($bat!=NULL)
 
 	display($bat);
 }
+ /*
+ *
+ * Function Name: command($macid,$action)
+ * Input: $ macid for macid, and $action for defining 0/1 for OFF/ON commands
+ * Output: publish battery status commands to esp device.
+ * each msg has macid, which will enable the script to generate a macid based topic(esp/macid)
+ * Logic: msg format is 0, 1, 2, for OFF, ON and battery status.
+ * 
+ *
+ */
 function command($macid,$action) //for sending mqtt commands
 	{
 		//$mqtt->setAuth('sskaje', '123123');
@@ -57,7 +74,15 @@ function command($macid,$action) //for sending mqtt commands
 		$mqtt->publish('esp/'.$macid, $msg, 0, 1, 0, 1);
 		//echo "</br>Success";
 	}
-
+ /*
+ *
+ * Function Name: display()
+ * Input: -
+ * Output: display devices under a group
+ * Logic: fetches devices from devices table where group = group id
+ * 
+ *
+ */
 function display($grp)
 {
 	$dbname='iot';

@@ -1,4 +1,12 @@
 <?php 
+/*
+*Project: eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse
+*Team members: Jayant Solanki, Kevin D'Souza
+*File name: time.php
+*Author: Jayant Solanki
+*display options to user for time scheduling
+*options are, period, duration and frequency
+*/
 include_once 'iotdb.php';?>
 <?php
 date_default_timezone_set('Asia/Kolkata');//setting IST
@@ -23,6 +31,7 @@ date_default_timezone_set('Asia/Kolkata');//setting IST
 <script type='text/javascript' src='script/jquery-ui-1.7.2.custom.min.js'></script>
 <script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
 <script type='text/javascript'>
+//for displaying divs based on selected option
 $(document).ready(function () {
   $('.choose').hide();
   //$('#period').show();
@@ -33,6 +42,7 @@ $(document).ready(function () {
 });
 </script>
 <script type='text/javascript'>
+//for displaying divs based on selected option
 $(document).ready(function () {
   $('.time').hide();
   $('#period').show();
@@ -43,6 +53,15 @@ $(document).ready(function () {
 });
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: del(str)
+ * Input: str, task id, for deletion
+ * Output: deletes the selected task
+ * Logic: It is a AJAX call
+ * Example Call: del(12)
+ *
+ */
 function del(str)
 {
 
@@ -70,13 +89,22 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: period()
+ * Input: -
+ * Output: updates tasks table with start and stop time for a group, in period format
+ * Logic: It is a AJAX call
+ * Example Call: period()
+ *
+ */
 function period()
 {
-var grp=document.getElementById("grps").value;
-var starth=document.getElementById("starth").value;
-var startm=document.getElementById("startm").value;
-var stoph=document.getElementById("stoph").value;
-var stopm=document.getElementById("stopm").value;
+var grp=document.getElementById("grps").value;//group id
+var starth=document.getElementById("starth").value;//hours
+var startm=document.getElementById("startm").value;//minutes
+var stoph=document.getElementById("stoph").value;//hours
+var stopm=document.getElementById("stopm").value;//minutes
 if (window.XMLHttpRequest)
   {
   xmlhttp=new XMLHttpRequest();
@@ -101,12 +129,21 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: duration()
+ * Input: -
+ * Output: updates tasks table with start and stop time for a group, in duration format
+ * Logic: It is a AJAX call
+ * Example Call: duration()
+ *
+ */
 function duration()
 {
-var grp=document.getElementById("grps").value;
-var starth=document.getElementById("dstarth").value;
-var startm=document.getElementById("dstartm").value;
-var duration=document.getElementById("dduration").value;
+var grp=document.getElementById("grps").value; //group id
+var starth=document.getElementById("dstarth").value;//start hour
+var startm=document.getElementById("dstartm").value;//start minutes
+var duration=document.getElementById("dduration").value;//duration of running
 
 if (window.XMLHttpRequest)
   {
@@ -132,12 +169,21 @@ xmlhttp.send();
 }
 </script>
 <script type='text/javascript'>
+/*
+ *
+ * Function Name: frequency()
+ * Input: -
+ * Output: updates tasks table with start and stop time for a group, in frequency format
+ * Logic: It is a AJAX call
+ * Example Call: frequency()
+ *
+ */
 function frequency()
 {
-var grp=document.getElementById("grps").value;
-var starth=document.getElementById("fstarth").value;
-var duration=document.getElementById("fduration").value;
-var repeath=document.getElementById("repeath").value;
+var grp=document.getElementById("grps").value; //group id
+var starth=document.getElementById("fstarth").value; //start hours
+var duration=document.getElementById("fduration").value; //duration in minutes
+var repeath=document.getElementById("repeath").value; //repeat for 4/8/12 hrs every day
 
 if (window.XMLHttpRequest)
   {
@@ -347,7 +393,15 @@ include_once "app.php";?></div>
 <?php
 
 
-
+/*
+ *
+ * Function Name: display()
+ * Input: -
+ * Output: display the scheduled tasks
+ * Logic: fetches tasks from tasks table
+ * 
+ *
+ */
 function display()
 {
 	$dbname='iot';
