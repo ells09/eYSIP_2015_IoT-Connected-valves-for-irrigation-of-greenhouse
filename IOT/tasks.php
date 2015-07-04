@@ -109,7 +109,7 @@ echo "No scheduled tasks exist";
 function command($macid,$action) //for sending mqtt commands
 {
 //$mqtt->setAuth('sskaje', '123123');
-$mqtt = new spMQTT('tcp://localhost:1883/');
+$mqtt = new spMQTT('tcp://192.168.43.177:1883/');
 $connected = $mqtt->connect();
 if (!$connected) {
     die(" Mosca MQTT Server is Offline\n");

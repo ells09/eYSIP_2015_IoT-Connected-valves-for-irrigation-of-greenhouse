@@ -33,18 +33,24 @@ if(isset($_GET['grp']))
 	$query="SELECT * FROM devices WHERE devices.group=$grp";
 	$results=mysql_query($query);
 	if (mysql_num_rows($results) > 0) 
-	{	$i=1;
+	{	$i=0;
 		
 			
 		while($row=mysql_fetch_assoc($results)) 
 		{	
+			$i++;
 			$macid=$row['macid'];
 			$action=$row['action'];
 			$status=$row['status']; //online offline or new, 1, 0, 2
-			
+			$name=$row['name'];
+			$type=$row['type'];
+			$query="SELECT name FROM sensors WHERE id='$type'";
+			$sens=mysql_query($query);
+			$sen=mysql_fetch_assoc($sens);
+			$sname=$sen['name'];
 			if($action==1) //changing into user readable form
 				$action='OFF';
-			elseif($action==0)
+			else
 				$action='ON';
 			
 		
@@ -55,7 +61,7 @@ if(isset($_GET['grp']))
 			elseif($status==2) //new device
 				$status="<span style='color: #0088FF;'>New Device Found</span>";
 
-			echo "<b style='color:#3B5998;font-weight:bold;'>Valve ".$i."</b>&nbsp; &nbsp;<bstyle='color:#3B5998;font-weight:bold;'>Group:</b> $name &nbsp;<span style='color:#3B5998;font-weight:normal;'><button class='item' id='$macid' type='button' onclick='update(this.value)' value='$macid'>Switch ".$action."</button> ".$status."<hr>";
+			echo "<b style='color:#3B5998;font-weight:bold;'>".$i.". $sname sensor: $name </b>&nbsp; &nbsp;<bstyle='color:#3B5998;font-weight:bold;'>Group:</b> $name &nbsp;<span style='color:#3B5998;font-weight:normal;'><button class='item' id='$macid' type='button' onclick='update(this.value)' value='$macid'>Switch ".$action."</button> ".$status."<hr>";
 			
 		
 		

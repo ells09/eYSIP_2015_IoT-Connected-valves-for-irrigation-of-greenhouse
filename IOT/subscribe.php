@@ -8,7 +8,7 @@ require(__DIR__ . '/spMQTT.class.php');
 //$start_time = time();
 //echo $start_time;
 
-$mqtt = new spMQTT('tcp://localhost:1883/');
+$mqtt = new spMQTT('tcp://192.168.43.177:1883/');
 
 spMQTTDebug::Enable();
 
@@ -63,7 +63,7 @@ function default_subscribe_callback($mqtt, $topic, $com) {
 	{
 	echo "</br>Match not found</br>";
 	//inserting the new found device into the device folder
-	$query="INSERT INTO devices VALUES". "(DEFAULT,NULL,'$com',NULL,2,NULL, DEFAULT,NULL)";
+	$query="INSERT INTO devices VALUES". "(DEFAULT,NULL,'$com',NULL,2,1, DEFAULT,NULL,NULL)";
 	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 		echo "INSERT failed: $query<br/>".mysql_error()."<br/><br/>";
 	else

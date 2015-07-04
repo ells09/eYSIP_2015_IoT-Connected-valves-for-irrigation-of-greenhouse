@@ -109,7 +109,7 @@ $results=mysql_query($query);
 function command($macid,$action) //for sending mqtt commands
 {
 
-$mqtt = new spMQTT('tcp://localhost:1883/');
+$mqtt = new spMQTT('tcp://192.168.43.177:1883/');
 $connected = $mqtt->connect();
 if (!$connected) {
     die("<span class='error'> Mosca MQTT Server is Offline\n</span>");

@@ -63,6 +63,10 @@ if(isset($_GET['grp']))
 			{
 				echo"<span class='error'>Start time and stop time cannot be same</span>";	
 			}
+			elseif($start>=$stop)
+			{
+				echo"<span class='error'>Start time cannot be greater than stop time </span>";	
+			}
 			else
 			{
 				$query="SELECT name FROM groups WHERE id='$grp'";

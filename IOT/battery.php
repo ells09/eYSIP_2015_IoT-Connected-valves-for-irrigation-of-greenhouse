@@ -2,7 +2,7 @@
 //include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 
-$mqtt = new spMQTT('tcp://localhost:1883/');
+$mqtt = new spMQTT('tcp://192.168.43.177:1883/');
 
 spMQTTDebug::Enable();
 
@@ -41,14 +41,14 @@ function default_subscribe_callback($mqtt, $topic, $com) {
 	$batstatus = substr($com,17);
 	mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());
 	mysql_select_db($dbname) or die(mysql_error());
-	$query = "UPDATE devices SET status ='1', battery='$batstatus' WHERE macid='$macid'";
+	$query = "UPDATE devices SET devices.status ='1', devices.battery='$batstatus' WHERE macid='$macid'";
 	echo $query;
 	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 		echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";
 	else
 	echo "</br>Device battery status updated";//marked online and battery marked
 mysql_close();
-	$mqtt->close(); //same with this line
+	//$mqtt->close(); //same with this line
 	//$mqtt->unsubscribe($topics); //adding this line helped in removing the infinite wait
 	
 }

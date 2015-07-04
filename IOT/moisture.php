@@ -2,7 +2,7 @@
 //include 'iotdb.php';
 require(__DIR__ . '/spMQTT.class.php');
 
-$mqtt = new spMQTT('tcp://localhost:1883/');
+$mqtt = new spMQTT('tcp://192.168.43.177:1883/');
 
 spMQTTDebug::Enable();
 
@@ -48,7 +48,7 @@ function default_subscribe_callback($mqtt, $topic, $com) {
 	else
 	echo "</br>Moisture status updated";//marked online and battery marked
 mysql_close();
-	$mqtt->close(); //same with this line
+	//$mqtt->close(); //same with this line
 	//$mqtt->unsubscribe($topics); //adding this line helped in removing the infinite wait
 	
 }

@@ -7,6 +7,6 @@
 <br/>
 </div>
 <div class='span-9 push-3'><br/>
-(c)<a target=blank href="http://www.e-yantra.org/">E-Yantra</a>, IIT Mumbai <!-- built date day/month/year -->
+(c)<a target=blank href="http://www.e-yantra.org/">e-Yantra</a>, IIT Bombay <!-- built date day/month/year -->
 </div>
 

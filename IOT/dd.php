@@ -24,15 +24,11 @@ if($bat!=NULL)
 				
 				command($macid,2);	//publish for getting bat status
 							
-				$query = "UPDATE devices SET battery ='3', status='1' WHERE macid='$macid'"; //updating battery status in device table and also changing new device status,, initially keeping status as offline and bat unavailable
+				$query = "UPDATE devices SET battery ='3', status='0' WHERE macid='$macid'"; //updating battery status in device table and also changing new device status,, initially keeping status as offline and bat unavailable
 				//echo "</br>".$query;
 				if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
 					echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";
-				sleep(1);
-				$query = "UPDATE devices SET battery ='2', status='0' WHERE macid='$macid'"; //updating battery status in device table and also changing new device status,, initially keeping status as offline and bat unavailable
-				//echo "</br>".$query;
-				if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
-					echo "UPDATE failed: $query<br/>".mysql_error()."<br/><br/>";
+				
 				
 			
 			
@@ -46,7 +42,7 @@ if($bat!=NULL)
 function command($macid,$action) //for sending mqtt commands
 	{
 		//$mqtt->setAuth('sskaje', '123123');
-		$mqtt = new spMQTT('tcp://localhost:1883/');
+		$mqtt = new spMQTT('tcp://192.168.43.177:1883/');
 		$connected = $mqtt->connect();
 		if (!$connected) 
 			{
@@ -91,18 +87,18 @@ function display($grp)
 			$rows=mysql_fetch_assoc($grps);
 			$sensor=$rows['name'];
 			if($battery==1) //changing into user readable form
-				$battery="<span style='color: #00CC00;'><b>Healthy</b></span>";
+				$batterymsg="<span style='color: #00CC00;'><b>Healthy</b></span>";
 			elseif($battery==2)
-				$battery="<span style='color: #FF0000;'><b>Status unavailable</b></span>";
+				$batterymsg="<span style='color: #FF0000;'><b>Status unavailable</b></span>";
 			elseif($battery==3)
-				$battery="<span style='color: #0000FF;'><b>Checking status...</b></span>";
-			else
-				$battery="<span style='color: #FF0000;'><b>Replace battery</b></span>";
+				$batterymsg="<span style='color: #0000FF;'><b>Checking status...</b></span>";
+			elseif ($battery==0)
+				$batterymsg="<span style='color: #FF0000;'><b>Replace battery</b></span>";
 			
 			if($action==1) //changing into user readable form
-				$action="<b><span style='color: #FFAA00;'>Valve is Open</b></span>";
+				$action="<b><span style='color: #FFAA00;'>device is ON, $action</b></span>";
 			elseif($action==0)
-				$action="<b><span style='color: #AA6600;'>Valve is Closed</span></b>";
+				$action="<b><span style='color: #AA6600;'>device is OFF, , $action</span></b>";
 			else 
 				$action="<b><span style='color: #AA6600;'>Moisture value is ".$action."</span></b>";
 		
@@ -113,7 +109,7 @@ function display($grp)
 			elseif($status==2) //new device
 				$status="<span style='color: #0088FF;'><b>New Device Found</b></span>";
 
-			echo "<h4 style='color:#3B5998;font-weight:normal;'><b>".$i.". Name:</b>$dname :".$status."</h4><b style='color:#3B5998;font-weight:normal;'>Group: $name</b></br><b style='color:#3B5998;font-weight:normal;'>Type: $sensor</b></br><b style='color:#3B5998;font-weight:normal;'>Device MAC ID</b> :<span style='color:#3B5998;font-weight:normal;'> ".$macid. "</span></br>".$action."</br> <b style='color:#3B5998;font-weight:normal;'>Battery status : </b> ".$battery." </br><b style='color:#3B5998;font-weight:normal;'>Last updated : </b>$seen <hr></span>";
+			echo "<h4 style='color:#3B5998;font-weight:normal;'><b>".$i.". Name:</b>$dname :".$status."</h4><b style='color:#3B5998;font-weight:normal;'>Group: $name</b></br><b style='color:#3B5998;font-weight:normal;'>Type: $sensor</b></br><b style='color:#3B5998;font-weight:normal;'>Device MAC ID</b> :<span style='color:#3B5998;font-weight:normal;'> ".$macid. "</span></br>".$action."</br> <b style='color:#3B5998;font-weight:normal;'>Battery status : </b> ".$batterymsg." </br><b style='color:#3B5998;font-weight:normal;'>Last updated : </b>$seen <hr></span>";
 			$i++;
 		
 		
