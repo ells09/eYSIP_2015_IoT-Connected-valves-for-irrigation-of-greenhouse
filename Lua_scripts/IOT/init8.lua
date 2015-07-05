@@ -79,18 +79,6 @@ tmr.alarm(1, 5000, 1, function()
      
            --   end
         --  end)
-
-          if flag ==1 then 
-          tmr.alarm(1,10000,1,function()
-
-           -- print("hey")
-            node.restart()                -- restart the ESP module after a certain duration form when the flag is set to zero 
-            tmr.stop(1)
-
-          end)
-
-          end 
-
           
         end)
         

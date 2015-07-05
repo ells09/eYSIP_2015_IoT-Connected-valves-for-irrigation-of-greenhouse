@@ -69,7 +69,8 @@ tmr.alarm(1, 5000, 1, function()
              node.dsleep(0)   
           end 
 
-       
+         -- print("hi1")
+
        --   tmr.alarm(1,900000,1,function()
        --       if (adc.read(0) < 725) then 
          --         m:publish(topic,'0',0,0, function(conn) print('battery status sent') end)
@@ -79,24 +80,12 @@ tmr.alarm(1, 5000, 1, function()
      
            --   end
         --  end)
-
-          if flag ==1 then 
-          tmr.alarm(1,10000,1,function()
-
-           -- print("hey")
-            node.restart()                -- restart the ESP module after a certain duration form when the flag is set to zero 
-            tmr.stop(1)
-
-          end)
-
-          end 
-
           
         end)
         
    end
 
-  
+  -- print("hi")
 end)
 
 

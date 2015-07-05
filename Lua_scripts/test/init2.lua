@@ -10,7 +10,7 @@
 --configure wifi 
 
 wifi.setmode(wifi.STATION)
-wifi.sta.config('your-ssid','your-passwd')
+wifi.sta.config('Connectify-MyWiFi','987654321')
 wifi.sta.connect()
 
 --configure gpio pins according to revised pin map
@@ -36,7 +36,6 @@ tmr.alarm(1, 5000, 1, function()
 --checking for mqtt connection
 
           if not c then
---mqtt connect establishes connection with the MQTT broker 
              m:connect('192.168.89.105',1883, 0, 
               function(conn) 
                 print('mqtt connected')
