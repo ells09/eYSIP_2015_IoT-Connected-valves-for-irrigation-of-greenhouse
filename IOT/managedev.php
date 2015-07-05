@@ -8,6 +8,7 @@ $update=$_GET['update'];
 $gid=$_GET['gid'];
 $del=$_GET['del'];
 $dels=$_GET['dels'];
+$ddel=$_GET['ddel'];
 $dname=$_GET['dname'];
 $sensor=$_GET['sensor'];
 $sentyp=$_GET['sentyp'];
@@ -187,6 +188,42 @@ if($dels!=null)
 	
 	
 }
+if($ddel!=null)
+{
+	
+	$query = "DELETE FROM devices WHERE devices.macid='$ddel'";
+	if(!mysql_query($query,mysql_connect($dbhost, $dbuser, $dbpass)))
+	echo "INSERT failed: $query<br/><div class='error'>".mysql_error()."</div><br/><br/>";
+
+	$query="SELECT * FROM devices"; //displaying groups
+	$results=mysql_query($query);
+	if (mysql_num_rows($results) > 0) 
+	{	$i=1;
+		echo "</br></br><h2>Items available</h2>";		
+		while($row=mysql_fetch_assoc($results)) 
+		{	$macid=$row['macid'];
+			$group=$row['group'];
+			//$group=$row['name'];
+			$query="SELECT name FROM groups WHERE id='$group'";
+			$grps=mysql_query($query);
+			$grp=mysql_fetch_assoc($grps);
+			$name=$grp['name'];
+			if($name=='')
+			 	$name="<span style='color: #0088FF;'><b>New Device Found</b></span>";
+			echo "".$i.". <span id='$macid' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $macid &nbsp; &nbsp;<b>Group:</b> $name &nbsp; &nbsp;<a href="."javascript:edit('$macid')".">edit</a>&nbsp; &nbsp;<a href="."javascript:ddel('$macid')".">Delete</a></span><hr>";
+			$i++;
+			
+			
+		}
+	}
+	else
+	{
+		echo "</br><div class='notice'><b>No devices added yet.</b></div>";
+	}
+	
+	
+}
+
 
 function groups()
 {

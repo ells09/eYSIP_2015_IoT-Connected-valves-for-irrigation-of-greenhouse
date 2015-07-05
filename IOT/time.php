@@ -6,26 +6,17 @@ date_default_timezone_set('Asia/Kolkata');//setting IST
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Schedule</title>
 <?php include 'favicon.php';?>
 </head>
 
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/navigation.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print"> 
-<link rel="stylesheet" href="css/zebra_datepicker.css" type="text/css">
-<!--[if lt IE 8]>
-  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
-<![endif]-->
+<?php include_once 'css.php'; ?>
 <script type='text/javascript' src='script/jquery-1.9.1.min.js'></script>
-<script type='text/javascript' src='script/jquery-ui-1.7.2.custom.min.js'></script>
-<script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
 <script type='text/javascript'>
 $(document).ready(function () {
   $('.choose').hide();
-  //$('#period').show();
   $('#grps').change(function () {
     $('.choose').show();
     
@@ -35,7 +26,7 @@ $(document).ready(function () {
 <script type='text/javascript'>
 $(document).ready(function () {
   $('.time').hide();
-  $('#period').show();
+  //$('#period').show();
   $('#time').change(function () {
     $('.time').hide();
     $('#'+$(this).val()).show();
@@ -165,16 +156,19 @@ xmlhttp.send();
 <noscript>
 Your browser doesnt support javascript</noscript>
 <body >
+<div id="layout">
 
+<?php include_once "navigation.php";?>
 
-<div  id='container' class='wrapper container'>
-<div class=" span-12 append-4"><a STYLE='text-decoration:none'href='index.php'>
-      <h1 style='color:#3B5998;font-weight:normal;'>IOT Based Valve control</h1></a>
+<div  id="main">
+    <div class="header" ><a href='index.php'>
+      <h1>IOT Based Valve control</h1></a>
+      <h2>Add Schedule</h2>
     </div>
 
-    <div class=" span-12 append-4">
-<h2 style='color:#3B5998;font-weight:normal;' >Add Schedule</h2>
-<b style='color:#3B5998;font-weight:bold;'>Choose Group</b> <select id="grps">
+    <div class="content">
+
+<b>Choose Group</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="grps">
 <option selected="true" disabled='disabled'>Choose</option>
 <?php
 mysql_select_db($dbname) or die(mysql_error());
@@ -194,14 +188,15 @@ if (mysql_num_rows($results) > 0)
 
 </select>
 <div class='choose'>
-<b style='color:#3B5998;font-weight:bold;'>Type of Schedule</b><select id="time">
+<b>Type of Schedule</b>&nbsp;&nbsp;&nbsp;<select id="time">
+<option selected="true" disabled='disabled'>Choose</option>
   <option value="period">Period</option>
   <option value="duration">Duration</option>
   <option value="frequency">Frequency</option>
 </select>
 <div id='period' class="time">
 <pre>
-
+</br>
 <span style='color:#3B5998;font-weight:normal;'>Start time:(hhmm)</span>
 
 <?php
@@ -243,7 +238,7 @@ $j=$j+5;
 } 
 echo "</select>";
 ?>
-
+</br>
 <input type='submit' name='submit' onclick='period()' value='Submit' />
 </pre>
 </div>
@@ -282,7 +277,8 @@ $j=$j+5;
 } 
 echo "</select>";
 ?>
-</br><input type='submit' name='submit' onclick='duration()' value='Submit' />
+</br>
+<input type='submit' name='submit' onclick='duration()' value='Submit' />
 
 </pre>
 </div>
@@ -323,7 +319,8 @@ $i=$i+4;
 } 
 echo "</select>";
 ?>
-</br><input type='submit' name='submit' onclick='frequency()' value='Submit' />
+</br>
+<input type='submit' name='submit' onclick='frequency()' value='Submit' />
 
 </pre>
 </div>
@@ -332,16 +329,12 @@ echo "</select>";
 <div id='display'>
 <?php display();?>
 </div>
-     </div>
-   
-    <div class="span-5">
-         <?php include_once "navigation.php";?>
-    </div>
-</div> <!-- end of container div -->
+  </div><!-- end of content div -->
+
+    </div><!-- end of main div -->
+</div><!-- end of layout -->
    
 <div class="push"></div>
-
-<div class='container footer'>
 <?php //include_once "footer.php";?><?php
 include_once "app.php";?></div>
 <?php
@@ -379,6 +372,6 @@ function display()
 
 }
 ?>
-
+<script src="js/ui.js"></script>
 </body>
 </html>

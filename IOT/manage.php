@@ -6,22 +6,12 @@ date_default_timezone_set('Asia/Kolkata');//setting IST
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Manage Devices</title>
 <?php include 'favicon.php';?>
 </head>
-
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/navigation.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print"> 
-<link rel="stylesheet" href="css/zebra_datepicker.css" type="text/css">
-<!--[if lt IE 8]>
-  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
-<![endif]-->
-<script type='text/javascript' src='script/jquery-1.9.1.min.js'></script>
-<script type='text/javascript' src='script/jquery-ui-1.7.2.custom.min.js'></script>
-<script type='text/javascript' src='script/jquery.easing.1.3.js'></script>
+<?php include_once 'css.php'; ?>
 <script type='text/javascript'>
 function addsen()
 {
@@ -195,20 +185,49 @@ xmlhttp.open('GET','managedev.php?dels='+str,true);
 xmlhttp.send();
 }
 </script>
+<script type='text/javascript'>
+function ddel(macid)
+{
+
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	if (xmlhttp.readyState==3 && xmlhttp.status==200)
+	  {
+	  document.getElementById("items").innerHTML="deleting...";
+	  
+	  }
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("items").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open('GET','managedev.php?ddel='+macid,true);
+//alert(macid);
+xmlhttp.send();
+}
+</script>
 <noscript>
 Your browser doesnt support javascript</noscript>
 <body >
+<div id="layout">
+<?php include_once "navigation.php";?>
 
-
-<div  id='container' class='wrapper container'>
-<div class=" span-12 append-4"><a STYLE='text-decoration:none'href='index.php'>
-      <h1 style='color:#3B5998;font-weight:normal;'>IOT Based Valve control</h1></a>
+<div  id="main">
+<div class="header" ><a href='index.php'>
+      <h1>IOT Based Valve control</h1></a>
+      <h2>Manage Devices</h2>
     </div>
-
-    <div class=" span-12 append-4">
-<h2 style='color:#3B5998;font-weight:normal;' >Manage</h2>
+    <div class="content">
 <pre>
-<span style='color:#3B5998;font-weight:normal;'>Add Sensor :</span>
+<span><b>Add Sensor :</b></span>
 <input type='text' id='sensor' name='sensor'/>
 
 <button id='button' type='button' onclick='addsen();' value='add'>Add</button>
@@ -241,8 +260,9 @@ else
 
  ?>  
 </div>
+</br>
 <pre>
-<span style='color:#3B5998;font-weight:normal;'>Add Group :</span>
+<span><b>Add Group :</b></span>
 <input type='text' id='group' name='group'/>
 
 <button id='button' type='button' onclick='addgrp();' value='add'>Add</button>
@@ -296,7 +316,7 @@ if (mysql_num_rows($results) > 0)
 		if($name=='')
 			$name="<span style='color: #0088FF;'><b>New Device Found</b></span>";
 		
-		echo "".$i.". <span id='$macid' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $macid &nbsp; &nbsp;<b>Group:</b> $name &nbsp; &nbsp;<a href="."javascript:edit('$macid')".">edit</a></span><hr>";
+		echo "".$i.". <span id='$macid' style='color:#3B5998;font-weight:normal;'><b></b><b>MAC id:</b> $macid &nbsp; &nbsp;<b>Group:</b> $name &nbsp; &nbsp;<a href="."javascript:edit('$macid')".">edit</a>&nbsp; &nbsp;<a href="."javascript:ddel('$macid')".">Delete</a></span><hr>";
 		$i++;
 		
 		
@@ -309,21 +329,16 @@ else
 
  ?>  
 </div>
-     </div>
-   
-    <div class="span-5">
-         <?php include_once "navigation.php";?>
-    </div>
-</div> <!-- end of container div -->
+     </div><!-- end of content div -->
+
+    </div><!-- end of main div -->
+</div><!-- end of layout -->
    
 <div class="push"></div>
 
 <div class='container footer'>
 <?php //include_once "footer.php";?><?php
 include_once "app.php";?></div>
-<?php
-
-
-?>
+<script src="js/ui.js"></script>
 </body>
 </html>
