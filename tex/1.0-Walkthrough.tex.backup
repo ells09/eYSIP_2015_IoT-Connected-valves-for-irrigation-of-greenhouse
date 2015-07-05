@@ -17,31 +17,28 @@
 \item
   Installation of Ubuntu and literature review
 \item
-  Choice of batteries and further planning
+  Literature review 
 \item
-  ESP8266
+  ESP8266 WiFi module 
 \item
-  Working with ESP8266 
-\item
-  Design and testing of circuit for controlling solenoid valves
+  Circuit design and testing 
 \item
   nodeMCU firmware
 \item
-  Lua Scripts and Interfracing
-\item
   Protocols for IOT applications and MQTT
 \item
-  Working with openHAB
-\item
-  Working with alternate automation 'TheThingSystem'
-\item
-  MOSCA-Configuration and sample run on openHAB server
-\item
-  Working with the Broker
+  MOSCA broker 
+\item 
+  Database handling and UI design 
+\item 
+  Power analysis
+\item 
+  Additional features and notes 
+
 \end{enumerate}
 
 
-\vspace{10.3cm}
+\vspace{11.5cm}
 
 
 {\textbf{\LARGE{INSTALLATION} }   }
@@ -60,15 +57,18 @@
     Take care to disable secure boot before installation
   \item
     After installation if windows doesn't show in the boot options then
-    repair the GRUB from UBUNTU using \emph{boot repair}
+    repair the GRUB from UBUNTU using \emph{boot repair}.Have boot repair in a disc or pen-drive.
   \item
-    If you use face further problems use GRUB customizer from UBUNTU
+    If you use face further problems use GRUB customizer from UBUNTU.Install Grub customizer from software centre.
   \item
     Once Windows shows in boot options then change the Boot preference
-    order from windows
+    order from windows by going to the bios setup.
   \item
     In Sony systems while booting use \emph{ASSIST} key
   \end{enumerate}
+  
+for further information look up this repository 
+%www.github.com/
   
 \hfill
 {\Large\item\textbf{openHAB}}
@@ -88,10 +88,14 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   \item Extract the zip file to a suitable directory of your Linux system
 
   \end{enumerate}
+  
+\hfill
 
 {\Large\item\textbf{Installatio-of-Apache2-,-PHP-and-MySQL-LAMP-server}} 
 
-{\Large{About LAMP}}
+\vspace{0.5cm}
+
+{\underline{\Large{About LAMP}}}
 
   LAMP stack is a group of open source software used to get web servers up
   and running. The acronym stands for Linux, Apache, MySQL, and PHP. Since
@@ -105,10 +109,13 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   
 %  \begin{center}\rule{3in}{0.4pt}\end{center}
 
-  {\Large{\item{Step 1---Install Apache}}}
+  {\Large{\item{\textbf{Step 1---Install Apache}}}}
+  
+  \hfill
 
-  To install apache, open terminal and type in these commands: \textbf{For
-  Ubuntu} \texttt{sudo apt-get update}
+  To install apache, open terminal and type in these commands: \\
+  \textbf{For Ubuntu} \\
+  \texttt{sudo apt-get update} 
 
   \texttt{sudo apt-get install apache2}
 
@@ -124,26 +131,34 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   tune the firewall configuration. The below step needs to be performed as
   root user. The supplied configurations are called apache2 and
   apache2-ssl. They can be enabled via YaST, by adding them to
-  FW\_CONFIGURATIONS\_EXT in /etc/sysconfig/SuSEfirewall2
+  FW\_CONFIGURATIONS\_EXT in the following path /etc/sysconfig/SuSEfirewall2
+  
+  \vspace{0.5cm}
 
   \texttt{sysconf\_addword /etc/sysconfig/SuSEfirewall2 FW\_CONFIGURATIONS\_EXT apache2}
   \texttt{sysconf\_addword /etc/sysconfig/SuSEfirewall2 FW\_CONFIGURATIONS\_EXT apache2-ssl}
   \texttt{rcSuSEfirewall2 restart}
+  
+   \vspace{0.5cm}
 
   \textbf{Starting Server}
 
   Start the server and configure it to automatically start at boot time.
 
   \texttt{rcapache2 start} \texttt{chkconfig -a apache2}
+  
+   \vspace{0.5cm}
 
   {\Large{\item{Step 2---Install MySQL}}}
+  
+   \vspace{0.5cm}
 
   MySQL is a powerful database management system used for organizing and
   retrieving data
 
   To install MySQL, open terminal and type in these commands:
 
-  \textbf{For Ubuntu} sudo apt-get install mysql-server
+  \textbf{For Ubuntu} \\ sudo apt-get install mysql-server
   libapache2-mod-auth-mysql php5-mysql
 
   \textbf{For openSuse}
@@ -153,8 +168,11 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   \textbf{To start the server}
 
   \texttt{sudo systemctl start mysql.service}
+  
+   \vspace{1cm}
 
   {\Large{\item{Step 3---Install PHP}}}
+   \vspace{0.5cm}
 
   PHP is an open source web scripting language that is widely use to build
   dynamic webpages.
@@ -168,8 +186,10 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   \textbf{For openSuse}
 
   \texttt{sudo zypper in php5 php5-mysql apache2-mod\_php5}
+  
+   \vspace{0.5cm}
 
-  \textbf{Installing phpMyAdmin}
+  {\underline{\textbf{Installing phpMyAdmin}}}
 
   \textbf{For Ubuntu}
 
@@ -178,6 +198,7 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   \textbf{For OpenSuse}
 
   \texttt{sudo zypper in phpMyAdmin}
+   \vspace{0.5cm}
 
   Finally restart apache so that all of the changes take effect:
 
@@ -188,12 +209,14 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   \textbf{For openSuse}
 
   \texttt{sudo systemctl start apache2.service}
+   \vspace{0.5cm}
 
   \end{enumerate}
 
   
 
 {\Large{\item\textbf{Broker and nodejs}}} 
+ \vspace{0.5cm}
 
 Based on their use, there are two widely available MQTT brokers
 available on the web. 
@@ -210,17 +233,20 @@ We chose Mosca because it is:
 \item Usable inside ANY other Node.js app.
 
 \end{enumerate}
+ \vspace{0.5cm}
 
-{\Large{Installation}}
+{\Large{\textbf{Installation}}}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
 
-\paragraph{Installation on a OpenSuse system (version
+\textbf{Installation on a OpenSuse system (version
 13.1)}
 
 \textbf{Part 1} First install nodejs and npm if both are absent in your
 system.
 
+ \vspace{1cm}
+ 
 \textbf{Nodejs}
 
 \begin{quote}
@@ -234,16 +260,18 @@ system.
 \end{quote}
 
 If everything goes right (no errors) then proceed to second part.
+ \vspace{0.5cm}
 
 \textbf{Part 2}
 
-\paragraph{Installation of Mosca}
+\textbf{Installation of Mosca}
 
 \begin{quote}
 \texttt{npm install mosca}
 \end{quote}
 
 If everything goes write then you are good to go.
+ \vspace{0.5cm}
 
 \textbf{To start the broker} \textgreater{}\texttt{mosca}
 
@@ -253,10 +281,11 @@ installed on the system. Installation codes are:
 
 To start the database service
 \textgreater{}\texttt{sudo service mongod start}
+ \vspace{0.5cm}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
 
-\paragraph{Installation on an Ubuntu system (version
+\textbf{Installation on an Ubuntu system (version
 14.4)}
 
 \textbf{Part 1} First install nodejs and npm if both are absent in your
@@ -284,9 +313,11 @@ system.
 
 If everything goes right (no errors) then proceed to second part.
 
+ \vspace{0.3cm}
+
 \textbf{Part 2}
 
-\paragraph{Installation of Mosca}
+\textbf{Installation of Mosca}
 
 \begin{quote}
 \texttt{sudo npm install debug}
@@ -301,7 +332,11 @@ globally
 \texttt{sudo npm install daemon}
 \end{quote}
 
+
+
 If everything goes write then you are good to go.
+
+ \vspace{0.3cm}
 
 \textbf{To start the broker} \textgreater{}\texttt{mosca}
 
@@ -312,6 +347,8 @@ installed on the system. Installation codes are:
 
 To start the database service
 \textgreater{}\texttt{sudo service mongod start}
+
+ \vspace{0.5cm}
 
 {\Large{\textbf{Testing the broker}}}
 
@@ -368,7 +405,7 @@ Script for starting MQTT broker service, \textbf{mosca-app.js}
 
 To start the service type \textgreater{}\texttt{node mosca-app.js}
 
-Script for MQTT Publishing Client client-pub.js
+Script for MQTT Publishing Client \textbf{node client-pub.js}
 
 %\begin{Shaded}
 %\begin{Highlighting}[]
@@ -382,7 +419,7 @@ Script for MQTT Publishing Client client-pub.js
 %\end{Highlighting}
 %\end{Shaded}
 
-Script for MQTT Publishing Client client-sub.js
+Script for MQTT Publishing Client \textbf{node client-sub.js}
 
 %\begin{Shaded}
 %\begin{Highlighting}[]
@@ -401,16 +438,18 @@ Script for MQTT Publishing Client client-sub.js
 %\end{Shaded}
 
 Open a new Terminal and Execute above MQTT Subscription Client
-client-sub.js \textgreater{}`node client-sub.js'
+client-sub.js \textgreater{}\texttt{node client-pub.js}
 
 Now open a differnent Terminal and Execute above MQTT Subscription
-Client client-pub.js \textgreater{}`node client-pub.js'
+Client client-pub.js \textgreater{}\texttt{node client-sub.js}
 
 \textbf{Successful Output From client-sub.js terminal}
 
 \begin{quote}
 \texttt{Hello!}
 \end{quote}
+
+\vspace{0.5cm}
 
 {\Large{\textbf{Troubleshooting}}}
 
@@ -440,8 +479,12 @@ tcp port.
 \end{enumerate}
 
 
+{\LARGE{\textbf{Literature review}}}
+\vspace{0.5cm}
 
-{\Large{\textbf{The thing system - Architecture}}}
+\begin{itemize}
+
+{\Large{\item{\textbf{The Thing system - Architecture}}}}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
 
@@ -449,10 +492,12 @@ tcp port.
 %\centering
 %\includegraphics{http://thethingsystem.com/dev/images/thing.architecture.png}
 %\end{figure}
+\vspace{0.5cm}
 
 The steward is center of the system, monitoring and controlling all
 sorts of things, according to the directives it receives from various
 clients.
+\vspace{0.5cm}
 
 {\Large{\textbf{Communicating with
 Things}}}
@@ -475,6 +520,8 @@ with a thing.
 %\href{http://thethingsystem.com/dev/Simple-Thing-Protocol.html}{Simple Thing Protocol}.
 
 \end{enumerate}
+
+\vspace{0.5cm}
 
 {\Large{\textbf{Communication with
 clients}}}
@@ -502,22 +549,18 @@ clients}}}
 %page}
 
 
+{\textbf{\item{\Large{Solenoid valves}}}}
 
-\vspace{8.5cm}
-{\textbf{\Large{Solenoid valves}}}
-
-\hfill 
+\vspace{0.3cm}
 
   Found a pdf explaining different types of solenoid valves and their
   power consumption.Holding amperes in case of latching Solenoid valves is
   for momentary time of around 20-50 ms reducing power consumption
-  significantly. Here's the link
+  significantly. Here's the link %
 
-\hfill
+\vspace{0.3cm}
 
-{\textbf{\Large{Latching solenoid valves}}}
-
-\hfill
+{\textbf{\item{\Large{Latching solenoid valves}}}}
 
   Some of the specifications of the latching solenoid valve related to our
   applications are:
@@ -534,7 +577,7 @@ clients}}}
     operating pressure upto 6 bar
   \end{itemize}
   
-
+\vspace{0.4cm}
 
   \textbf{Key points to note:}
 
@@ -561,7 +604,7 @@ clients}}}
 
 \hfill
 
-{\textbf{\Large{Batteries}}}
+{\textbf{\item{\Large{Batteries}}}}
 
 \hfill
 
@@ -618,7 +661,7 @@ applications. Some of the important features of these batteries are:
 
 \hfill
 
-{\Large{\textbf{Power consumption}}}
+{\Large{\item{\textbf{Power consumption}}}}
 
 \begin{enumerate}
 
@@ -637,6 +680,7 @@ wiki
 
 \end{enumerate}
 
+\end{itemize}
 \hfill
 
 {\Large{\textbf{Tasks to accomplish}}}
@@ -668,8 +712,10 @@ wiki
 \end{enumerate}
 
 
-\vspace{16cm}
+\vspace{5cm}
 {\LARGE{\textbf{ESP8266 WiFi module}}}
+
+\vspace{0.5cm}
 
 ESP8266 is a low power WIFI module which is very much suitable for our
 irrigation application. Some of the important features of the ESP8266
@@ -752,7 +798,7 @@ for IoT applications.
   the installation procedure
 \end{enumerate}
 
-
+\vspace{0.5cm}
 
 {\Large{\textbf{MQTT in ESP8266}}}
 
@@ -775,11 +821,11 @@ for IoT applications.
  % \href{https://github.com/Imroy/pubsubclient}{pubsubclient}
 \end{itemize}
 
+\vspace{0.5cm}
+
 {\Large{\textbf{Troubleshooting}}}
 
 \begin{enumerate}
-
-
 
 \item
   After installation of Arduino if an error saying \emph{JAVA exception
@@ -791,9 +837,15 @@ for IoT applications.
 \end{enumerate}
 
 
-\vspace{4.7cm}
+\vspace{3.5cm}
 
-{\LARGE{\textbf{Design and Testing}}}
+{\LARGE{\textbf{Circuit design and testing}}}
+
+\begin{enumerate}
+
+{\Large{\item{\textbf{The circuit for controlling of ESP8266}}}}
+
+\vspace{0.5cm}
 
 After successfull installation of the forked version of arduino, testing
 of ESP8266 is done. The components used are:
@@ -839,7 +891,8 @@ Before you begin:
   choose the ESP board, port connected and set CPU frequency to 80 Mhz
 \end{itemize}
 
-\textbf{Troubleshooting}
+\vspace{0.5cm}
+{\Large{\textbf{Troubleshooting}}}
 
 \begin{enumerate}
 
@@ -851,6 +904,7 @@ Before you begin:
   \textgreater{}\texttt{sudo chown \$username /dev/ttyUSB}
 \end{enumerate}
 
+\vspace{0.5cm}
 \textbf{Testing GPIO's and wifi connection}
 
 Some of the key points observed during testing:
@@ -874,6 +928,8 @@ Some of the key points observed during testing:
   
 \end{itemize}
 
+\vspace{0.5cm}
+
 \textbf{Test codes}
 
 \begin{enumerate}
@@ -889,8 +945,9 @@ Some of the key points observed during testing:
   The solenoid was controlled using the web server hosted on the ESP
 \end{enumerate}
 
+\vspace{0.5cm}
 
-{\Large{\textbf{The circuit for controlling the solenoid valves}}} 
+{\Large{\item{\textbf{The circuit for controlling the solenoid valves}}} }
 
 Components required:
 
@@ -931,9 +988,11 @@ Components required:
   %\href{http://www.ti.com/lit/an/slva460/slva460.pdf}{Solenoid\_driving}
 \end{itemize}
 
+\end{enumerate}
 
-\vspace{5cm}
+\vspace{19cm}
 {\LARGE{\textbf{nodeMCU firmware}}}
+\vspace{0.5cm}
 
 Reasons for Switching from Arduino IDE to nodeMCU firmware
 
@@ -964,7 +1023,7 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
  
 \end{itemize}
 
-\textbf{Insatllation procedure:}
+\textbf{Installation procedure:}
 
 \begin{itemize}
 
@@ -993,6 +1052,7 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
 \end{quote}
 
 \textbf{note:} Make sure GPIO 0 is connected to ground while flashing
+\vspace{0.5cm}
 
 \textbf{ESPlorer IDE}
 
@@ -1035,17 +1095,19 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
 If you choose to install esptool system-wide by running
 \texttt{python setup.py install}, then this will be taken care of
 automatically.
-
 If not using \texttt{setup.py}, then you'll have to install pySerial
-manually by running something like \texttt{pip install pyserial},
+manually by running something like \\
+
+\texttt{pip install pyserial},
 \texttt{easy\_install pyserial} or
-\texttt{apt-get install python-serial}, depending on your platform. (The
+\texttt{apt-get install python-serial} \\
+\vspace{0.3cm}
+depending on your platform. The
 official pySerial installation instructions are
 %\href{http://pyserial.sourceforge.net/pyserial.html\#installation}{here}).
 This utility actually have a user interface! It uses
 %\href{https://docs.python.org/dev/library/argparse.html}{Argparse}
-and
-is rather self-documenting. Try running \texttt{esptool -h}. Or hack the
+and is rather self-documenting. Try running \texttt{esptool -h}. Or hack the
 script to your hearts content. The serial port is selected using the
 \texttt{-p} option, like \texttt{-p /dev/ttyUSB0} (on unixen like Linux
 and OSX) or \texttt{-p COM1} (on Windows). The perhaps not so obvious
@@ -1053,64 +1115,12 @@ corner case here is when you run esptool in Cygwin on Windows, where you
 have to convert the Windows-style name into an Unix-style path
 (\texttt{COM1} -\textgreater{} \texttt{/dev/ttyS0}, and so on).
 
-\vspace{15cm}
-
-{\LARGE{\textbf{Interfacing MOSCA and ESP}}}
-
-\begin{itemize}
-
-\item
-  Install MOSCA on your system
-\item
-  Setup the server using \emph{mosca -v --host \$hostname \textbar{}
-  bunyan}
-\item
-  Burn the LUA scripts on the ESP8266
-\item
-  send subscribe request from your terminal using
-  \textgreater{}\texttt{node client-sub.js} (go to the apprpriate folder
-  first)
-\item
-  send publish command from the terminal
-  \textgreater{}\texttt{node client-pub.js}
-\item
-  see the sent data on your terminal with confirm message
-\end{itemize}
-
-
-
-{\Large{\textbf{Troubleshooting}}}
-
-\textbf{ESP8266}
-
-\begin{itemize}
-
-\item
-  take care to use the delays at appropriate places so as to send out
-  publish and subscribe requests
-\item
-  LUA syntax must be kept in mind.
-\item
-  Use \textgreater{}\texttt{tmr.alarm} instead of
-  \textgreater{}\texttt{tmr.delay} wherever possible
-\end{itemize}
-
-\textbf{MOSCA server}
-
-\begin{itemize}
-
-\item
-  The local IP must be changed in the the ESP and also the
-  \textgreater{}\texttt{client-pub.js} and
-  \textgreater{}\texttt{client-sub.js} scrits
-\item
-  The topic must be the same in the \textgreater{}\texttt{client-pub.js}
-  and subscribe code in the ESP
-\end{itemize}
-
+\vspace{9cm}
 
 
 {\LARGE{\textbf{Protocols for communication}}}
+
+\vspace{0.5cm}
 
 The Protocols that can be looked into are:
 
@@ -1162,8 +1172,11 @@ The Protocols that can be looked into are:
   %\href{http://www.eclipse.org/community/eclipse_newsletter/2014/february/article2.php}{comparison}
 \end{enumerate}
 
-{\LARGE{\textbf{Message queing telemetry transport protocol}}}
+\vspace{0.5cm}
 
+{\LARGE{\textbf{Message queing telemetry transport}}}
+
+\vspace{0.5cm}
 Some of the important features of MQTT protocol:
 
 \begin{itemize}
@@ -1200,25 +1213,30 @@ Some of the important features of MQTT protocol:
 These are the reasons we decided to go with MQTT protocol for our
 application.
 
+\vspace{13cm}
 
-\vspace{5cm}
+{\LARGE{\textbf{MOSCA broker}}}
 
+\vspace{0.5cm}
 
 After successfully installing MOSCA broker on the system, you are now
 good to go on next step.
 
+\vspace{0.5cm}
 {\Large{\textbf{Running MOSCA}}}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
 
-{\Large{\textbf{Configuring IP on which MOSCA has to be run.}}}
+{\textbf{Configuring IP on which MOSCA has to be run.}}
 
 \emph{on the terminal type \textgreater{}\texttt{mosca -help}, it will
-display all the handles which mosca currently supports }we are going to
-use handles, -v, --host, \textbar{} bunyan. \emph{To start the server,on
-the terminal type \textgreater{}`mosca -v --host ``ur ip''
-\textbar{}bunyan }server testing can be done via two codes included in
+display all the handles which mosca currently supports we are going to
+use handles, {\textbf{-v, --host, \textbar{} bunyan}}}. \emph{To start the server,on
+the terminal type \textgreater{}\texttt{mosca -v --host 'ur ip'
+\textbar{}bunyan}}. \\ Server testing can be done via two codes included in
 the mosca folder.
+
+\vspace{0.3cm}
 
 \textbf{NOTE}: for opensuse users, make sure that entry for tcp port
 1883 is in the firewall for inbound connection.
@@ -1231,6 +1249,67 @@ the mosca folder.
 \item
   message from the topic subscribed will be printed where client-sub.js
   has been run.
+\end{itemize}
+
+\vspace{0.5cm}
+
+{\LARGE{\textbf{Interfacing MOSCA and ESP}}}
+
+\begin{itemize}
+
+\item
+  Install MOSCA on your system
+\item
+  Setup the server using \emph{mosca -v --host \$hostname \textbar{}
+  bunyan}
+\item
+  Burn the LUA scripts on the ESP8266
+\item
+  send subscribe request from your terminal using
+  \textgreater{}\texttt{node client-sub.js} (go to the apprpriate folder
+  first)
+\item
+  send publish command from the terminal
+  \textgreater{}\texttt{node client-pub.js}
+\item
+  see the sent data on your terminal with confirm message
+\end{itemize}
+
+
+
+{\Large{\textbf{Troubleshooting}}}
+
+\begin{itemize}
+\item{\textbf{ESP8266}}
+
+\begin{itemize}
+
+\item
+  take care to use the delays at appropriate places so as to send out
+  publish and subscribe requests
+\item
+  LUA syntax must be kept in mind.
+\item
+  Use \textgreater{}\texttt{tmr.alarm} instead of
+  \textgreater{}\texttt{tmr.delay} wherever possible
+\end{itemize}
+
+\vspace{0.6cm}
+
+\item{\textbf{MOSCA server}}
+
+\begin{itemize}
+
+\item
+  The local IP must be changed in the the ESP and also the
+  \textgreater{}\texttt{client-pub.js} and
+  \textgreater{}\texttt{client-sub.js} scrits
+\item
+  The topic must be the same in the \textgreater{}\texttt{client-pub.js}
+  and subscribe code in the ESP
+\end{itemize}
+
+\vspace{0.5cm}
 \end{itemize}
 
 {\Large{\textbf{Configuring MOSCA with
@@ -1271,8 +1350,13 @@ the switch and you can see led going on and off.
 
 \end{itemize}
 
-\vspace{5cm}
-{\Large{\textbf{Table Description}}}
+\vspace{8cm}
+
+{\LARGE{\textbf{Database handling and UI design\\}}}
+
+\vspace{0.3cm}
+{\Large{\underline{\textbf{Table Description}}}}
+\vspace{0.2cm}
 
 \textbf{Database name: iot}
 
@@ -1280,10 +1364,10 @@ Tables in database:
 
 \begin{itemize}
 
-\item devices\\
-\item groups\\ 
-\item sensors\\
-\item tasks  \\
+\item devices
+\item groups 
+\item sensors
+\item tasks  
 
 \end{itemize}
 
@@ -1393,14 +1477,17 @@ following automated tasks:
 Tasks.php is executed every minute using cron and above other files are
 run continuously in php cli mode.
 
+\vspace{13cm}
 
+{\LARGE{\textbf{Power Analysis}}}
+\vspace{0.5cm}
 
-{\Large{\textbf{Power Analysis}}}
+{\Large{\textbf{ESP8266}}}
 
-\textbf{ESP8266}
+\vspace{0.2cm}
 
 \textbf{Modes of operation of
-ESP8266}
+ESP8266:}
 
 \begin{itemize}
 
@@ -1442,56 +1529,51 @@ Thecrystal oscillator and PLLs are enabled.
 \end{itemize}
 
 Only RTC is powered on --the rest of the chip is powered off. Recovery
-memory of RTC can keep basic Wi-Fi connecting information.
-
-To be able to implement deep sleep (without adding extra hardware to
+memory of RTC can keep basic Wi-Fi connecting information.To be able to implement deep sleep (without adding extra hardware to
 generate a wake-up signal), you need to link the \emph{RESET pin to the
 GPIO 16 pin}.By linking these, you lose the ability to use GPIO16, but
 gain an automatic wake-up from deep sleep after the number of
 microseconds that you specify in the \texttt{node.dsleep(time\_in\_us)}
-call.
-
-When the ESP wakes from sleep it runs init.lua file again.
-
-It does not require Wi-Fi connection to be maintained. It's mainly for
-application with long time lags between data transmission.
-
-ESP8266 need be waked up by GPIO16 or by other gpio of external MCU.
+call.It does not require Wi-Fi connection to be maintained. It's mainly for
+application with long time lags between data transmission.ESP8266 needs to be waked up by GPIO16 or by other gpio of external MCU.
 Thus, GPIO 16 or external GPIO should be connected to RST pin.
 
 \begin{itemize}
 
 \item
-  \textbf{\emph{note}} : During flashing : consumes a peak current of 75
-  ma.
+  \textbf{\emph{note 1}} : During flashing : consumes a peak current of 75
+  ma
+\item
+  \textbf{\emph{note 2}} : When the ESP wakes from sleep it runs init.lua file again
 \end{itemize}
 
+\vspace{0.5cm}
 {\Large{\textbf{WIFI sleep modes}}}
 
-\textbf{\texttt{wifi.sleeptype()}}
+\vspace{0.5cm}
+{\underline{\texttt{\textbf{wifi.sleeptype()}}}}
 
-\begin{itemize}
 
-\item
+\vspace{0.1cm}
   Configures the sleep type for wifi modem
-\end{itemize}
 
-\emph{Note}: works only in wifi.STATION mode
+
+\textbf{\emph{Note}}: works only in wifi.STATION mode
 
 \begin{itemize}
 
 \item
-  Syntax: type\_actual = wifi.sleeptype(type\_need)
+  \textbf{\emph{syntax}}: type\_actual = wifi.sleeptype(type\_need)
 \end{itemize}
 
-\textbf{parameters}
+  \textbf{parameters:}
 
 \begin{itemize}
 \item
-  wifi.NONE\_SLEEP: wake up device from LIGHT\_SLEEP or MODEM\_SLEEP
+  \textbf{\emph{wifi.NONE\_SLEEP}}: wake up device from LIGHT\_SLEEP or MODEM\_SLEEP
   mode
 \item
-  wifi.MODEM\_SLEEP: closes wifi modem, but CPU and other peripherals
+  \textbf{\emph{wifi.MODEM\_SLEEP}}: closes wifi modem, but CPU and other peripherals
   still work.
 \end{itemize}
 
@@ -1502,7 +1584,7 @@ working, as in PWM or I2C applications.
 \begin{itemize}
 
 \item
-  wifi.LGIHT\_SLEEP: close wifi modem, Oscillator and PLL, CPU and
+  \textbf{\emph{wifi.LGIHT\_SLEEP}}: close wifi modem, Oscillator and PLL, CPU and
   peripheral enters ``clock-pause'' status.
 \end{itemize}
 
@@ -1510,23 +1592,33 @@ The CPU may be suspended in applications like Wi-Fi switch. Without data
 transmission, the Wi-Fi Modem circuit can be turned off and CPU
 suspended to save power.
 
-\textbf{\emph{Note}}: Both are automatically added by underlying, which
+\vspace{0.2cm}
+
+\textbf{\emph{Note 1}}: Both are automatically added by underlying, which
 can sleep and be waked up automatically. There is no need of any
 processing in hardware.Both can adjust themselves to support the type of
 DTIM according to the AP that connected.
 
-\textbf{\emph{Note}}: Power saving modes can only be enabled in station
+\vspace{0.1cm}
+
+\textbf{\emph{Note 2}}: Power saving modes can only be enabled in station
 mode
+
+\vspace{0.6cm}
 
 {\Large{\textbf{Implementaton}}}
 
-\textbf{\texttt{node.dsleep()}}
+\vspace{0.3cm}
 
-\textbf{Description}: Enter deep sleep mode, wake up when timed out.
+{\underline{\texttt{\textbf{node.dsleep()}}}}
 
-\textbf{Syntax}: node.dsleep(us, option)
+\vspace{0.3cm}
 
-\textbf{Note}: This function can only be used in the condition that
+\textbf{\emph{Description}}: Enter deep sleep mode, wake up when timed out.
+
+\textbf{\emph{Syntax}}: node.dsleep(us, option)
+
+\textbf{\emph{Note}}: This function can only be used in the condition that
 esp8266 RST and GPIO16 are connected together. Using sleep(0) will set
 no wake up timer, connect a GPIO to pin RST, the chip will wake up by a
 falling-edge on pin RST.
@@ -1534,11 +1626,13 @@ falling-edge on pin RST.
 option=0, init data byte 108 is valuable; option\textgreater{}0, init
 data byte 108 is valueless.
 
-More details as follows: 0, RF\_CAL or not after deep-sleep wake up,
-depends on init data byte 108. 1, RF\_CAL after deep-sleep wake up,
-there will belarge current. 2, no RF\_CAL after deep-sleep wake up,
-there will only be small current. 4, disable RF after deep-sleep wake
-up, just like modem sleep, there will be the smallest current.
+More details as follows: 
+\begin{itemize}
+\item 0, RF\_CAL or not after deep-sleep wake up, depends on init data byte 108
+\item 1, RF\_CAL after deep-sleep wake up, there will belarge current
+\item 2, no RF\_CAL after deep-sleep wake up, there will only be small current 
+\item 4, disable RF after deep-sleep wakeup, just like modem sleep, there will be the smallest current.
+\end{itemize}
 
 \textbf{Parameters}:
 
@@ -1561,27 +1655,34 @@ up, just like modem sleep, there will be the smallest current.
 \end{itemize}
 
 \textbf{Example}
+\vspace{0.1cm}
 
---do nothing
+--do nothing\\
+\texttt{node.dsleep()}\\
 
-\texttt{node.dsleep()}
+\vspace{0.1cm}
 
---sleep μs
+--sleep microcesonds\\
+\texttt{node.dsleep(1000000)}\\
 
-\texttt{node.dsleep(1000000)}
+\vspace{0.1cm}
 
---set sleep option, then sleep μs
+--set sleep option, then sleep microseconds\\
+\texttt{node.dsleep(1000000, 4)}\\
 
-\texttt{node.dsleep(1000000, 4)}
+\vspace{0.1cm}
 
---set sleep option only
-
+--set sleep option only\\
 \texttt{node.dsleep(nil,4)}
+
+\vspace{0.3cm}
 
 \textbf{Note}: \texttt{node.dsleep(0)} makes the ESP sleep forever until
 the RST pin is brought low
 
-\textbf{Steps}
+
+\vspace{0.5cm}
+{\Large{\textbf{Steps}}}
 
 \begin{itemize}
 
@@ -1615,7 +1716,7 @@ the RST pin is brought low
   But could not see any significant change in the current drawn
 \item
   The current consumed in Light\_Sleep mode stays to be around 70 ma and
-  in Modem\_Sleep to be around 80 ma
+  in Modem\_Sleep to be aroun\vspace{0.5cm}d 80 ma
 \item
   The deep sleep is a better option when occasional reception of data is
   required as it can go down to as low as 1 ma, maybe even to
@@ -1628,6 +1729,8 @@ the RST pin is brought low
   tries to connect and then just make it go to deepsleep mode.
 \end{itemize}
 
+
+\vspace{0.5cm}
 {\Large{\textbf{Graphs showing current
 consumption}}}
 
@@ -1635,69 +1738,64 @@ consumption}}}
 
 \item
   Average current consumption of the ESP8266 module during its various
-  operations over time
-\end{itemize}
+  operations over time.Refer figure 1 
+
 
 \begin{figure}
-
 \includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/average_current1.png}
 \caption{Average}
 \end{figure}
 
-\begin{itemize}
+
 \item
   Peak current consumption of the ESP8266 module during its various
-  operations over time
-\end{itemize}
+  operations over time.Refer figure 2 
 
 \begin{figure}
-
 \includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/peak_current1.png}
 \caption{Peak}
+\textbf{Key Points}
+
+  \begin{itemize}
+
+  \item
+    The current consumption peaks during message reception and publish
+    time
+  \item
+    The H-bridge consumes more current to turn the latch on than when
+    turning it off
+  \item
+    Overall current peaks up to 45mA at an average
+  \item
+    The peak current has a possibility to spike up to 75mA
+  \item
+    There is a wide fluctuation in the current being drawn even during
+    idle time therefore there is a possibility that the battery might
+    drain out if the power is not switched off at regular intervals
+  \end{itemize}
 \end{figure}
 
-\begin{itemize}
+  
 \item
   A graph showing the breakup between the average current consumed by
-  the H-bridge(theoretical) and the ESP8266 module
+  the H-bridge(theoretical) and the ESP8266 module.Refer figure 3
 \end{itemize}
 
 \begin{figure}
-
 \includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/breakup1.png}
 \caption{Breakup}
 \end{figure}
-
-\textbf{Key Points}
-
-\begin{itemize}
-
-\item
-  The current consumption peaks during message reception and publish
-  time
-\item
-  The H-bridge consumes more current to turn the latch on than when
-  turning it off
-\item
-  Overall current peaks up to 45mA at an average
-\item
-  The peak current has a possibility to spike up to 75mA
-\item
-  There is a wide fluctuation in the current being drawn even during
-  idle time therefore there is a possibility that the battery might
-  drain out if the power is not switched off at regular intervals
-\end{itemize}
-
+  
 {\Large{\textbf{Observations}}}
 
 \begin{itemize}
 
 \item
-  At idle we can observe an average current of about 20mA
+  At idle we can observe an av\vspace{0.5cm}erage current of about 20mA
 \item
   A 2500 mA will last for a maximum of 4 days
 \item
-  The sleep option of the ESP have to be tapped and as the
+  The sleep option of the ESP have to be tapped and as the \\
   \texttt{node.dsleep()} function is not working the options we can look
   into are:
 \end{itemize}
@@ -1712,6 +1810,7 @@ consumption}}}
   Wait for an update to the nodeMCU firmware
 \end{enumerate}
 
+\vspace{0.5cm}
 \textbf{Troubleshooting}
 
 \begin{itemize}
@@ -1728,12 +1827,16 @@ consumption}}}
 Follow this link for additional info
 %\href{http://tinker.yeoman.com.au/2015/03/08/reducing-esp8266-power-consumption-using-deep-sleep/}{Sleep}
 
+\vspace{0.5cm}
 {\Large{\textbf{Future plans}}}
 
+\vspace{0.3cm}
 In the future we could try to integrate solar power into the module. The
 Valve would still be driven by the battery but the ESP8266 module could
 be driven by Solar cells during the day and charge the battery during
 the night.
+
+\vspace{0.3cm}
 
 \textbf{Problems}
 
@@ -1747,9 +1850,10 @@ the night.
   costly.
 \end{itemize}
 
+\vspace{9cm}
+{\LARGE{\textbf{Additional features and notes}}}
 
-{\Large{\textbf{Integrating Moisture
-sensor}}}
+\vspace{0.5cm}
 
 \textbf{YL-69 Soil Hygrometer Humidity \& Soil Moisture Detection Sensor}
 
@@ -1816,7 +1920,7 @@ as accurate as the analogue output.
   applications
 \item
   Soil moisture module is most sensitive to the ambient humidity is
-  generally used to detect the moisture content of the soil
+  generally used to detect the \vspace{0.5cm}moisture content of the soil
 \end{itemize}
 
 {\Large{\textbf{Implementation}}}
@@ -1846,6 +1950,81 @@ as accurate as the analogue output.
   wet and humid soil and process accordingly
 \end{itemize}
 
+
+{\LARGE{\textbf{Schematic and PCB
+Design}}}
+
+{\Large{\textbf{Schematics in KICAD}}}
+Install KICAD from the ubntu software centre along with the additional
+addons and tools.
+
+Here is a tutorial that will guide you in the making of schematics using
+%\href{https://www.youtube.com/watch?v=rkQ0nVX1q1k}{KICAD}
+
+\begin{itemize}
+
+\item
+  If you want to delete, add or functionally change a component, it's
+  best to change the schematic and repeat the entire process again
+\item
+  Make changes in EESCHEMA, re-annotating the components if necessary
+\end{itemize}
+
+{\Large{\textbf{Netlists and
+footprints}}}
+
+\begin{itemize}
+
+\item
+  After completing the schematic, generate a netlist that contains all
+  the components and their connections
+\item
+  Save netlist in EESCHEMA (schematic editor)
+\item
+  After generating the netlist associate footprints in CVPCB
+\item
+  Each component has its own footprint to be associated to it
+\item
+  After associating all the components to their respective footprints
+  load the netlist in PCBNEW (backup the .brd first!)
+%\item
+ % A tutorial
+ % \href{http://store.curiousinventor.com/guides/kicad/schematic_to_layout}{design}
+\end{itemize}
+
+%Here is a tutorial to generate a netlist and associate footprints
+%\href{https://www.youtube.com/watch?v=8HNMihqa844}{Tutorial}
+
+\begin{itemize}
+
+\item
+  Sometimes the required footprints are not available in KICAD but you
+  can make your own footprints in CVPCB
+%\item
+%  Here's a link to the same
+%  \href{http://kicadhowto.wikidot.com/mcf1foot1}{footprints}
+%\item
+%  Here's a video tutorial explaining how to make your own footprint
+%  \href{https://www.youtube.com/watch?v=aVNMJVaRf6M}{video}
+\end{itemize}
+
+{\Large{\textbf{PCB designing with
+PCBNEW}}}
+
+Here is a list of tutorials for PCB making
+
+%\begin{itemize}
+
+%\item
+%  \href{http://store.curiousinventor.com/guides/kicad/pcb_layout/change_part/}{PCB}
+%\item
+%  \href{http://kicadhowto.wikidot.com/}{How \_to}
+%\item
+ % \href{http://store.curiousinventor.com/guides/kicad/pcb_layout/}{PCB
+%  making}
+%\item
+%  \href{https://www.youtube.com/watch?v=TYqmmj6SO-k}{video}
+%\end{itemize}
 
 \end{document}
 
