@@ -126,7 +126,7 @@ Your browser doesnt support javascript</noscript>
 <?php include_once "navigation.php";?>
 
 <div  id="main">
-<div class="header" ><a href='index.php'>
+<div class="header" ><a style'text-decoration: none;' href='index.php'>
       <h1>IOT Based Valve control</h1></a>
       <h2>Valve Controls</h2>
     </div>
@@ -152,15 +152,17 @@ if (mysql_num_rows($results) > 0)
 <div id='controls'>
 
 </div>
-    </div><!-- end of content div -->
 
+    </div><!-- end of content div -->
+<div class='footer'>
+<?php
+include_once "app.php";?></div>
     </div><!-- end of main div -->
+    
 </div><!-- end of layout -->
 <div class="push"></div>
 
-<div class='footer'>
-<?php //include_once "footer.php";?><?php
-include_once "app.php";?></div>
+
 <script src="js/ui.js"></script>
 </body>
 </html>
