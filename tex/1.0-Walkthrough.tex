@@ -2,20 +2,73 @@
 
 \documentclass[16pt]{article}
 \usepackage{graphicx}
+\usepackage{array}
 \begin{document}
 
+\begin{titlepage}
+ 
+       
+
+       \hfill\hfill\hfill
+
+       {\LARGE{\textbf{e-Yantra Summer Internship-2015 \\ }}}
+       
+       \vspace{3cm}
+       {\Large{\textbf{IoT Connected valves for irrigation of}}} \\  
+       % Print the main header
+      
+       
+        {\Large{\textbf{\hspace{3.2cm} greenhouse}}}
+        
+         \vspace{3cm}
+        {\underline{\textbf{Interns:}}} \\
+        
+        Jayant Solanki \\
+        
+        Kevin D'souza  
+        
+        \vspace{1cm}
+        
+          {\underline{\textbf{Mentors:}}} \\
+          
+          Ajit Harpude \\
+          
+          Vishwanathan Iyer
+          
+\end{titlepage}
+
+\begin{abstract}
+ \vspace{0.5cm}
+ This project aims to build a copamct and portable module that can be remotely accessed 
+ to turn ON/OFF the water supply in a trough, terrace garden or even an agricultural farm. The solution promises to be cheap and afforadble to the common man and 
+ the setup is intended to be simple and without hassle. This project aims to touch the lack of automation on irrigation systems in agriculture 
+ and thus increase the throuput of the average farmer. 
+ 
+ Once installed this setup would allow you to remotely control the valve for one's irrigation system and also provides additional features such as 
+ timing based control and frequency in watering. This could really ease the user of his worry when he/she is not at around the house or the farm. 
+ 
+ Latter part of this project also includes experimentation regarding moisture sensor integration. This would mean effective feedback to the user for 
+ watering. The ultimate goal of the project would be to eliminate the user from this loop and provide effective automation in irrigation through the 
+ Internet-of-things approach.
+\end{abstract}
+
+\vspace{12cm}
+
 \begin{tabbing}
-	\hspace{5cm}
+	\hspace{5cm}	
         \LARGE{INDEX}                % Print the main header
 \end{tabbing}
 
 \vspace{0.5cm}
 
+
 \begin{enumerate}
 %\def\labelenumi{\arabic{enumi}.}
 %\itemsep1pt\parskip0pt\parsep0pt
+\item 
+ Objective and Deliverables
 \item
-  Installation of Ubuntu and literature review
+  Installation
 \item
   Literature review 
 \item
@@ -33,13 +86,39 @@
 \item 
   Power analysis
 \item 
-  Additional features and notes 
+  Cost analysis 
+\item 
+  Experimental features and notes 
 
 \end{enumerate}
 
-
 \vspace{11.5cm}
 
+
+ 
+  {\Large{\textbf{Objective}}} \\
+  
+  \vspace{0.1cm}
+  
+  Development of a IOT based low-cost, low-power, standalone module for the automation of Irrigation in a greenhouse.
+  
+   \vspace{0.6cm}
+   
+  {\textbf{Deliverables}}
+  
+\begin{itemize}
+\item Demonstration of control of valves remotely
+\item Designing a user interfrace for the same 
+\item Adding features to the UI 
+\item Detailed report on power consumption of the system
+\item Exploring experimental features like moisture sensor integration
+\item Detailed report of the design process with documented code
+\end{itemize}
+
+
+
+
+ \vspace{17cm}
 
 {\textbf{\LARGE{INSTALLATION} }   }
 
@@ -1791,7 +1870,7 @@ consumption}}}
 \begin{itemize}
 
 \item
-  At idle we can observe an av\vspace{0.5cm}erage current of about 20mA
+  At idle we can observe an average current of about 20mA
 \item
   A 2500 mA will last for a maximum of 4 days
 \item
@@ -1850,8 +1929,12 @@ the night.
   costly.
 \end{itemize}
 
-\vspace{9.5cm}
-{\LARGE{\textbf{Additional features and notes}}}
+\vspace{10.5cm}
+
+{\LARGE{\textbf{Cost analysis}}}
+
+\vspace{19cm}
+{\LARGE{\textbf{Experimental features and notes}}}
 
 \vspace{0.5cm}
 
@@ -2035,6 +2118,27 @@ Here is a list of tutorials for PCB making
 %\item
 %  \href{https://www.youtube.com/watch?v=TYqmmj6SO-k}{video}
 %\end{itemize}
+\vspace{17cm}
+
+{\LARGE{\textbf{Cost analysis}}}
+
+\vspace{1cm}
+\begin{tabular}{|m{5cm}|m{3.5cm}|}
+	\hline
+	{\bf Items} & {\bf Est. cost in Rupees}\\ \hline
+	ESP8266 & 400 \\ \hline
+	Rechargible Alkaline battery & 150 \\ \hline
+	H-bridge & 100 \\ \hline 
+	Latching Solenoid valve & 430 \\ \hline
+	Total cost & 1080 \\ \hline 
+\end{tabular} 
+
+\vspace{15cm}
+{\LARGE{\textbf{Bugs}}}
+
+
+\vspace{19cm}
+{\LARGE{\textbf{Future work}}}
 
 \end{document}
 

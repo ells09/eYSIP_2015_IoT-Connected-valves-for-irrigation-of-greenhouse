@@ -4,8 +4,57 @@
 \usepackage{graphicx}
 \begin{document}
 
+\begin{titlepage}
+ 
+       
+
+       \hfill\hfill\hfill
+
+       {\LARGE{\textbf{e-Yantra Summer Internship-2015 \\ }}}
+       
+       \vspace{3cm}
+       {\Large{\textbf{IoT Connected valves for irrigation of}}} \\  
+       % Print the main header
+      
+       
+        {\Large{\textbf{\hspace{3.2cm} greenhouse}}}
+        
+         \vspace{3cm}
+        {\underline{\textbf{Interns:}}} \\
+        
+        Jayant Solanki \\
+        
+        Kevin D'souza  
+        
+        \vspace{1cm}
+        
+          {\underline{\textbf{Mentors:}}} \\
+          
+          Ajit Harpude \\
+          
+          Vishwanathan Iyer
+          
+\end{titlepage}
+
+\begin{abstract}
+ \vspace{0.5cm}
+ This project aims to build a copamct and portable module that can be remotely accessed 
+ to turn ON/OFF the water supply in a trough, terrace garden or even an agricultural farm. The solution promises to be cheap and afforadble to the common man and 
+ the setup is intended to be simple and without hassle. This project aims to touch the lack of automation on irrigation systems in agriculture 
+ and thus increase the throuput of the average farmer. 
+ 
+ Once installed this setup would allow you to remotely control the valve for one's irrigation system and also provides additional features such as 
+ timing based control and frequency in watering. This could really ease the user of his worry when he/she is not at around the house or the farm. 
+ 
+ Latter of this project also includes experimentation regarding moisture sensor integration. This would mean effective feedback to the user for effective 
+ watering. The ultimate goal of the project would be to eliminate the user from this loop and provide effective automation in irrigation through the 
+ Internet-of-things approach.
+\end{abstract}
+
+\vspace{12cm}
+
 \begin{tabbing}
-	\hspace{5cm}
+	\hspace{5cm}	
         \LARGE{INDEX}                % Print the main header
 \end{tabbing}
 
@@ -15,7 +64,7 @@
 %\def\labelenumi{\arabic{enumi}.}
 %\itemsep1pt\parskip0pt\parsep0pt
 \item
-  Installation of Ubuntu and literature review
+  Installation
 \item
   Literature review 
 \item
@@ -1791,7 +1840,7 @@ consumption}}}
 \begin{itemize}
 
 \item
-  At idle we can observe an av\vspace{0.5cm}erage current of about 20mA
+  At idle we can observe an average current of about 20mA
 \item
   A 2500 mA will last for a maximum of 4 days
 \item
@@ -1850,12 +1899,14 @@ the night.
   costly.
 \end{itemize}
 
-\vspace{9cm}
+\vspace{9.5cm}
 {\LARGE{\textbf{Additional features and notes}}}
 
 \vspace{0.5cm}
 
-\textbf{YL-69 Soil Hygrometer Humidity \& Soil Moisture Detection Sensor}
+\begin{itemize}
+
+\item{\textbf{YL-69 Soil Hygrometer Humidity \& Soil Moisture Detection Sensor}}
 
 %\begin{figure}
 %\centering
@@ -1863,6 +1914,7 @@ the night.
 %\caption{YL - 69 moisture sensor}
 %\end{figure}
 
+\vspace{0.3cm}
 This is an Electrical resistance Sensor. The sensor is made up of two
 electrodes. This soil moisture sensor reads the moisture content around
 it. A current is passed across the electrodes through the soil and the
@@ -1872,6 +1924,8 @@ will pass through. On the other hand when the soil moisture is low the
 sensor module outputs a high level of resistance. This sensor has both
 digital and analogue outputs. Digital output is simple to use but is not
 as accurate as the analogue output.
+
+\vspace{0.5cm}
 
 {\Large{\textbf{Specifications}}}
 
@@ -1895,6 +1949,7 @@ as accurate as the analogue output.
   GND : Connected to ground
 \end{itemize}
 
+\vspace{0.5cm}
 {\Large{\textbf{Key Features}}}
 
 \begin{itemize}
@@ -1950,11 +2005,14 @@ as accurate as the analogue output.
   wet and humid soil and process accordingly
 \end{itemize}
 
+\vspace{0.5cm}
 
-{\LARGE{\textbf{Schematic and PCB
-Design}}}
+{\Large{\item{\textbf{Schematic and PCB
+Design}}}}
 
-{\Large{\textbf{Schematics in KICAD}}}
+\end{itemize}
+
+{\textbf{Schematics in KICAD}} \\
 Install KICAD from the ubntu software centre along with the additional
 addons and tools.
 
@@ -1968,10 +2026,11 @@ Here is a tutorial that will guide you in the making of schematics using
   best to change the schematic and repeat the entire process again
 \item
   Make changes in EESCHEMA, re-annotating the components if necessary
+  \vspace{0.2cm}
 \end{itemize}
 
-{\Large{\textbf{Netlists and
-footprints}}}
+{\textbf{Netlists and
+footprints}}
 
 \begin{itemize}
 
@@ -2008,8 +2067,8 @@ footprints}}}
 %  \href{https://www.youtube.com/watch?v=aVNMJVaRf6M}{video}
 \end{itemize}
 
-{\Large{\textbf{PCB designing with
-PCBNEW}}}
+{\textbf{PCB designing with
+PCBNEW}}
 
 Here is a list of tutorials for PCB making
 
