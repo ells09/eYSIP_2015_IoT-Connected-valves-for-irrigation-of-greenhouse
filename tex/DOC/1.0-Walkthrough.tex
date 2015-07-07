@@ -5,6 +5,8 @@
 \usepackage{array}
 \begin{document}
 
+
+
 \begin{titlepage}
  
        
@@ -36,8 +38,11 @@
           Vishwanathan Iyer
           
 \end{titlepage}
+\tableofcontents
+\vspace{15cm }
 
-\begin{abstract}
+\section{Abstract}
+
  \vspace{0.5cm}
  This project aims to build a copamct and portable module that can be remotely accessed 
  to turn ON/OFF the water supply in a trough, terrace garden or even an agricultural farm. The solution promises to be cheap and afforadble to the common man and 
@@ -50,52 +55,15 @@
  Latter part of this project also includes experimentation regarding moisture sensor integration. This would mean effective feedback to the user for 
  watering. The ultimate goal of the project would be to eliminate the user from this loop and provide effective automation in irrigation through the 
  Internet-of-things approach.
-\end{abstract}
+
 
 \vspace{12cm}
 
-\begin{tabbing}
-	\hspace{5cm}	
-        \LARGE{INDEX}                % Print the main header
-\end{tabbing}
-
-\vspace{0.5cm}
 
 
-\begin{enumerate}
-%\def\labelenumi{\arabic{enumi}.}
-%\itemsep1pt\parskip0pt\parsep0pt
-\item 
- Objective and Deliverables
-\item
-  Installation
-\item
-  Literature review 
-\item
-  ESP8266 WiFi module 
-\item
-  Circuit design and testing 
-\item
-  nodeMCU firmware
-\item
-  Protocols for IOT applications and MQTT
-\item
-  MOSCA broker 
-\item 
-  Database handling and UI design 
-\item 
-  Power analysis
-\item 
-  Cost analysis 
-\item 
-  Experimental features and notes 
+\section{Objective and Deliverables} 
 
-\end{enumerate}
-
-\vspace{11.5cm}
-
-
- 
+\vspace{1cm}
   {\Large{\textbf{Objective}}} \\
   
   \vspace{0.1cm}
@@ -115,21 +83,18 @@
 \item Detailed report of the design process with documented code
 \end{itemize}
 
+\vspace{8cm}
 
-
-
- \vspace{17cm}
-
-{\textbf{\LARGE{INSTALLATION} }   }
-
+\section{Installation}
+ 
 \vspace{1cm}                                    % Print the main header
 
-\begin{enumerate}
+
  
-{\Large\item\textbf{Ubuntu}}
+\subsection{Ubuntu}
+
 \hfill
   \begin{enumerate}
- 
   \item
     Have Ubuntu image in pen-drive or a cd
   \item
@@ -150,8 +115,8 @@ for further information look up this repository
 %www.github.com/
   
 \hfill
-{\Large\item\textbf{openHAB}}
 
+\subsection{openhab}
 
 
 Studied openHAB, The thing system and other engines and found that among these openHAB was the best option available, since it was fully open sourced and it
@@ -170,7 +135,7 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   
 \hfill
 
-{\Large\item\textbf{Installatio-of-Apache2-,-PHP-and-MySQL-LAMP-server}} 
+\subsection{Installatio-of-Apache2-,-PHP-and-MySQL-LAMP-server}
 
 \vspace{0.5cm}
 
@@ -182,13 +147,13 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   part is taken care of. Here is how to install the rest.
 
 
-  \begin{enumerate}
+  
   
 
   
 %  \begin{center}\rule{3in}{0.4pt}\end{center}
 
-  {\Large{\item{\textbf{Step 1---Install Apache}}}}
+  \subsubsection{Install Apache}
   
   \hfill
 
@@ -228,7 +193,7 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   
    \vspace{0.5cm}
 
-  {\Large{\item{Step 2---Install MySQL}}}
+  \subsubsection{Install MySQL}
   
    \vspace{0.5cm}
 
@@ -250,7 +215,7 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   
    \vspace{1cm}
 
-  {\Large{\item{Step 3---Install PHP}}}
+  \subsubsection{Install PHP}
    \vspace{0.5cm}
 
   PHP is an open source web scripting language that is widely use to build
@@ -290,11 +255,12 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   \texttt{sudo systemctl start apache2.service}
    \vspace{0.5cm}
 
-  \end{enumerate}
+ 
 
   
 
-{\Large{\item\textbf{Broker and nodejs}}} 
+\subsection{Broker and nodejs}
+
  \vspace{0.5cm}
 
 Based on their use, there are two widely available MQTT brokers
@@ -314,7 +280,6 @@ We chose Mosca because it is:
 \end{enumerate}
  \vspace{0.5cm}
 
-{\Large{\textbf{Installation}}}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
 
@@ -324,7 +289,6 @@ We chose Mosca because it is:
 \textbf{Part 1} First install nodejs and npm if both are absent in your
 system.
 
- \vspace{1cm}
  
 \textbf{Nodejs}
 
@@ -429,7 +393,7 @@ To start the database service
 
  \vspace{0.5cm}
 
-{\Large{\textbf{Testing the broker}}}
+\subsection{Testing the broker}
 
 First to test the mqtt broker, we need to install a mqtt client on the
 system.
@@ -442,86 +406,21 @@ system.
 
 Script for starting MQTT broker service, \textbf{mosca-app.js}
 
-%\begin{Shaded}
-%\begin{Highlighting}[]
-%\KeywordTok{var} \NormalTok{mosca = }\FunctionTok{require}\NormalTok{(}\StringTok{'mosca'}\NormalTok{)}
-
-%\KeywordTok{var} \NormalTok{ascoltatore = \{}
- % \CommentTok{//using ascoltatore}
- % \DataTypeTok{type}\NormalTok{: }\StringTok{'mongo'}\NormalTok{,        }
- %\DataTypeTok{url}\NormalTok{: }\StringTok{'mongodb://localhost:27017/mqtt'}\NormalTok{,}
- % \DataTypeTok{pubsubCollection}\NormalTok{: }\StringTok{'ascoltatori'}\NormalTok{,}
- % \DataTypeTok{mongo}\NormalTok{: \{\}}
-%\NormalTok{\};}
-
-%\KeywordTok{var} \NormalTok{moscaSettings = \{}
- % \DataTypeTok{port}\NormalTok{: }\DecValTok{1883}\NormalTok{,}
- % \DataTypeTok{backend}\NormalTok{: ascoltatore,}
- % \DataTypeTok{persistence}\NormalTok{: \{}
-  %  \DataTypeTok{factory}\NormalTok{: }\OtherTok{mosca}\NormalTok{.}\OtherTok{persistence}\NormalTok{.}\FunctionTok{Mongo}\NormalTok{,}
-  %  \DataTypeTok{url}\NormalTok{: }\StringTok{'mongodb://localhost:27017/mqtt'}
- % \NormalTok{\}}
-%\NormalTok{\};}
-
-%\KeywordTok{var} \NormalTok{server = }\KeywordTok{new} \OtherTok{mosca}\NormalTok{.}\FunctionTok{Server}\NormalTok{(moscaSettings);}
-%\OtherTok{server}\NormalTok{.}\FunctionTok{on}\NormalTok{(}\StringTok{'ready'}\NormalTok{, setup);}
-
-%\OtherTok{server}\NormalTok{.}\FunctionTok{on}\NormalTok{(}\StringTok{'clientConnected'}\NormalTok{, }\KeywordTok{function}\NormalTok{(client) \{}
- %   \OtherTok{console}\NormalTok{.}\FunctionTok{log}\NormalTok{(}\StringTok{'client connected'}\NormalTok{, }\OtherTok{client}\NormalTok{.}\FunctionTok{id}\NormalTok{);     }
-%\NormalTok{\});}
-
-%\CommentTok{// fired when a message is received}
-%\OtherTok{server}\NormalTok{.}\FunctionTok{on}\NormalTok{(}\StringTok{'published'}\NormalTok{, }\KeywordTok{function}\NormalTok{(packet, client) \{}
- % \OtherTok{console}\NormalTok{.}\FunctionTok{log}\NormalTok{(}\StringTok{'Published'}\NormalTok{, }\OtherTok{packet}\NormalTok{.}\FunctionTok{payload}\NormalTok{);}
-%\NormalTok{\});}
-
-%\CommentTok{// fired when the mqtt server is ready}
-%\KeywordTok{function} \FunctionTok{setup}\NormalTok{() \{}
- % \OtherTok{console}\NormalTok{.}\FunctionTok{log}\NormalTok{(}\StringTok{'Mosca server is up and running'}\NormalTok{)}
-%\NormalTok{\}}
-%\end{Highlighting}
-%\end{Shaded}
-
 To start the service type \textgreater{}\texttt{node mosca-app.js}
 
-Script for MQTT Publishing Client \textbf{node client-pub.js}
-
-%\begin{Shaded}
-%\begin{Highlighting}[]
-%\KeywordTok{var} \NormalTok{mqtt    = }\FunctionTok{require}\NormalTok{(}\StringTok{'mqtt'}\NormalTok{);}
-%\KeywordTok{var} \NormalTok{client  = }\OtherTok{mqtt}\NormalTok{.}\FunctionTok{connect}\NormalTok{(}\StringTok{'mqtt://localhost'}\NormalTok{);}
- 
-%\OtherTok{client}\NormalTok{.}\FunctionTok{on}\NormalTok{(}\StringTok{'connect'}\NormalTok{, }\KeywordTok{function} \NormalTok{() \{}
- % \OtherTok{client}\NormalTok{.}\FunctionTok{publish}\NormalTok{(}\StringTok{'presence'}\NormalTok{, }\StringTok{'Hello!'}\NormalTok{, \{}\DataTypeTok{retain}\NormalTok{: }\KeywordTok{false}\NormalTok{, }\DataTypeTok{qa}\NormalTok{: }\DecValTok{1}\NormalTok{\});}
-%\OtherTok{client}\NormalTok{.}\FunctionTok{end}\NormalTok{();}
-%\NormalTok{\});}
-%\end{Highlighting}
-%\end{Shaded}
-
-Script for MQTT Publishing Client \textbf{node client-sub.js}
-
-%\begin{Shaded}
-%\begin{Highlighting}[]
-%\KeywordTok{var} \NormalTok{mqtt    = }\FunctionTok{require}\NormalTok{(}\StringTok{'mqtt'}\NormalTok{);}
-%\KeywordTok{var} \NormalTok{client  = }\OtherTok{mqtt}\NormalTok{.}\FunctionTok{connect}\NormalTok{(}\StringTok{'mqtt://localhost'}\NormalTok{);}
- 
-%\OtherTok{client}\NormalTok{.}\FunctionTok{on}\NormalTok{(}\StringTok{'connect'}\NormalTok{, }\KeywordTok{function} \NormalTok{() \{}
- % \OtherTok{client}\NormalTok{.}\FunctionTok{subscribe}\NormalTok{(}\StringTok{'presence'}\NormalTok{);}
- 
-%\OtherTok{client}\NormalTok{.}\FunctionTok{on}\NormalTok{(}\StringTok{'message'}\NormalTok{, }\KeywordTok{function} \NormalTok{(topic, message) \{}
- % \OtherTok{console}\NormalTok{.}\FunctionTok{log}\NormalTok{(}\OtherTok{message}\NormalTok{.}\FunctionTok{toString}\NormalTok{());}
-%\OtherTok{client}\NormalTok{.}\FunctionTok{end}\NormalTok{();}
- % \NormalTok{\});}
-%\NormalTok{\});}
-%\end{Highlighting}
-%\end{Shaded}
+\vspace{0.5cm}
+Script for publishing, \textbf{client-pub.js}
 
 Open a new Terminal and Execute above MQTT Subscription Client
 client-sub.js \textgreater{}\texttt{node client-pub.js}
 
+\vspace{0.5cm}
+Script for subscribing, \textbf{client-sub.js}
+
 Now open a differnent Terminal and Execute above MQTT Subscription
 Client client-pub.js \textgreater{}\texttt{node client-sub.js}
 
+\vspace{0.5cm}
 \textbf{Successful Output From client-sub.js terminal}
 
 \begin{quote}
@@ -530,7 +429,7 @@ Client client-pub.js \textgreater{}\texttt{node client-sub.js}
 
 \vspace{0.5cm}
 
-{\Large{\textbf{Troubleshooting}}}
+\subsection{Troubleshooting}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
 
@@ -555,15 +454,14 @@ allowed service, then go to to advance option, there enter 1883 inside
 tcp port.
 
   
-\end{enumerate}
+\vspace{2cm}
 
-
-{\LARGE{\textbf{Literature review}}}
+\section{Literature review}
 \vspace{0.5cm}
 
-\begin{itemize}
 
-{\Large{\item{\textbf{The Thing system - Architecture}}}}
+
+\subsection{The Thing system - Architecture}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
 
@@ -628,7 +526,7 @@ clients}}}
 %page}
 
 
-{\textbf{\item{\Large{Solenoid valves}}}}
+\subsection{Solenoid valves}
 
 \vspace{0.3cm}
 
@@ -639,7 +537,7 @@ clients}}}
 
 \vspace{0.3cm}
 
-{\textbf{\item{\Large{Latching solenoid valves}}}}
+\subsection{Latching solenoid valves}
 
   Some of the specifications of the latching solenoid valve related to our
   applications are:
@@ -683,7 +581,7 @@ clients}}}
 
 \hfill
 
-{\textbf{\item{\Large{Batteries}}}}
+\subsection{Batteries}
 
 \hfill
 
@@ -740,26 +638,26 @@ applications. Some of the important features of these batteries are:
 
 \hfill
 
-{\Large{\item{\textbf{Power consumption}}}}
+\subsection{Power consumption}
 
-\begin{enumerate}
+
 
  
-\item\textbf{Solenoid Valve}
+\subsubsection{Solenoid Valve}
 
 Power rating of each latching solenoid valve
 ranges from 7-11 watts.The energy consumed is significantly reduced when
 compared to the solenoid valves without latching, as the time duration
 of the pulse is very less, around 50ms.
 
-\item\textbf{ESP8266 WIFI module}
+\subsubsection{ESP8266 WIFI module}
 
 A detailed report of its power consumption can be found later in the
 wiki
 
-\end{enumerate}
 
-\end{itemize}
+
+
 \hfill
 
 {\Large{\textbf{Tasks to accomplish}}}
@@ -792,7 +690,7 @@ wiki
 
 
 \vspace{5cm}
-{\LARGE{\textbf{ESP8266 WiFi module}}}
+\section{ESP8266 WiFi module}
 
 \vspace{0.5cm}
 
@@ -821,7 +719,7 @@ are:
   controller
 \end{itemize}
 
-{\Large{\textbf{Progress stages and key points}}}
+\subsection{Progress stages and key points}
 
 \begin{itemize}
 
@@ -852,7 +750,7 @@ for IoT applications.
 
 \vspace{5.5cm}
 
-{\LARGE{\textbf{IDE for ESP8266}}}
+\subsection{IDE for ESP8266}
 
 \begin{enumerate}
 
@@ -879,7 +777,7 @@ for IoT applications.
 
 \vspace{0.5cm}
 
-{\Large{\textbf{MQTT in ESP8266}}}
+\subsection{MQTT in ESP8266}
 
 \begin{itemize}
 
@@ -902,7 +800,7 @@ for IoT applications.
 
 \vspace{0.5cm}
 
-{\Large{\textbf{Troubleshooting}}}
+\subsection{Troubleshooting}
 
 \begin{enumerate}
 
@@ -918,11 +816,11 @@ for IoT applications.
 
 \vspace{3.5cm}
 
-{\LARGE{\textbf{Circuit design and testing}}}
+\section{Circuit design and testing}
 
-\begin{enumerate}
 
-{\Large{\item{\textbf{The circuit for controlling of ESP8266}}}}
+
+\subsection{The circuit for controlling of ESP8266}
 
 \vspace{0.5cm}
 
@@ -1026,7 +924,7 @@ Some of the key points observed during testing:
 
 \vspace{0.5cm}
 
-{\Large{\item{\textbf{The circuit for controlling the solenoid valves}}} }
+\subsection{The circuit for controlling the solenoid valves}
 
 Components required:
 
@@ -1067,10 +965,10 @@ Components required:
   %\href{http://www.ti.com/lit/an/slva460/slva460.pdf}{Solenoid\_driving}
 \end{itemize}
 
-\end{enumerate}
+
 
 \vspace{19cm}
-{\LARGE{\textbf{nodeMCU firmware}}}
+\section{nodeMCU firmware}
 \vspace{0.5cm}
 
 Reasons for Switching from Arduino IDE to nodeMCU firmware
@@ -1102,7 +1000,7 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
  
 \end{itemize}
 
-\textbf{Installation procedure:}
+\subsection{Installation procedure:}
 
 \begin{itemize}
 
@@ -1133,7 +1031,7 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
 \textbf{note:} Make sure GPIO 0 is connected to ground while flashing
 \vspace{0.5cm}
 
-\textbf{ESPlorer IDE}
+\subsection{ESPlorer IDE}
 
 \begin{itemize}
 
@@ -1155,7 +1053,7 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
   %\href{http://www.nodemcu.com/docs/}{nodeMCU}
 \end{itemize}
 
-\textbf{Troubleshooting}
+\subsection{Troubleshooting}
 
 \begin{itemize}
 
@@ -1197,7 +1095,7 @@ have to convert the Windows-style name into an Unix-style path
 \vspace{9cm}
 
 
-{\LARGE{\textbf{Protocols for communication}}}
+\section{Protocols for communication}
 
 \vspace{0.5cm}
 
@@ -1223,7 +1121,7 @@ The Protocols that can be looked into are:
   The simple thing protocol
 \end{itemize}
 
-\textbf{Material for reading}
+\subsection{Material for reading}
 
 \begin{enumerate}
 
@@ -1253,7 +1151,7 @@ The Protocols that can be looked into are:
 
 \vspace{0.5cm}
 
-{\LARGE{\textbf{Message queing telemetry transport}}}
+\subsection{Message queing telemetry transport}
 
 \vspace{0.5cm}
 Some of the important features of MQTT protocol:
@@ -1294,7 +1192,7 @@ application.
 
 \vspace{13cm}
 
-{\LARGE{\textbf{MOSCA broker}}}
+\section{MOSCA broker}
 
 \vspace{0.5cm}
 
@@ -1302,11 +1200,13 @@ After successfully installing MOSCA broker on the system, you are now
 good to go on next step.
 
 \vspace{0.5cm}
-{\Large{\textbf{Running MOSCA}}}
+\subsection{Running MOSCA}
+
+\vspace{0.3cm}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
 
-{\textbf{Configuring IP on which MOSCA has to be run.}}
+\subsubsection{Configuring IP on which MOSCA has to be run.}
 
 \emph{on the terminal type \textgreater{}\texttt{mosca -help}, it will
 display all the handles which mosca currently supports we are going to
@@ -1332,7 +1232,7 @@ the mosca folder.
 
 \vspace{0.5cm}
 
-{\LARGE{\textbf{Interfacing MOSCA and ESP}}}
+\subsubsection{Interfacing MOSCA and ESP}
 
 \begin{itemize}
 
@@ -1356,10 +1256,10 @@ the mosca folder.
 
 
 
-{\Large{\textbf{Troubleshooting}}}
+\subsection{Troubleshooting}
 
-\begin{itemize}
-\item{\textbf{ESP8266}}
+
+\subsubsection{ESP8266}
 
 \begin{itemize}
 
@@ -1375,7 +1275,7 @@ the mosca folder.
 
 \vspace{0.6cm}
 
-\item{\textbf{MOSCA server}}
+\subsubsection{MOSCA server}
 
 \begin{itemize}
 
@@ -1389,10 +1289,10 @@ the mosca folder.
 \end{itemize}
 
 \vspace{0.5cm}
-\end{itemize}
 
-{\Large{\textbf{Configuring MOSCA with
-openHAB}}}
+
+\subsection{Configuring MOSCA with
+openHAB}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
 
@@ -1431,7 +1331,7 @@ the switch and you can see led going on and off.
 
 \vspace{8cm}
 
-{\LARGE{\textbf{Database handling and UI design\\}}}
+\section{Database handling and UI design\\}
 
 \vspace{0.3cm}
 {\Large{\underline{\textbf{Table Description}}}}
@@ -1558,14 +1458,14 @@ run continuously in php cli mode.
 
 \vspace{13cm}
 
-{\LARGE{\textbf{Power Analysis}}}
+\section{Power Analysis}
 \vspace{0.5cm}
 
-{\Large{\textbf{ESP8266}}}
+{\Large{\underline{\textbf{ESP8266}}}}
 
 \vspace{0.2cm}
 
-\textbf{Modes of operation of
+\subsection{Modes of operation of
 ESP8266:}
 
 \begin{itemize}
@@ -1627,7 +1527,7 @@ Thus, GPIO 16 or external GPIO should be connected to RST pin.
 \end{itemize}
 
 \vspace{0.5cm}
-{\Large{\textbf{WIFI sleep modes}}}
+\subsection{WIFI sleep modes}
 
 \vspace{0.5cm}
 {\underline{\texttt{\textbf{wifi.sleeptype()}}}}
@@ -1685,7 +1585,7 @@ mode
 
 \vspace{0.6cm}
 
-{\Large{\textbf{Implementaton}}}
+\subsection{Implementaton}
 
 \vspace{0.3cm}
 
@@ -1761,7 +1661,7 @@ the RST pin is brought low
 
 
 \vspace{0.5cm}
-{\Large{\textbf{Steps}}}
+\subsection{Steps}
 
 \begin{itemize}
 
@@ -1810,8 +1710,8 @@ the RST pin is brought low
 
 
 \vspace{0.5cm}
-{\Large{\textbf{Graphs showing current
-consumption}}}
+\subsection{Graphs showing current
+consumption}
 
 \begin{itemize}
 
@@ -1821,18 +1721,25 @@ consumption}}}
 
 
 \begin{figure}
+
+\textbf{Troubleshooting}
+
+\vspace{0.2cm}
+\begin{itemize}
+\item
+  Even after connecting the GPIO 16 pin to the RESET pin the ESP doesn't
+  wake up to its initial state. It wakes up to some random condition and
+  halts the ongoing process
+\item
+  The ESP8266 has bugs with its software RESET. Therefore an external
+  controller might be required to pull its reset pin low if one wants to
+  explore the sleep modes of ESP
+  
+  Follow this link for additional info
+%\href{http://tinker.yeoman.com.au/2015/03/08/reducing-esp8266-power-consumption-using-deep-sleep/}{Sleep}
+\end{itemize}
 \includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/average_current1.png}
 \caption{Average}
-\end{figure}
-
-
-\item
-  Peak current consumption of the ESP8266 module during its various
-  operations over time.Refer figure 2 
-
-\begin{figure}
-\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/peak_current1.png}
-\caption{Peak}
 \textbf{Key Points}
 
   \begin{itemize}
@@ -1854,18 +1761,15 @@ consumption}}}
   \end{itemize}
 \end{figure}
 
-  
+
 \item
-  A graph showing the breakup between the average current consumed by
-  the H-bridge(theoretical) and the ESP8266 module.Refer figure 3
-\end{itemize}
+  Peak current consumption of the ESP8266 module during its various
+  operations over time.Refer figure 2 
 
 \begin{figure}
-\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/breakup1.png}
-\caption{Breakup}
-\end{figure}
-  
-{\Large{\textbf{Observations}}}
+\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/peak_current1.png}
+\caption{Peak}
+\textbf{Observations}
 
 \begin{itemize}
 
@@ -1875,10 +1779,18 @@ consumption}}}
   A 2500 mA will last for a maximum of 4 days
 \item
   The sleep option of the ESP have to be tapped and as the \\
-  \texttt{node.dsleep()} function is not working the options we can look
+ \texttt{node.dsleep()} function is not working the options we can look
   into are:
 \end{itemize}
+\end{figure}
 
+  
+\item
+  A graph showing the breakup between the average current consumed by
+  the H-bridge(theoretical) and the ESP8266 module.Refer figure 3
+\end{itemize}
+
+\begin{figure}
 \begin{enumerate}
 
 \item
@@ -1888,26 +1800,15 @@ consumption}}}
 \item
   Wait for an update to the nodeMCU firmware
 \end{enumerate}
+\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/breakup1.png}
+\caption{Breakup}
+\end{figure}
+  
+
+
 
 \vspace{0.5cm}
-\textbf{Troubleshooting}
-
-\begin{itemize}
-\item
-  Even after connecting the GPIO 16 pin to the RESET pin the ESP doesn't
-  wake up to its initial state. It wakes up to some random condition and
-  halts the ongoing process
-\item
-  The ESP8266 has bugs with its software RESET. Therefore an external
-  controller might be required to pull its reset pin low if one wants to
-  explore the sleep modes of ESP
-\end{itemize}
-
-Follow this link for additional info
-%\href{http://tinker.yeoman.com.au/2015/03/08/reducing-esp8266-power-consumption-using-deep-sleep/}{Sleep}
-
-\vspace{0.5cm}
-{\Large{\textbf{Future plans}}}
+\subsection{Future plans}
 
 \vspace{0.3cm}
 In the future we could try to integrate solar power into the module. The
@@ -1917,7 +1818,7 @@ the night.
 
 \vspace{0.3cm}
 
-\textbf{Problems}
+\subsection{Problems}
 
 \begin{itemize}
 
@@ -1931,16 +1832,14 @@ the night.
 
 \vspace{10.5cm}
 
-{\LARGE{\textbf{Cost analysis}}}
-
 \vspace{19cm}
-{\LARGE{\textbf{Experimental features and notes}}}
+\section{Experimental features and notes}
 
 \vspace{0.5cm}
 
-\begin{itemize}
 
-\item{\textbf{YL-69 Soil Hygrometer Humidity \& Soil Moisture Detection Sensor}}
+
+\subsection{YL-69 Soil Hygrometer Humidity \& Soil Moisture Detection Sensor}
 
 %\begin{figure}
 %\centering
@@ -1961,7 +1860,7 @@ as accurate as the analogue output.
 
 \vspace{0.5cm}
 
-{\Large{\textbf{Specifications}}}
+\subsubsection{Specifications}
 
 \begin{itemize}
 
@@ -1984,7 +1883,7 @@ as accurate as the analogue output.
 \end{itemize}
 
 \vspace{0.5cm}
-{\Large{\textbf{Key Features}}}
+\subsubsection{Key Features}
 
 \begin{itemize}
 
@@ -2012,7 +1911,7 @@ as accurate as the analogue output.
   generally used to detect the \vspace{0.5cm}moisture content of the soil
 \end{itemize}
 
-{\Large{\textbf{Implementation}}}
+\subsubsection{Implementation}
 
 \begin{itemize}
 
@@ -2041,12 +1940,12 @@ as accurate as the analogue output.
 
 \vspace{0.5cm}
 
-{\Large{\item{\textbf{Schematic and PCB
-Design}}}}
+\subsection{Schematic and PCB
+Design}
 
-\end{itemize}
 
-{\textbf{Schematics in KICAD}} \\
+
+\subsubsection{Schematics in KICAD}
 Install KICAD from the ubntu software centre along with the additional
 addons and tools.
 
@@ -2063,8 +1962,8 @@ Here is a tutorial that will guide you in the making of schematics using
   \vspace{0.2cm}
 \end{itemize}
 
-{\textbf{Netlists and
-footprints}}
+\subsubsection{Netlists and
+footprints}
 
 \begin{itemize}
 
@@ -2101,8 +2000,8 @@ footprints}}
 %  \href{https://www.youtube.com/watch?v=aVNMJVaRf6M}{video}
 \end{itemize}
 
-{\textbf{PCB designing with
-PCBNEW}}
+\subsubsection{PCB designing with
+PCBNEW}
 
 Here is a list of tutorials for PCB making
 
@@ -2120,7 +2019,7 @@ Here is a list of tutorials for PCB making
 %\end{itemize}
 \vspace{17cm}
 
-{\LARGE{\textbf{Cost analysis}}}
+\section{Cost analysis}
 
 \vspace{1cm}
 \begin{tabular}{|m{5cm}|m{3.5cm}|}
@@ -2134,11 +2033,13 @@ Here is a list of tutorials for PCB making
 \end{tabular} 
 
 \vspace{15cm}
-{\LARGE{\textbf{Bugs}}}
+\section{Bugs}
 
+sjbjcnskn
 
 \vspace{19cm}
-{\LARGE{\textbf{Future work}}}
+
+\section{Future work}
 
 \end{document}
 
