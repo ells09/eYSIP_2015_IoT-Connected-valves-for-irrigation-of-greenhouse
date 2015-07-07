@@ -3,6 +3,9 @@
 \documentclass[16pt]{article}
 \usepackage{graphicx}
 \usepackage{array}
+\usepackage{hyperref}
+
+
 \begin{document}
 
 
@@ -26,6 +29,7 @@
         {\underline{\textbf{Interns:}}} \\
         
         Jayant Solanki 
+<<<<<<< HEAD
         
         email: 
         
@@ -35,6 +39,17 @@
         
         email: kdsouza1496@gmail.com
         
+=======
+        
+        email: 
+        
+        mobile: \\
+        
+        Kevin D'souza
+        
+        email: kdsouza1496@gmail.com
+        
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
         mobile: 9449711647
         
         \vspace{1cm}
@@ -132,10 +147,19 @@
     In Sony systems while booting use \emph{ASSIST} key
   \end{enumerate}
   
+<<<<<<< HEAD
 for further information look up this repository 
 %www.github.com/
   
 \hfill
+
+=======
+for further information look up \\
+
+\href{https://help.ubuntu.com/community/WindowsDualBoot}{Ubuntu Insatllation}
+  
+\hfill
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 
 \subsection{Installatio-of-Apache2-,-PHP-and-MySQL-LAMP-server}
@@ -268,8 +292,8 @@ for further information look up this repository
 
 Based on their use, there are two widely available MQTT brokers
 available on the web. 
-%* \href{http://mosquitto.org/}{Mosquitto} *
-%\href{https://github.com/mcollina/mosca}{Mosca}
+\href{http://mosquitto.org/}{Mosquitto} 
+\href{https://github.com/mcollina/mosca}{Mosca}
 
 We chose Mosca because it is: 
 
@@ -284,7 +308,7 @@ We chose Mosca because it is:
  \vspace{0.5cm}
 
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
+
 
 \textbf{Installation on a OpenSuse system (version
 13.1)}
@@ -329,7 +353,7 @@ To start the database service
 \textgreater{}\texttt{sudo service mongod start}
  \vspace{0.5cm}
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
+
 
 \textbf{Installation on an Ubuntu system (version
 14.4)}
@@ -434,7 +458,11 @@ Client client-pub.js \textgreater{}\texttt{node client-sub.js}
 
 \begin{figure}
 \hspace{2cm}
+<<<<<<< HEAD
 \includegraphics[width=0.7\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/mosca.jpg}
+=======
+\includegraphics[width=0.7\textwidth]{images/mosca.jpg}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 \caption{MOSCA start}
 \end{figure}
 
@@ -474,12 +502,6 @@ tcp port.
 
 \subsection{The Thing system - Architecture}
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
-
-%\begin{figure}[htbp]
-%\centering
-%\includegraphics{http://thethingsystem.com/dev/images/thing.architecture.png}
-%\end{figure}
 \vspace{0.5cm}
 
 The steward is center of the system, monitoring and controlling all
@@ -490,8 +512,6 @@ clients.
 {\Large{\textbf{Communicating with
 Things}}}
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
-
 There are three different protocols that the steward uses to communicate
 with a thing. 
 
@@ -500,12 +520,12 @@ with a thing.
 
 \item With consumer equipment native protocol is used.
 \item Things concerned with sensors reading reports uses
-%\href{http://thethingsystem.com/dev/Thing-Sensor-Reporting-Protocol.html}{Thing
-%Sensor Reporting Protocol}.
-%Codes are found on
-%\href{https://github.com/TheThingSystem/steward/tree/master/things/examples}{Github}.
+\href{http://thethingsystem.com/dev/Thing-Sensor-Reporting-Protocol.html}{Thing
+Sensor Reporting Protocol}.
+Codes are found on
+\href{https://github.com/TheThingSystem/steward/tree/master/things/examples}{Github}.
 \item Things performing some events uses
-%\href{http://thethingsystem.com/dev/Simple-Thing-Protocol.html}{Simple Thing Protocol}.
+\href{http://thethingsystem.com/dev/Simple-Thing-Protocol.html}{Simple Thing Protocol}.
 
 \end{enumerate}
 
@@ -514,7 +534,6 @@ with a thing.
 {\Large{\textbf{Communication with
 clients}}}
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
 
 \begin{enumerate}
 
@@ -522,20 +541,28 @@ clients}}}
 \item
   Simple clients like platform specific Arduino, Android, iOS and
   platform neutral HTML5. Code can be found on
-  %\href{https://github.com/TheThingSystem/steward/tree/master/clients/examples}{Github}.
+  \href{https://github.com/TheThingSystem/steward/tree/master/clients/examples}{Github}.
 \item
   Apprentices, they work autonomously.
   
 \end{enumerate}
 
-%{\Large{\textbf{Installation}}}
+\subsection{openhab}
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
 
-%Visit
-%\href{http://thethingsystem.com/dev/Installation.html}{installation
-%page}
+Studied openHAB, The thing system and other engines and found that among these openHAB was the best option available, since it was fully open sourced and it
+consisted of nearly 100+ addons. It also support MQTT binding which will be useful later on as a minimal size packet data communication protocol.
 
+\hfill
+
+\textbf{Installation of openHAB runtime}
+
+\begin{enumerate}
+
+  \item Download openHAB from its Github repository \href{https://github.com/openhab}{openHAB}
+  \item Extract the zip file to a suitable directory of your Linux system
+
+\end{enumerate}
 
 
 \subsection{openhab}
@@ -562,7 +589,7 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
   Found a pdf explaining different types of solenoid valves and their
   power consumption.Holding amperes in case of latching Solenoid valves is
   for momentary time of around 20-50 ms reducing power consumption
-  significantly. Here's the link %
+  significantly. Here's the link \href{http://www.ascovalve.com/common/pdffiles/product/engineeringr5.pdf}{solenoid valve}
 
 \vspace{0.3cm}
 
@@ -594,7 +621,7 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
     their continuous power consumption.
   \item
     some of the important features and working of latching valves can be
-    found at
+    found at \href{www.giplindia.com/latching-solenoid-valve.htm}{latching valve}  
     
   \item
     Latching solenoid valves specifications matching irrigation
@@ -636,7 +663,11 @@ Options for Rechargeable batteries we can use :
 
 \begin{figure}
 \hspace{3cm}
+<<<<<<< HEAD
 \includegraphics[width=0.4\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/latch_valve.jpg}
+=======
+\includegraphics[width=0.4\textwidth]{images/latch_valve.jpg}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 \caption{Latching valve}
 \end{figure}
 \vspace{0.4cm}
@@ -698,10 +729,46 @@ wiki
 
 
 
+<<<<<<< HEAD
 \subsection{Configuring MOSCA with
 openHAB}
 
 %\begin{center}\rule{3in}{0.4pt}\end{center}
+=======
+\subsection{Progress stages}
+
+\begin{itemize}
+
+\item
+  Installed CCS successfully but later found that this step was unnecessary.you can skip this step.Download CCS from TI website and follow this link for instructions
+  \href{http://processors.wiki.ti.com/index.php/Linux_Host_Support_CCSv6}{CCS}
+\item ESP8266 toolchain setup   \href{https://github.com/esp8266/esp8266-wiki/wiki/Toolchain}{toolchain}
+\item
+  A variety of AT commands are mentioned in the link which will be
+  useful to send commanda to the ESP from the serial termina. \href{https://nurdspace.nl/ESP8266#AT_Commands}{AT commands}
+\item
+  The code for ESP8266 can be written in \emph{C} or \emph{python} with
+  the help of the SDK which has extensible functions which are useful
+\item
+  Not much help exists about coding ESP module using \emph{Energia}
+\item Go through \href{http://hackaday.com/2014/12/08/compiling-your-own-programs-for-the-esp8266/}{help} and \href{http://www.instructables.com/id/ESP8266-mini-Tutorial/}{instructable}
+\item
+  ESP8266 also has MQTT libraries which can be included for its use
+\item
+  We can use arduino IDE for programming as there is great support for
+  Arduino from the ESP community
+\item
+  All we have to do is flash the code on the ESP using FTDI and we can
+  start programming with arduinoIDE
+  
+\end{itemize}
+
+
+\subsection{Configuring MOSCA with
+openHAB}
+
+
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 After successfully running mosca on the system, it is time to start
 running openHAB.
@@ -711,7 +778,11 @@ running openHAB.
 \item
   copy required addons (mqtt binding, mqtt-transport binding,
   persistence binding etc) from the addon zip downloaded from the
+<<<<<<< HEAD
   %\href{openHAB}{https://bintray.com/artifact/download/openhab/bin/distribution-1.7.0-addons.zip}
+=======
+  \href{openHAB}{https://bintray.com/artifact/download/openhab/bin/distribution-1.7.0-addons.zip}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
   link to the openhab\textgreater{} addon folder of your system.
 \item
   create openhab.cfg from openhab-default.cfg file and add following
@@ -768,7 +839,11 @@ the switch and you can see led going on and off.
 \end{enumerate}
 
 
+<<<<<<< HEAD
 \vspace{7cm}
+=======
+\vspace{12cm}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 \section{ESP8266 WiFi module}
 
 \vspace{0.5cm}
@@ -799,6 +874,7 @@ are:
   controller
 \end{itemize}
 
+<<<<<<< HEAD
 
 \subsection{Progress stages and key points}
 
@@ -824,6 +900,10 @@ are:
   start programming with arduinoIDE
   
 \end{itemize}
+=======
+
+\vspace{0.4cm}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
   \begin{figure}
 \hspace{3cm}
@@ -836,7 +916,8 @@ We chose to go with ESP8266 over CC3200 because the ESP module had all
 the functionalities that we needed and was cheaper, lighter and better
 for IoT applications.
 
-\vspace{5.5cm}
+
+
 
 \subsection{IDE for ESP8266}
 
@@ -847,23 +928,31 @@ for IoT applications.
   script which can be loaded into the board using ESplorer IDE, but the
   use of this IDE lacks proper documentation.
 \item
-  Download ESplorer from the website 
+  Download ESplorer from the website \href{http://esp8266.ru/esplorer/#download}{ESPlorer}
 \item
   LUA is an embeddable, fast, powerful and light script. This is useful in data
   description and has procedural syntax. It also has some other
   important features like: Automatic memory management and Garbage
-  collection
+  collection. Here's \href{http://www.lua.org/manual/5.3/}{LUA API}
 \item
   One other way of loading code into the ESP is using the Arduino
   IDE.This directly loads code into the EEPROM and the NodeMCU firmware
   can be loaded back in the ESP if
-  needed
+  needed. \href{https://learn.adafruit.com/adafruit-huzzah-esp8266-breakout/using-arduino-ide}{Using arduino}
 \item Clone
   arduino IDE fro ESP-Arduino Github repository and follow
-  the installation procedure
+  the installation procedure. \href{https://github.com/esp8266/Arduino.git}{Arduino}. \textbf{But we prefer to inbuilt nodeMCU with ESPlorer IDE.}
 \end{enumerate}
 
 
+<<<<<<< HEAD
+=======
+ \begin{figure}
+\hspace{3cm}
+\includegraphics[width=0.4\textwidth]{images/ESP1.jpg}
+\caption{ESP8266 V 0.7}
+\end{figure}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 
 \vspace{0.5cm}
@@ -874,25 +963,128 @@ for IoT applications.
 
 \item
   The ESP8266 community has come up with a MQTT library which can be
-  useful to implement MQTT protocol. Go to ESP-mqtt Gitub repository
+  useful to implement MQTT protocol. \href{https://github.com/tuanpmt/esp_mqtt}{ESP mqtt}
  
 \item
   MQTT can also be implemented using ESP8266 along with Arduino board
   using espduino library. clone from ESP-duino github repository. This is not
-  useful to us as it requires Arduino as an external micro-controller
+  useful to us as it requires Arduino as an external micro-controller. \href{https://github.com/tuanpmt/espduino}{github}
 \item
-  MQTT functions are already present in the nodeMCU firmware to be used
+  MQTT functions are already present in the nodeMCU firmware to be used.\textbf{We went with this method.}
 \item
   while using Arduino IDE and additional library called
   \emph{Pubsubclient} needs to be downloaded and placed in the libraries
-  folder. Go to the pubsubclient github repository
- % \href{https://github.com/Imroy/pubsubclient}{pubsubclient}
+  folder.\href{https://github.com/Imroy/pubsubclient}{pubsubclient}
 \end{itemize}
 
+<<<<<<< HEAD
  \begin{figure}
 \hspace{1cm}
 \includegraphics[width=1\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/Esplorer.png}
 \caption{ESPlorer IDE}
+=======
+
+
+\subsection{Analog to digital conversion in
+ESP8266}
+
+\subsubsection{Features}
+\begin{itemize}
+\item
+  It has only one 10 bit ADC channel
+\item
+
+\begin{figure}
+\hspace{3cm}
+\includegraphics[width=0.4\textwidth]{images/ADC.jpeg}
+\caption{ADC in ESP}
+\end{figure}
+  It shows values in the range of 0 - 1024
+\item
+  The module only converts voltage from 0 to 1 meaning a voltage of 1v
+  will give out 1024 value
+\end{itemize}
+
+
+\subsubsection{Implementation}
+
+
+  As we are using a 8V cell we have to give appropriate analog input
+  into the ADC channel of ESP8266 by using a voltage divider.
+
+
+
+
+The value of resistors in our case will be:
+
+R1 = 7.5K
+
+R2 = 1K
+
+This ensures that the maximum voltage that is fed into the ADC is 0.94V
+according to the formula shown.
+
+
+
+\begin{itemize}
+
+\item
+  The code will be polling for the ADC value and when it goes below a
+  certain threshold(75\% of the MAX value), a message is published to
+  the client
+\item
+  The threshold value from calculation comes to about 725
+\end{itemize}
+
+
+\begin{figure}
+\hspace{3.5cm}
+\includegraphics[width=0.3\textwidth]{images/divider.jpeg}
+\caption{Voltage divider}
+\end{figure}
+
+
+\textbf{Code}
+
+\begin{itemize}
+
+\item
+  Use the adc.read(id) function to take the reading
+\item
+  id should be equal to 0
+\end{itemize}
+
+\texttt{value=0}
+
+\texttt{i=0}
+
+\texttt{while (i\textless{}10) do}
+
+\texttt{value=value + adc.read(0)}
+
+\texttt{i=i+1}
+
+\texttt{end}
+
+\texttt{value = value/10}
+
+\texttt{print(value)}
+
+
+
+\subsubsection{Observations}
+
+\begin{itemize}
+
+\item
+  avoid long wires that can produce itself a voltage drop due to
+  internal resistance
+\item
+  Use good quality resistors
+\end{itemize}
+
+
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 \subsection{Troubleshooting}
 
@@ -904,7 +1096,7 @@ for IoT applications.
   the nonheadless version of JAVA.Installed open-JDK-non-headless
   version and configured to a new java and the installation problem was
   solved. Refer this
- %\href{http://askubuntu.com/questions/26474/unable-to-install-arduino}{forum}
+ \href{http://askubuntu.com/questions/26474/unable-to-install-arduino}{forum}
 \end{enumerate}
 
 \end{figure}
@@ -914,12 +1106,12 @@ for IoT applications.
 
 
 
-\vspace{3.5cm}
+
+
+
+\vspace{15cm}
 
 \section{Circuit design and testing}
-
-
-
 \subsection{The circuit for controlling of ESP8266}
 
 \vspace{0.5cm}
@@ -972,7 +1164,11 @@ Before you begin:
 
 \begin{figure}
 \hspace{2cm}
+<<<<<<< HEAD
 \includegraphics[width=0.7\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/ESP8266.jpg}
+=======
+\includegraphics[width=0.7\textwidth]{images/ESP8266.jpg}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 \caption{ESP8266 test}
 \end{figure}
 
@@ -1054,7 +1250,11 @@ Components required:
 \begin{figure}
 
 \hspace{2cm}
+<<<<<<< HEAD
 \includegraphics[width=0.7\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/valve.jpg}
+=======
+\includegraphics[width=0.7\textwidth]{images/valve.jpg}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 \caption{valve test}
 \end{figure}
 
@@ -1074,11 +1274,11 @@ Components required:
   of the pulse should be around 20ms for optimum working
 \item
   LT293 H-bridge driver IC also can be used to test the
-  circuit%\href{http://www.ti.com/lit/ds/symlink/l293.pdf}{LT293}
+  circuit \href{http://www.ti.com/lit/ds/symlink/l293.pdf}{LT293}
 \item
   This is another alternative to the same, Using dual Hbridge driver
   DRV8841
-  %\href{http://www.ti.com/lit/an/slva460/slva460.pdf}{Solenoid\_driving}
+  \href{http://www.ti.com/lit/an/slva460/slva460.pdf}{Solenoid\_driving}
 \end{itemize}
 
 
@@ -1099,20 +1299,20 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
   IoT application
 \item
   checkout the nodeMCU API
-  %\href{https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_en}{nodeMCU}
+  \href{https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_en}{nodeMCU}
 \item
   nodeMCU firmware comes inbuilt with the ESP8266 and it uses LUA script
   which is a fast and powerful script
 \item
   Incase you have erased the original firmware then you can reflash it
   by downloading the firmware here
-  %\href{https://github.com/nodemcu/nodemcu-firmware/raw/master/pre_build/latest/nodemcu_latest.bin}{firmware}
+  \href{https://github.com/nodemcu/nodemcu-firmware/raw/master/pre_build/latest/nodemcu_latest.bin}{firmware}
 \item
   It can be flashed through the esptool. Download ESPTOOL here
-  %\href{https://github.com/themadinventor/esptool/}{esptool}.
+  \href{https://github.com/themadinventor/esptool/}{esptool}.
 \item
   Follow the instructions given here
- % \href{http://www.whatimade.today/flashing-the-nodemcu-firmware-on-the-esp8266-linux-guide/}{setup}
+  \href{http://www.whatimade.today/flashing-the-nodemcu-firmware-on-the-esp8266-linux-guide/}{setup}
  
 \end{itemize}
 
@@ -1121,7 +1321,7 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
 \begin{itemize}
 
 \item
-  Download nodeMCU latest firmware from the link above
+  Download nodeMCU latest firmware from the link above 
 \item
   Download ESPTOOL
 \item
@@ -1156,17 +1356,17 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
   loading of code into the ESP an easy task
 \item
   Download ESPlorer here
- % \href{http://esp8266.ru/esplorer/\#download}{ESPlorer}
+ \href{http://esp8266.ru/esplorer/\#download}{ESPlorer}
 \item
   ESPlorer is a platform that helps you load lua scripts into the ESP.
   follow this for more help
-  %\href{http://randomnerdtutorials.com/esp8266-web-server/}{webserver\_example}
+  \href{http://randomnerdtutorials.com/esp8266-web-server/}{webserver\_example}
 \item
   For the GPIO mapping refer this
-  %\href{https://github.com/nodemcu/nodemcu-firmware}{gpio\_map}
+  \href{https://github.com/nodemcu/nodemcu-firmware}{gpio\_map}
 \item
   Refer this for some more documentation regarding nodeMCU
-  %\href{http://www.nodemcu.com/docs/}{nodeMCU}
+  \href{http://www.nodemcu.com/docs/}{nodeMCU}
 \end{itemize}
 
 \subsection{Troubleshooting}
@@ -1176,12 +1376,12 @@ Reasons for Switching from Arduino IDE to nodeMCU firmware
 \item
   ESPlorer needs JAVA 7 or higher. install JAVA 8 for ubuntu by
   following these steps
-  %\href{http://tecadmin.net/install-oracle-java-8-jdk-8-ubuntu-via-ppa/}{JAVA 8}.
+  \href{http://tecadmin.net/install-oracle-java-8-jdk-8-ubuntu-via-ppa/}{JAVA 8}.
   After downloading ESPlorer make your way to the folder in which
   ESPlorer.jar exists and run this command in the terminal
   \textgreater{}\texttt{java -jar ESPlorer.jar} and your done
 \item
-  esptool depends on %\href{http://pyserial.sourceforge.net/}{pySerial}
+  esptool depends on \href{http://pyserial.sourceforge.net/}{pySerial}
   for serial communication with the target device.
 \end{itemize}
 
@@ -1197,9 +1397,9 @@ manually by running something like \\
 \vspace{0.3cm}
 depending on your platform. The
 official pySerial installation instructions are
-%\href{http://pyserial.sourceforge.net/pyserial.html\#installation}{here}).
+\href{http://pyserial.sourceforge.net/pyserial.html\#installation}{here}).
 This utility actually have a user interface! It uses
-%\href{https://docs.python.org/dev/library/argparse.html}{Argparse}
+\href{https://docs.python.org/dev/library/argparse.html}{Argparse}
 and is rather self-documenting. Try running \texttt{esptool -h}. Or hack the
 script to your hearts content. The serial port is selected using the
 \texttt{-p} option, like \texttt{-p /dev/ttyUSB0} (on unixen like Linux
@@ -1244,12 +1444,12 @@ The Protocols that can be looked into are:
 \item
   Here is a Pdf explaining the LWM2M protocol. This is a very specific
   M2M protocol for Internet of things
-  applications.%\href{http://archive.ericsson.net/service/internet/picov/get?DocNo=1/28701-FGB101973}{LWM2M}.
+  applications. \href{http://archive.ericsson.net/service/internet/picov/get?DocNo=1/28701-FGB101973}{LWM2M}.
   This protocol intergrates COAP in it as well
 \item
   COAP protocol is widely used in IOT applications. Ideal for low power
   and constrained memory usage applications
-  %\href{https://tools.ietf.org/html/draft-arkko-core-sleepy-sensors-01}{COAP}.
+  \href{https://tools.ietf.org/html/draft-arkko-core-sleepy-sensors-01}{COAP}.
   This could make use of sleep-wakeup model as mentioned in the pdf
 \item
   MQTT-SN is also a very lightweight sensor application protocol.
@@ -1259,10 +1459,10 @@ The Protocols that can be looked into are:
   communication
 \item
   Additional features of MQTT-SN are explained here
- %\href{http://mqtt.org/new/wp-content/uploads/2009/06/MQTT-SN_spec_v1.2.pdf}{MQTT-SN}
+ \href{http://mqtt.org/new/wp-content/uploads/2009/06/MQTT-SN_spec_v1.2.pdf}{MQTT-SN}
 \item
   Comparison and Pros and cons of MQTT and COAP at the application layer
-  %\href{http://www.eclipse.org/community/eclipse_newsletter/2014/february/article2.php}{comparison}
+  \href{http://www.eclipse.org/community/eclipse_newsletter/2014/february/article2.php}{comparison}
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -1290,10 +1490,10 @@ Some of the important features of MQTT protocol:
   ESP8266 has inbuilt support for MQTT with all the important functions
 \item
   MQTT protocol is explained in detail here
-  %\href{http://mosquitto.org/man/mqtt-7.html}{MQTT}
+  \href{http://mosquitto.org/man/mqtt-7.html}{MQTT}
 \item
   Look through MQTT as a protocol and its API documentation
-  %\href{http://knolleary.net/arduino-client-for-mqtt/api/}{API\_documentation}
+  \href{http://knolleary.net/arduino-client-for-mqtt/api/}{API\_documentation}
 \item
   It runs on UDP therefore doesn't need to maintain the connection
   information
@@ -1509,16 +1709,16 @@ stop \textbar{} int(4) \textbar{} YES \textbar{} \textbar{} NULL
 action \textbar{} int(1) \textbar{} YES \textbar{} \textbar{} NULL
 \textbar{}
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
+
 
 \textbf{Library used}
 
 Uses php library \textbf{SSKAJE MQTT} for communicating with MOSCA
 broker.
 
-%\href{https://sskaje.me}{SSKAJE MQTT}
+\href{https://sskaje.me}{SSKAJE MQTT}
 
-%\href{https://github.com/sskaje/mqtt}{GITHUB}
+\href{https://github.com/sskaje/mqtt}{GITHUB}
 
 \textbf{About the website}
 
@@ -1821,9 +2021,9 @@ consumption}
   explore the sleep modes of ESP
   
   Follow this link for additional info
-%\href{http://tinker.yeoman.com.au/2015/03/08/reducing-esp8266-power-consumption-using-deep-sleep/}{Sleep}
+\href{http://tinker.yeoman.com.au/2015/03/08/reducing-esp8266-power-consumption-using-deep-sleep/}{Sleep}
 \end{itemize}
-\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/average_current1.png}
+\includegraphics[width=1.2\textwidth]{images/average_current1.png}
 \caption{Average}
 \textbf{Key Points}
 
@@ -1852,7 +2052,7 @@ consumption}
   operations over time.Refer figure 2 
 
 \begin{figure}
-\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/peak_current1.png}
+\includegraphics[width=1.2\textwidth]{images/peak_current1.png}
 \caption{Peak}
 \textbf{Observations}
 
@@ -1885,7 +2085,7 @@ consumption}
 \item
   Wait for an update to the nodeMCU firmware
 \end{enumerate}
-\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/breakup1.png}
+\includegraphics[width=1.2\textwidth]{images/breakup1.png}
 \caption{Breakup}
 \end{figure}
   
@@ -1926,11 +2126,6 @@ the night.
 
 \subsection{YL-69 Soil Hygrometer Humidity \& Soil Moisture Detection Sensor}
 
-%\begin{figure}
-%\centering
-%\includegraphics{http://www.tiagoespinha.net/wp-content/uploads/2014/05/2014-05-09-12.51.20.jpg}
-%\caption{YL - 69 moisture sensor}
-%\end{figure}
 
 \vspace{0.3cm}
 This is an Electrical resistance Sensor. The sensor is made up of two
@@ -2048,7 +2243,7 @@ Install KICAD from the ubntu software centre along with the additional
 addons and tools.
 
 Here is a tutorial that will guide you in the making of schematics using
-%\href{https://www.youtube.com/watch?v=rkQ0nVX1q1k}{KICAD}
+\href{https://www.youtube.com/watch?v=rkQ0nVX1q1k}{KICAD}
 
 \begin{itemize}
 
@@ -2063,7 +2258,11 @@ Here is a tutorial that will guide you in the making of schematics using
 
 \begin{figure}
 
+<<<<<<< HEAD
 \includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/schema.png}
+=======
+\includegraphics[width=1.2\textwidth]{images/schema.png}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 \caption{schematic}
 \end{figure}
 \vspace{0.4cm}
@@ -2088,40 +2287,50 @@ footprints}
 \item
   After associating all the components to their respective footprints
   load the netlist in PCBNEW (backup the .brd first!)
-%\item
- % A tutorial
- % \href{http://store.curiousinventor.com/guides/kicad/schematic_to_layout}{design}
+\item
+  A tutorial
+ \href{http://store.curiousinventor.com/guides/kicad/schematic_to_layout}{design}
 \end{itemize}
 
 
 
+<<<<<<< HEAD
 %Here is a tutorial to generate a netlist and associate footprints
 %\href{https://www.youtube.com/watch?v=8HNMihqa844}{Tutorial}
+=======
+Here is a tutorial to generate a netlist and associate footprints
+\href{https://www.youtube.com/watch?v=8HNMihqa844}{Tutorial}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 \begin{itemize}
 
 \item
   Sometimes the required footprints are not available in KICAD but you
   can make your own footprints in CVPCB
-%\item
-%  Here's a link to the same
-%  \href{http://kicadhowto.wikidot.com/mcf1foot1}{footprints}
-%\item
-%  Here's a video tutorial explaining how to make your own footprint
-%  \href{https://www.youtube.com/watch?v=aVNMJVaRf6M}{video}
+\item
+ Here's a link to the same
+\href{http://kicadhowto.wikidot.com/mcf1foot1}{footprints}
+\item
+Here's a video tutorial explaining how to make your own footprint
+\href{https://www.youtube.com/watch?v=aVNMJVaRf6M}{video}
 \end{itemize}
 
+<<<<<<< HEAD
 \begin{figure}
 
 \includegraphics[width=1\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/cvpcb.png}
 \caption{footprint association}
 \end{figure}
 \vspace{0.4cm}
+=======
+
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 \subsubsection{PCB designing with
 PCBNEW}
 Here is a list of tutorials for PCB making
 
+<<<<<<< HEAD
 \vspace{25cm}
 %\begin{itemize}
 
@@ -2135,10 +2344,36 @@ Here is a list of tutorials for PCB making
 %\item
 %  \href{https://www.youtube.com/watch?v=TYqmmj6SO-k}{video}
 %\end{itemize}
+=======
+
+\begin{itemize}
+
+\item
+\href{http://store.curiousinventor.com/guides/kicad/pcb_layout/change_part/}{PCB}
+\item
+\href{http://kicadhowto.wikidot.com/}{How \_to}
+\item
+\href{http://store.curiousinventor.com/guides/kicad/pcb_layout/}{PCB
+ making}
+\item
+\href{https://www.youtube.com/watch?v=TYqmmj6SO-k}{video}
+\end{itemize}
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 \hfill 
 
 
+<<<<<<< HEAD
+=======
+\begin{figure}
+\includegraphics[width=1\textwidth]{images/cvpcb.png}
+\caption{footprint association}
+\end{figure}
+
+\vspace{10cm}
+
+
+>>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 \section{Cost analysis}
 
