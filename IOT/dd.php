@@ -96,12 +96,17 @@ function display($grp)
 				$batterymsg="<span style='color: #FF0000;'><b>Replace battery</b></span>";
 			
 			if($action==1) //changing into user readable form
-				$action="<b><span style='color: #FFAA00;'>device is ON, $action</b></span>";
+				$action="<b><span style='color: #FFAA00;'>Device is ON</b></span>";
 			elseif($action==0)
-				$action="<b><span style='color: #AA6600;'>device is OFF, , $action</span></b>";
+				$action="<b><span style='color: #AA6600;'>Device is OFF</span></b>";
 			else 
-				$action="<b><span style='color: #AA6600;'>Moisture value is ".$action."</span></b>";
-		
+			{
+				if($action<260)
+				    $action="<b><span style='color: #AA6600;'>Soil is wet</span></b>";
+				else
+				    $action="<b><span style='color: #AA6600;'>Soil is dry</span></b>";
+				
+			}
 			if($status==0) //offline
 				$status="<b><span style='color: #FF0000;'>Device offline, please check..</span></b>";
 			elseif($status==1) //online

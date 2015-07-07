@@ -110,13 +110,15 @@ if (mysql_num_rows($results) > 0)
 
 </div>
   </div><!-- end of content div -->
-
+<?php
+include_once "app.php";?>
     </div><!-- end of main div -->
+    <?php
+include_once "app.php";?>
 </div><!-- end of layout -->
 <div class="push"></div>
 
-<?php //include_once "footer.php";?><?php
-include_once "app.php";?></div>
+<?php //include_once "footer.php";?></div>
 <script src="js/ui.js"></script>
 </body>
 </html>

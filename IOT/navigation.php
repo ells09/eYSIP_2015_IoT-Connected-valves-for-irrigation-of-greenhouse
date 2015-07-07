@@ -7,7 +7,7 @@
 echo"
 <div id='menu'>
   <div class='pure-menu'>
-    <a class='pure-menu-heading' href='#'>IOT Controls</a>
+    <a class='pure-menu-heading' href='index.php'>IOT Controls</a>
         <ul class='pure-menu-list'>
           <li class='pure-menu-item' ><a class='pure-menu-link' href='index.php'>Valve Control</a></li>
 	  <li class='pure-menu-item' ><a class='pure-menu-link' href='time.php'>Schedule</a></li>

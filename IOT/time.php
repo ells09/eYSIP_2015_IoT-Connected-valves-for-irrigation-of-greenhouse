@@ -330,13 +330,13 @@ echo "</select>";
 <?php display();?>
 </div>
   </div><!-- end of content div -->
-
+<?php
+include_once "app.php";?>
     </div><!-- end of main div -->
 </div><!-- end of layout -->
    
 <div class="push"></div>
-<?php //include_once "footer.php";?><?php
-include_once "app.php";?></div>
+<?php //include_once "footer.php";?></div>
 <?php
 
 
