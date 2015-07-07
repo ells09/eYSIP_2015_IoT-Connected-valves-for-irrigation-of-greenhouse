@@ -2,63 +2,67 @@
 \contentsline {section}{\numberline {2}Objective and Deliverables}{4}
 \contentsline {section}{\numberline {3}Installation}{5}
 \contentsline {subsection}{\numberline {3.1}Ubuntu}{5}
-\contentsline {subsection}{\numberline {3.2}openhab}{5}
-\contentsline {subsection}{\numberline {3.3}Installatio-of-Apache2-,-PHP-and-MySQL-LAMP-server}{5}
-\contentsline {subsubsection}{\numberline {3.3.1}Install Apache}{6}
-\contentsline {subsubsection}{\numberline {3.3.2}Install MySQL}{6}
-\contentsline {subsubsection}{\numberline {3.3.3}Install PHP}{7}
-\contentsline {subsection}{\numberline {3.4}Broker and nodejs}{7}
-\contentsline {subsection}{\numberline {3.5}Testing the broker}{9}
-\contentsline {subsection}{\numberline {3.6}Troubleshooting}{9}
-\contentsline {section}{\numberline {4}Literature review}{10}
+\contentsline {subsection}{\numberline {3.2}Installatio-of-Apache2-,-PHP-and-MySQL-LAMP-server}{5}
+\contentsline {subsubsection}{\numberline {3.2.1}Install Apache}{5}
+\contentsline {subsubsection}{\numberline {3.2.2}Install MySQL}{6}
+\contentsline {subsubsection}{\numberline {3.2.3}Install PHP}{6}
+\contentsline {subsection}{\numberline {3.3}Broker and nodejs}{7}
+\contentsline {subsection}{\numberline {3.4}Testing the broker}{8}
+\contentsline {subsection}{\numberline {3.5}Troubleshooting}{9}
+\contentsline {section}{\numberline {4}Research}{10}
 \contentsline {subsection}{\numberline {4.1}The Thing system - Architecture}{10}
-\contentsline {subsection}{\numberline {4.2}Solenoid valves}{10}
-\contentsline {subsection}{\numberline {4.3}Latching solenoid valves}{10}
-\contentsline {subsection}{\numberline {4.4}Batteries}{11}
-\contentsline {subsection}{\numberline {4.5}Power consumption}{12}
-\contentsline {subsubsection}{\numberline {4.5.1}Solenoid Valve}{12}
-\contentsline {subsubsection}{\numberline {4.5.2}ESP8266 WIFI module}{12}
-\contentsline {section}{\numberline {5}ESP8266 WiFi module}{13}
-\contentsline {subsection}{\numberline {5.1}Progress stages and key points}{13}
-\contentsline {subsection}{\numberline {5.2}IDE for ESP8266}{14}
-\contentsline {subsection}{\numberline {5.3}MQTT in ESP8266}{14}
-\contentsline {subsection}{\numberline {5.4}Troubleshooting}{14}
-\contentsline {section}{\numberline {6}Circuit design and testing}{15}
-\contentsline {subsection}{\numberline {6.1}The circuit for controlling of ESP8266}{15}
-\contentsline {subsection}{\numberline {6.2}The circuit for controlling the solenoid valves}{16}
-\contentsline {section}{\numberline {7}nodeMCU firmware}{18}
-\contentsline {subsection}{\numberline {7.1}Installation procedure:}{18}
-\contentsline {subsection}{\numberline {7.2}ESPlorer IDE}{18}
-\contentsline {subsection}{\numberline {7.3}Troubleshooting}{19}
-\contentsline {section}{\numberline {8}Protocols for communication}{20}
-\contentsline {subsection}{\numberline {8.1}Material for reading}{20}
-\contentsline {subsection}{\numberline {8.2}Message queing telemetry transport}{20}
-\contentsline {section}{\numberline {9}MOSCA broker}{22}
-\contentsline {subsection}{\numberline {9.1}Running MOSCA}{22}
-\contentsline {subsubsection}{\numberline {9.1.1}Configuring IP on which MOSCA has to be run.}{22}
-\contentsline {subsubsection}{\numberline {9.1.2}Interfacing MOSCA and ESP}{22}
-\contentsline {subsection}{\numberline {9.2}Troubleshooting}{22}
-\contentsline {subsubsection}{\numberline {9.2.1}ESP8266}{22}
-\contentsline {subsubsection}{\numberline {9.2.2}MOSCA server}{23}
-\contentsline {subsection}{\numberline {9.3}Configuring MOSCA with openHAB}{23}
-\contentsline {section}{\numberline {10}Database handling and UI design\\}{24}
-\contentsline {section}{\numberline {11}Power Analysis}{26}
-\contentsline {subsection}{\numberline {11.1}Modes of operation of ESP8266:}{26}
-\contentsline {subsection}{\numberline {11.2}WIFI sleep modes}{27}
-\contentsline {subsection}{\numberline {11.3}Implementaton}{27}
-\contentsline {subsection}{\numberline {11.4}Steps}{28}
-\contentsline {subsection}{\numberline {11.5}Graphs showing current consumption}{29}
-\contentsline {subsection}{\numberline {11.6}Future plans}{29}
-\contentsline {subsection}{\numberline {11.7}Problems}{33}
-\contentsline {section}{\numberline {12}Experimental features and notes}{34}
-\contentsline {subsection}{\numberline {12.1}YL-69 Soil Hygrometer Humidity \& Soil Moisture Detection Sensor}{34}
-\contentsline {subsubsection}{\numberline {12.1.1}Specifications}{34}
-\contentsline {subsubsection}{\numberline {12.1.2}Key Features}{34}
-\contentsline {subsubsection}{\numberline {12.1.3}Implementation}{35}
-\contentsline {subsection}{\numberline {12.2}Schematic and PCB Design}{35}
-\contentsline {subsubsection}{\numberline {12.2.1}Schematics in KICAD}{35}
-\contentsline {subsubsection}{\numberline {12.2.2}Netlists and footprints}{36}
-\contentsline {subsubsection}{\numberline {12.2.3}PCB designing with PCBNEW}{36}
-\contentsline {section}{\numberline {13}Cost analysis}{37}
-\contentsline {section}{\numberline {14}Bugs}{38}
-\contentsline {section}{\numberline {15}Future work}{39}
+\contentsline {subsection}{\numberline {4.2}openhab}{10}
+\contentsline {subsection}{\numberline {4.3}Solenoid valves}{10}
+\contentsline {subsection}{\numberline {4.4}Latching solenoid valves}{11}
+\contentsline {subsection}{\numberline {4.5}Batteries}{11}
+\contentsline {subsection}{\numberline {4.6}Power consumption}{12}
+\contentsline {subsubsection}{\numberline {4.6.1}Solenoid Valve}{12}
+\contentsline {subsubsection}{\numberline {4.6.2}ESP8266 WIFI module}{12}
+\contentsline {subsection}{\numberline {4.7}Configuring MOSCA with openHAB}{13}
+\contentsline {section}{\numberline {5}ESP8266 WiFi module}{14}
+\contentsline {subsection}{\numberline {5.1}Progress stages and key points}{14}
+\contentsline {subsection}{\numberline {5.2}IDE for ESP8266}{15}
+\contentsline {subsection}{\numberline {5.3}MQTT in ESP8266}{15}
+\contentsline {subsection}{\numberline {5.4}Troubleshooting}{16}
+\contentsline {section}{\numberline {6}Circuit design and testing}{17}
+\contentsline {subsection}{\numberline {6.1}The circuit for controlling of ESP8266}{17}
+\contentsline {subsection}{\numberline {6.2}The circuit for controlling the solenoid valves}{18}
+\contentsline {section}{\numberline {7}nodeMCU firmware}{20}
+\contentsline {subsection}{\numberline {7.1}Installation procedure:}{20}
+\contentsline {subsection}{\numberline {7.2}ESPlorer IDE}{20}
+\contentsline {subsection}{\numberline {7.3}Troubleshooting}{21}
+\contentsline {section}{\numberline {8}Protocols for communication}{22}
+\contentsline {subsection}{\numberline {8.1}Material for reading}{22}
+\contentsline {subsection}{\numberline {8.2}Message queing telemetry transport}{22}
+\contentsline {section}{\numberline {9}MOSCA broker}{24}
+\contentsline {subsection}{\numberline {9.1}Running MOSCA}{24}
+\contentsline {subsubsection}{\numberline {9.1.1}Configuring IP on which MOSCA has to be run.}{24}
+\contentsline {subsubsection}{\numberline {9.1.2}Interfacing MOSCA and ESP}{24}
+\contentsline {subsection}{\numberline {9.2}Troubleshooting}{24}
+\contentsline {subsubsection}{\numberline {9.2.1}ESP8266}{24}
+\contentsline {subsubsection}{\numberline {9.2.2}MOSCA server}{25}
+\contentsline {section}{\numberline {10}Database handling and UI design\\}{26}
+\contentsline {section}{\numberline {11}Power Analysis}{28}
+\contentsline {subsection}{\numberline {11.1}Modes of operation of ESP8266:}{28}
+\contentsline {subsection}{\numberline {11.2}WIFI sleep modes}{29}
+\contentsline {subsection}{\numberline {11.3}Implementaton}{29}
+\contentsline {subsection}{\numberline {11.4}Steps}{30}
+\contentsline {subsection}{\numberline {11.5}Graphs showing current consumption}{31}
+\contentsline {subsection}{\numberline {11.6}Future plans}{31}
+\contentsline {subsection}{\numberline {11.7}Problems}{35}
+\contentsline {section}{\numberline {12}Experimental features and notes}{36}
+\contentsline {subsection}{\numberline {12.1}YL-69 Soil Hygrometer Humidity \& Soil Moisture Detection Sensor}{36}
+\contentsline {subsubsection}{\numberline {12.1.1}Specifications}{36}
+\contentsline {subsubsection}{\numberline {12.1.2}Key Features}{36}
+\contentsline {subsubsection}{\numberline {12.1.3}Implementation}{37}
+\contentsline {subsection}{\numberline {12.2}Schematic and PCB Design}{37}
+\contentsline {subsubsection}{\numberline {12.2.1}Schematics in KICAD}{37}
+\contentsline {subsubsection}{\numberline {12.2.2}Netlists and footprints}{38}
+\contentsline {subsubsection}{\numberline {12.2.3}PCB designing with PCBNEW}{38}
+\contentsline {section}{\numberline {13}Cost analysis}{39}
+\contentsline {section}{\numberline {14}Bugs}{41}
+\contentsline {subsection}{\numberline {14.1}Hardware}{41}
+\contentsline {subsection}{\numberline {14.2}Software}{41}
+\contentsline {section}{\numberline {15}Future work}{42}
+\contentsline {subsection}{\numberline {15.1}Hardware}{42}
+\contentsline {subsection}{\numberline {15.2}Software}{42}

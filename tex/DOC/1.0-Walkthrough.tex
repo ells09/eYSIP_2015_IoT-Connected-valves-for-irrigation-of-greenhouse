@@ -15,27 +15,45 @@
 
        {\LARGE{\textbf{e-Yantra Summer Internship-2015 \\ }}}
        
-       \vspace{3cm}
+       \vspace{0.5cm}
        {\Large{\textbf{IoT Connected valves for irrigation of}}} \\  
        % Print the main header
       
        
         {\Large{\textbf{\hspace{3.2cm} greenhouse}}}
         
-         \vspace{3cm}
+         \vspace{0.5cm}
         {\underline{\textbf{Interns:}}} \\
         
-        Jayant Solanki \\
+        Jayant Solanki 
         
-        Kevin D'souza  
+        email: 
+        
+        mobile: \\
+        
+        Kevin D'souza
+        
+        email: kdsouza1496@gmail.com
+        
+        mobile: 9449711647
         
         \vspace{1cm}
         
           {\underline{\textbf{Mentors:}}} \\
           
-          Ajit Harpude \\
+          Ajit Harpude 
+          
+          email: 
+        
+          mobile: \\
           
           Vishwanathan Iyer
+          
+          email: 
+        
+          mobile:  \\
+          
+          \textbf{Duration:} 25/05/2015 to 08/07/2015
           
 \end{titlepage}
 \tableofcontents
@@ -47,10 +65,10 @@
  This project aims to build a copamct and portable module that can be remotely accessed 
  to turn ON/OFF the water supply in a trough, terrace garden or even an agricultural farm. The solution promises to be cheap and afforadble to the common man and 
  the setup is intended to be simple and without hassle. This project aims to touch the lack of automation on irrigation systems in agriculture 
- and thus increase the throuput of the average farmer. 
+ and thus increase the throuput of the average farmer. \\
  
  Once installed this setup would allow you to remotely control the valve for one's irrigation system and also provides additional features such as 
- timing based control and frequency in watering. This could really ease the user of his worry when he/she is not at around the house or the farm. 
+ timing based control and frequency in watering. This could really ease the user of his worry when he/she is not at around the house or the farm. \\
  
  Latter part of this project also includes experimentation regarding moisture sensor integration. This would mean effective feedback to the user for 
  watering. The ultimate goal of the project would be to eliminate the user from this loop and provide effective automation in irrigation through the 
@@ -68,7 +86,10 @@
   
   \vspace{0.1cm}
   
-  Development of a IOT based low-cost, low-power, standalone module for the automation of Irrigation in a greenhouse.
+  Development of a IOT based low-cost, low-power, standalone module for the automation of Irrigation in a greenhouse, urban farm or even an agricultural farm.
+  It is desired to be a plug and play module with as little intervention from the user as possible. Implementation of remote controlling of irrigation valves 
+  along with timing control would be the main objective.\\ Feedback created from the moisture level readings and effective watering based on these values 
+  would be the ultimate goal of the project, thus resulting in total \emph{internet-of-things} based automation.
   
    \vspace{0.6cm}
    
@@ -116,24 +137,6 @@ for further information look up this repository
   
 \hfill
 
-\subsection{openhab}
-
-
-Studied openHAB, The thing system and other engines and found that among these openHAB was the best option available, since it was fully open sourced and it
-consisted of nearly 100+ addons. It also support MQTT binding which will be useful later on as a minimal size packet data communication protocol.
-
-\hfill
-
-\textbf{Installation of openHAB runtime}
-
-\begin{enumerate}
-
-  \item Download openHAB from its Github repository https://github.com/openhab
-  \item Extract the zip file to a suitable directory of your Linux system
-
-  \end{enumerate}
-  
-\hfill
 
 \subsection{Installatio-of-Apache2-,-PHP-and-MySQL-LAMP-server}
 
@@ -391,6 +394,7 @@ installed on the system. Installation codes are:
 To start the database service
 \textgreater{}\texttt{sudo service mongod start}
 
+
  \vspace{0.5cm}
 
 \subsection{Testing the broker}
@@ -427,6 +431,13 @@ Client client-pub.js \textgreater{}\texttt{node client-sub.js}
 \texttt{Hello!}
 \end{quote}
 
+
+\begin{figure}
+\hspace{2cm}
+\includegraphics[width=0.7\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/mosca.jpg}
+\caption{MOSCA start}
+\end{figure}
+
 \vspace{0.5cm}
 
 \subsection{Troubleshooting}
@@ -454,9 +465,9 @@ allowed service, then go to to advance option, there enter 1883 inside
 tcp port.
 
   
-\vspace{2cm}
+\vspace{8cm}
 
-\section{Literature review}
+\section{Research}
 \vspace{0.5cm}
 
 
@@ -526,6 +537,24 @@ clients}}}
 %page}
 
 
+
+\subsection{openhab}
+
+
+Studied openHAB, The thing system and other engines and found that among these openHAB was the best option available, since it was fully open sourced and it
+consisted of nearly 100+ addons. It also support MQTT binding which will be useful later on as a minimal size packet data communication protocol.
+
+\hfill
+
+\textbf{Installation of openHAB runtime}
+
+\begin{enumerate}
+
+  \item Download openHAB from its Github repository https://github.com/openhab
+  \item Extract the zip file to a suitable directory of your Linux system
+
+\end{enumerate}
+
 \subsection{Solenoid valves}
 
 \vspace{0.3cm}
@@ -553,8 +582,7 @@ clients}}}
   \item
     operating pressure upto 6 bar
   \end{itemize}
-  
-\vspace{0.4cm}
+ 
 
   \textbf{Key points to note:}
 
@@ -578,15 +606,22 @@ clients}}}
     Availaible online at stores like Indiamart and Alibaba with price
     ranging from 3-8 US dollars per piece
   \end{itemize}
+  
+
 
 \hfill
+
+
+
 
 \subsection{Batteries}
 
 \hfill
 
+
 Options for Rechargeable batteries we can use :
 \hfill
+
 \begin{enumerate}
 
 \item
@@ -599,6 +634,12 @@ Options for Rechargeable batteries we can use :
 
 \hfill
 
+\begin{figure}
+\hspace{3cm}
+\includegraphics[width=0.4\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/latch_valve.jpg}
+\caption{Latching valve}
+\end{figure}
+\vspace{0.4cm}
 
 Alkaline rechargeable batteries would be suitable for our low power
 applications. Some of the important features of these batteries are:
@@ -657,6 +698,44 @@ wiki
 
 
 
+\subsection{Configuring MOSCA with
+openHAB}
+
+%\begin{center}\rule{3in}{0.4pt}\end{center}
+
+After successfully running mosca on the system, it is time to start
+running openHAB.
+
+\begin{itemize}
+
+\item
+  copy required addons (mqtt binding, mqtt-transport binding,
+  persistence binding etc) from the addon zip downloaded from the
+  %\href{openHAB}{https://bintray.com/artifact/download/openhab/bin/distribution-1.7.0-addons.zip}
+  link to the openhab\textgreater{} addon folder of your system.
+\item
+  create openhab.cfg from openhab-default.cfg file and add following
+  details
+\item
+  under mqtt transport section update following lines
+\end{itemize}
+
+\texttt{javacript       mqtt:broker.url=tcp://192.168.0.100:1883       mqtt:broker.clientId=openhab}
+
+\begin{itemize}
+
+
+\item your system is now ready for openHAB to start and test a demo site for
+glowing a led on esp8266 module.
+\item copy content of the folders to the
+respective folder in the openHAB 
+\item Open browser and type
+\textgreater{}\texttt{localhost:8080/openhab.app?sitemap=test}
+\item toggle
+the switch and you can see led going on and off.
+
+\end{itemize}
+
 
 \hfill
 
@@ -675,9 +754,9 @@ wiki
 \item
   Communicate with the valve remotely
 \item
-  Install openHAB and MQTT broker
+  Install php, mysql and MQTT broker
 \item
-  Control the valve using openHAB GUI
+  Control the valve using GUI
 \item
   Work on device discovery and persistence
 \item
@@ -689,7 +768,7 @@ wiki
 \end{enumerate}
 
 
-\vspace{5cm}
+\vspace{7cm}
 \section{ESP8266 WiFi module}
 
 \vspace{0.5cm}
@@ -697,6 +776,7 @@ wiki
 ESP8266 is a low power WIFI module which is very much suitable for our
 irrigation application. Some of the important features of the ESP8266
 are:
+
 
 \begin{itemize}
 
@@ -719,6 +799,7 @@ are:
   controller
 \end{itemize}
 
+
 \subsection{Progress stages and key points}
 
 \begin{itemize}
@@ -732,7 +813,7 @@ are:
   The code for ESP8266 can be written in \emph{C} or \emph{python} with
   the help of the SDK which has extensible functions which are useful
 \item
-  Not much help exists about coding ESP module using \emph{Energia}
+  Not much help exists about coding ESP module using \emph{Energia}  
 \item
   ESP8266 also has MQTT libraries which can be included for its use
 \item
@@ -743,6 +824,13 @@ are:
   start programming with arduinoIDE
   
 \end{itemize}
+
+  \begin{figure}
+\hspace{3cm}
+\includegraphics[width=0.4\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/ESP1.jpg}
+\caption{ESP8266 V 0.7}
+\end{figure}
+\vspace{0.4cm}
 
 We chose to go with ESP8266 over CC3200 because the ESP module had all
 the functionalities that we needed and was cheaper, lighter and better
@@ -775,6 +863,9 @@ for IoT applications.
   the installation procedure
 \end{enumerate}
 
+
+
+
 \vspace{0.5cm}
 
 \subsection{MQTT in ESP8266}
@@ -798,7 +889,10 @@ for IoT applications.
  % \href{https://github.com/Imroy/pubsubclient}{pubsubclient}
 \end{itemize}
 
-\vspace{0.5cm}
+ \begin{figure}
+\hspace{1cm}
+\includegraphics[width=1\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/Esplorer.png}
+\caption{ESPlorer IDE}
 
 \subsection{Troubleshooting}
 
@@ -812,6 +906,12 @@ for IoT applications.
   solved. Refer this
  %\href{http://askubuntu.com/questions/26474/unable-to-install-arduino}{forum}
 \end{enumerate}
+
+\end{figure}
+
+
+\vspace{0.4cm}
+
 
 
 \vspace{3.5cm}
@@ -850,6 +950,8 @@ Before you begin:
   IDE. Test using sample codes.
 \end{enumerate}
 
+
+
 \textbf{Key points to note while flashing code}
 
 \begin{itemize}
@@ -867,6 +969,12 @@ Before you begin:
 \item
   choose the ESP board, port connected and set CPU frequency to 80 Mhz
 \end{itemize}
+
+\begin{figure}
+\hspace{2cm}
+\includegraphics[width=0.7\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/ESP8266.jpg}
+\caption{ESP8266 test}
+\end{figure}
 
 \vspace{0.5cm}
 {\Large{\textbf{Troubleshooting}}}
@@ -941,6 +1049,14 @@ Components required:
 \item
   Arduino Mega ADK(any microcontroller)
 \end{itemize}
+
+
+\begin{figure}
+
+\hspace{2cm}
+\includegraphics[width=0.7\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/valve.jpg}
+\caption{valve test}
+\end{figure}
 
 \textbf{Steps}
 
@@ -1215,6 +1331,8 @@ the terminal type \textgreater{}\texttt{mosca -v --host 'ur ip'
 \textbar{}bunyan}}. \\ Server testing can be done via two codes included in
 the mosca folder.
 
+ 
+
 \vspace{0.3cm}
 
 \textbf{NOTE}: for opensuse users, make sure that entry for tcp port
@@ -1230,6 +1348,8 @@ the mosca folder.
   has been run.
 \end{itemize}
 
+
+
 \vspace{0.5cm}
 
 \subsubsection{Interfacing MOSCA and ESP}
@@ -1244,6 +1364,8 @@ the mosca folder.
 \item
   Burn the LUA scripts on the ESP8266
 \item
+
+
   send subscribe request from your terminal using
   \textgreater{}\texttt{node client-sub.js} (go to the apprpriate folder
   first)
@@ -1291,45 +1413,8 @@ the mosca folder.
 \vspace{0.5cm}
 
 
-\subsection{Configuring MOSCA with
-openHAB}
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
-
-After successfully running mosca on the system, it is time to start
-running openHAB.
-
-\begin{itemize}
-
-\item
-  copy required addons (mqtt binding, mqtt-transport binding,
-  persistence binding etc) from the addon zip downloaded from the
-  %\href{openHAB}{https://bintray.com/artifact/download/openhab/bin/distribution-1.7.0-addons.zip}
-  link to the openhab\textgreater{} addon folder of your system.
-\item
-  create openhab.cfg from openhab-default.cfg file and add following
-  details
-\item
-  under mqtt transport section update following lines
-\end{itemize}
-
-\texttt{javacript       mqtt:broker.url=tcp://192.168.0.100:1883       mqtt:broker.clientId=openhab}
-
-\begin{itemize}
-
-
-\item your system is now ready for openHAB to start and test a demo site for
-glowing a led on esp8266 module.
-\item copy content of the folders to the
-respective folder in the openHAB 
-\item Open browser and type
-\textgreater{}\texttt{localhost:8080/openhab.app?sitemap=test}
-\item toggle
-the switch and you can see led going on and off.
-
-\end{itemize}
-
-\vspace{8cm}
+\vspace{12cm}
 
 \section{Database handling and UI design\\}
 
@@ -1858,6 +1943,9 @@ sensor module outputs a high level of resistance. This sensor has both
 digital and analogue outputs. Digital output is simple to use but is not
 as accurate as the analogue output.
 
+
+
+
 \vspace{0.5cm}
 
 \subsubsection{Specifications}
@@ -1881,6 +1969,8 @@ as accurate as the analogue output.
 \item
   GND : Connected to ground
 \end{itemize}
+
+
 
 \vspace{0.5cm}
 \subsubsection{Key Features}
@@ -1935,7 +2025,15 @@ as accurate as the analogue output.
   reaches beyond a certain threshold
 \item
   After the installation check the values that the sensor gives for dry,
-  wet and humid soil and process accordingly
+  wet and humid soil and process accordingly. According to the readings given by the 
+  moisture sensor, we have decided a threshold of 260. 
+\begin{enumerate}
+ \item A value above 260 is marked as dry soil
+ \item A value below 260 is marked as wet soil 
+\end{enumerate}
+
+
+  
 \end{itemize}
 
 \vspace{0.5cm}
@@ -1962,8 +2060,19 @@ Here is a tutorial that will guide you in the making of schematics using
   \vspace{0.2cm}
 \end{itemize}
 
+
+\begin{figure}
+
+\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/schema.png}
+\caption{schematic}
+\end{figure}
+\vspace{0.4cm}
+
+
+
 \subsubsection{Netlists and
 footprints}
+
 
 \begin{itemize}
 
@@ -1984,6 +2093,8 @@ footprints}
  % \href{http://store.curiousinventor.com/guides/kicad/schematic_to_layout}{design}
 \end{itemize}
 
+
+
 %Here is a tutorial to generate a netlist and associate footprints
 %\href{https://www.youtube.com/watch?v=8HNMihqa844}{Tutorial}
 
@@ -2000,11 +2111,18 @@ footprints}
 %  \href{https://www.youtube.com/watch?v=aVNMJVaRf6M}{video}
 \end{itemize}
 
+\begin{figure}
+
+\includegraphics[width=1\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/cvpcb.png}
+\caption{footprint association}
+\end{figure}
+\vspace{0.4cm}
+
 \subsubsection{PCB designing with
 PCBNEW}
-
 Here is a list of tutorials for PCB making
 
+\vspace{25cm}
 %\begin{itemize}
 
 %\item
@@ -2017,29 +2135,84 @@ Here is a list of tutorials for PCB making
 %\item
 %  \href{https://www.youtube.com/watch?v=TYqmmj6SO-k}{video}
 %\end{itemize}
-\vspace{17cm}
+
+\hfill 
+
+
 
 \section{Cost analysis}
 
-\vspace{1cm}
+A table showing breakup of unit cost of a module controlling the valve: 
+
+\vspace{0.5cm}
 \begin{tabular}{|m{5cm}|m{3.5cm}|}
 	\hline
 	{\bf Items} & {\bf Est. cost in Rupees}\\ \hline
 	ESP8266 & 400 \\ \hline
-	Rechargible Alkaline battery & 150 \\ \hline
-	H-bridge & 100 \\ \hline 
+	Rechargible duracell battery & 100 \\ \hline
+	H-bridge & 50 \\ \hline 
 	Latching Solenoid valve & 430 \\ \hline
-	Total cost & 1080 \\ \hline 
+	miscellaneous & 20 \\ \hline
+	Total cost & 1000 \\ \hline 
 \end{tabular} 
+
+\hfill 
+\vspace{1cm}
+
+This module is a cheap and effective solution to the irrigation problems that the urban and rural farmers face today.
+With initial installations that are already in place, this becomes just a plug and play module and easy to use.\\
+
+Considering 4 plots in a farm assuming initial installations like network of pipes already in place it would take only a day's work of setup and configuration 
+and a total price of Rs.4000/- plus miscellaneous costs for installation.\\
+
+This works out cheaper than anyother module in the market, whose installation might go up to double the price mentioned here for a farm of the same size.
+When the product is manufactured in bulk, the manufacturing price will lower further and might even end up less than Rs.500 per unit. This could
+either mean a better margin of profit or making the module available for cheap for the needy user.  
+
 
 \vspace{15cm}
 \section{Bugs}
 
-sjbjcnskn
+\vspace{0.5cm}
+
+\subsection{Hardware}
+\begin{enumerate}
+ \item The user has to take the trouble of installing the server in his/her system and configure the ip the device connects to
+ \item The user has to configure the network he would like to connect to 
+ \item The ESP8266 doesn't sleep automatically now. The user has to send it to sleep and has to manually reset to wake it up
+ \item The user might have to replace the battery once in two days which could be solved by tapping into the sleep modes of the ESP8266
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\subsection{Software}
+\begin{enumerate}
+ \item 
+\end{enumerate}
+
 
 \vspace{19cm}
 
 \section{Future work}
+
+\vspace{0.5cm}
+
+\subsection{Hardware}
+\begin{enumerate}
+ \item To integrate the moisture sensor into the setup and design an algorithm that would result in effective watering 
+ \item To automatically scan the networks in the region and connect to the strongest one
+ \item Tap into the sleep mode of the ESP8266 and make it sleep for most of the day except for the time 
+ it has to water the plants
+ \item To send the server information wirelessly without the user having to configure the ip
+ \item Reduce the components used and try to make the module even cheaper  
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\subsection{Software}
+\begin{enumerate}
+ \item 
+\end{enumerate}
 
 \end{document}
 
