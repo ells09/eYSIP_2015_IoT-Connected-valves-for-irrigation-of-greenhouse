@@ -3,7 +3,7 @@
 \documentclass[16pt]{article}
 \usepackage{graphicx}
 \usepackage{array}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 
 \begin{document}
@@ -15,7 +15,9 @@
        
 
        \hfill\hfill\hfill
-
+\begin{figure}
+	\centering{\includegraphics[width=1.2\textwidth]{images/eyantralogo.png}}
+\end{figure}
        {\LARGE{\textbf{e-Yantra Summer Internship-2015 \\ }}}
        
        \vspace{0.5cm}
@@ -27,47 +29,42 @@
         
          \vspace{0.5cm}
         {\underline{\textbf{Interns:}}} \\
+        \begin{quote}
+        	Jayant Solanki
+        	
+        	email: jayantjnp@gmail.com		
+        	
+        	mobile:9044775938
+        \end{quote}
         
-        Jayant Solanki 
-<<<<<<< HEAD
         
-        email: 
+		
+		\begin{quote}
+			Kevin D'souza
+			
+			email: kdsouza1496@gmail.com
+			
+			mobile: 9449711647
+		\end{quote}
         
-        mobile: \\
-        
-        Kevin D'souza
-        
-        email: kdsouza1496@gmail.com
-        
-=======
-        
-        email: 
-        
-        mobile: \\
-        
-        Kevin D'souza
-        
-        email: kdsouza1496@gmail.com
-        
->>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
-        mobile: 9449711647
         
         \vspace{1cm}
         
           {\underline{\textbf{Mentors:}}} \\
-          
+          \begin{quote}
           Ajit Harpude 
           
           email: 
         
           mobile: \\
-          
+        \end{quote}
+          \begin{quote}
           Vishwanathan Iyer
           
           email: 
         
           mobile:  \\
-          
+          \end{quote}
           \textbf{Duration:} 25/05/2015 to 08/07/2015
           
 \end{titlepage}
@@ -147,22 +144,14 @@
     In Sony systems while booting use \emph{ASSIST} key
   \end{enumerate}
   
-<<<<<<< HEAD
-for further information look up this repository 
-%www.github.com/
-  
-\hfill
-
-=======
 for further information look up \\
 
 \href{https://help.ubuntu.com/community/WindowsDualBoot}{Ubuntu Insatllation}
   
 \hfill
->>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 
-\subsection{Installatio-of-Apache2-,-PHP-and-MySQL-LAMP-server}
+\subsection{Installation of Apache2, PHP and MySQL (LAMP-server)}
 
 \vspace{0.5cm}
 
@@ -292,8 +281,8 @@ for further information look up \\
 
 Based on their use, there are two widely available MQTT brokers
 available on the web. 
-%* \href{http://mosquitto.org/}{Mosquitto} *
-%\href{https://github.com/mcollina/mosca}{Mosca}
+\href{http://mosquitto.org/}{Mosquitto} 
+\href{https://github.com/mcollina/mosca}{Mosca}
 
 We chose Mosca because it is: 
 
@@ -308,7 +297,7 @@ We chose Mosca because it is:
  \vspace{0.5cm}
 
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
+
 
 \textbf{Installation on a OpenSuse system (version
 13.1)}
@@ -353,7 +342,7 @@ To start the database service
 \textgreater{}\texttt{sudo service mongod start}
  \vspace{0.5cm}
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
+
 
 \textbf{Installation on an Ubuntu system (version
 14.4)}
@@ -458,7 +447,7 @@ Client client-pub.js \textgreater{}\texttt{node client-sub.js}
 
 \begin{figure}
 \hspace{2cm}
-\includegraphics[width=0.7\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/mosca.jpg}
+\includegraphics[width=0.7\textwidth]{images/mosca.jpg}
 \caption{MOSCA start}
 \end{figure}
 
@@ -555,25 +544,7 @@ consisted of nearly 100+ addons. It also support MQTT binding which will be usef
 
 \begin{enumerate}
 
-  \item Download openHAB from its Github repository https://github.com/openhab
-  \item Extract the zip file to a suitable directory of your Linux system
-
-\end{enumerate}
-
-
-\subsection{openhab}
-
-
-Studied openHAB, The thing system and other engines and found that among these openHAB was the best option available, since it was fully open sourced and it
-consisted of nearly 100+ addons. It also support MQTT binding which will be useful later on as a minimal size packet data communication protocol.
-
-\hfill
-
-\textbf{Installation of openHAB runtime}
-
-\begin{enumerate}
-
-  \item Download openHAB from its Github repository https://github.com/openhab
+  \item Download openHAB from its Github repository \href{https://github.com/openhab}{openHAB}
   \item Extract the zip file to a suitable directory of your Linux system
 
 \end{enumerate}
@@ -659,7 +630,7 @@ Options for Rechargeable batteries we can use :
 
 \begin{figure}
 \hspace{3cm}
-\includegraphics[width=0.4\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/latch_valve.jpg}
+\includegraphics[width=0.4\textwidth]{images/latch_valve.jpg}
 \caption{Latching valve}
 \end{figure}
 \vspace{0.4cm}
@@ -721,8 +692,6 @@ wiki
 
 
 
-<<<<<<< HEAD
-=======
 \subsection{Progress stages}
 
 \begin{itemize}
@@ -752,11 +721,10 @@ wiki
 \end{itemize}
 
 
->>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 \subsection{Configuring MOSCA with
 openHAB}
 
-%\begin{center}\rule{3in}{0.4pt}\end{center}
+
 
 After successfully running mosca on the system, it is time to start
 running openHAB.
@@ -766,7 +734,7 @@ running openHAB.
 \item
   copy required addons (mqtt binding, mqtt-transport binding,
   persistence binding etc) from the addon zip downloaded from the
-  %\href{openHAB}{https://bintray.com/artifact/download/openhab/bin/distribution-1.7.0-addons.zip}
+  \href{openHAB}{https://bintray.com/artifact/download/openhab/bin/distribution-1.7.0-addons.zip}
   link to the openhab\textgreater{} addon folder of your system.
 \item
   create openhab.cfg from openhab-default.cfg file and add following
@@ -823,7 +791,7 @@ the switch and you can see led going on and off.
 \end{enumerate}
 
 
-\vspace{7cm}
+\vspace{12cm}
 \section{ESP8266 WiFi module}
 
 \vspace{0.5cm}
@@ -855,19 +823,14 @@ are:
 \end{itemize}
 
 
-
- \begin{figure}
-\hspace{3cm}
-\includegraphics[width=0.4\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/ESP1.jpg}
-\caption{ESP8266 V 0.7}
-\end{figure}
 \vspace{0.4cm}
 
 We chose to go with ESP8266 over CC3200 because the ESP module had all
 the functionalities that we needed and was cheaper, lighter and better
 for IoT applications.
 
-\vspace{5.5cm}
+
+
 
 \subsection{IDE for ESP8266}
 
@@ -895,6 +858,11 @@ for IoT applications.
 \end{enumerate}
 
 
+ \begin{figure}
+\hspace{3cm}
+\includegraphics[width=0.4\textwidth]{images/ESP1.jpg}
+\caption{ESP8266 V 0.7}
+\end{figure}
 
 
 \vspace{0.5cm}
@@ -929,6 +897,12 @@ ESP8266}
 \item
   It has only one 10 bit ADC channel
 \item
+
+\begin{figure}
+\hspace{3cm}
+\includegraphics[width=0.4\textwidth]{images/ADC.jpeg}
+\caption{ADC in ESP}
+\end{figure}
   It shows values in the range of 0 - 1024
 \item
   The module only converts voltage from 0 to 1 meaning a voltage of 1v
@@ -943,11 +917,7 @@ ESP8266}
   into the ADC channel of ESP8266 by using a voltage divider.
 
 
-\begin{figure}
-\hspace{3cm}
-\includegraphics[width=0.4\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/ADC.jpeg}
-\caption{ADC in ESP}
-\end{figure}
+
 
 The value of resistors in our case will be:
 
@@ -969,6 +939,14 @@ according to the formula shown.
 \item
   The threshold value from calculation comes to about 725
 \end{itemize}
+
+
+\begin{figure}
+\hspace{3.5cm}
+\includegraphics[width=0.3\textwidth]{images/divider.jpeg}
+\caption{Voltage divider}
+\end{figure}
+
 
 \textbf{Code}
 
@@ -997,11 +975,6 @@ according to the formula shown.
 \texttt{print(value)}
 
 
-\begin{figure}
-\hspace{3.5cm}
-\includegraphics[width=0.3\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/divider.jpeg}
-\caption{Voltage divider}
-\end{figure}
 
 \subsubsection{Observations}
 
@@ -1026,19 +999,16 @@ according to the formula shown.
   the nonheadless version of JAVA.Installed open-JDK-non-headless
   version and configured to a new java and the installation problem was
   solved. Refer this
- %\href{http://askubuntu.com/questions/26474/unable-to-install-arduino}{forum}
+ \href{http://askubuntu.com/questions/26474/unable-to-install-arduino}{forum}
 \end{enumerate}
 
-\vspace{0.4cm}
 
 
 
-\vspace{3.5cm}
+
+\vspace{15cm}
 
 \section{Circuit design and testing}
-
-
-
 \subsection{The circuit for controlling of ESP8266}
 
 \vspace{0.5cm}
@@ -1091,7 +1061,7 @@ Before you begin:
 
 \begin{figure}
 \hspace{2cm}
-\includegraphics[width=0.7\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/ESP8266.jpg}
+\includegraphics[width=0.7\textwidth]{images/ESP8266.jpg}
 \caption{ESP8266 test}
 \end{figure}
 
@@ -1173,7 +1143,7 @@ Components required:
 \begin{figure}
 
 \hspace{2cm}
-\includegraphics[width=0.7\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/valve.jpg}
+\includegraphics[width=0.7\textwidth]{images/valve.jpg}
 \caption{valve test}
 \end{figure}
 
@@ -1535,8 +1505,9 @@ the mosca folder.
 
 \vspace{12cm}
 
-\section{Database handling and UI design\\}
-
+\section{Database handling and UI design}
+{{\textbf{UI part consist of PHP core, MySQL and phpMQTT library(SSKAJE) }}}
+\subsection{Database}
 \vspace{0.3cm}
 {\Large{\underline{\textbf{Table Description}}}}
 \vspace{0.2cm}
@@ -1558,91 +1529,78 @@ Tables in database:
 
 \textbf{Name:} device
 
-\textbf{\textbar{} Field \textbar{} Type \textbar{} Null \textbar{} Key
-\textbar{} Default \textbar{} Extra \textbar{}}
+\begin{quote}
 
-\textbar{} id \textbar{} int(255) \textbar{} NO \textbar{} PRI
-\textbar{} NULL \textbar{} auto\_increment \textbar{}
-
-\textbar{} name \textbar{} varchar(255) \textbar{} YES \textbar{}
-\textbar{} NULL \textbar{} \textbar{}
-
-\textbar{} macid \textbar{} varchar(30) \textbar{} NO \textbar{}
-\textbar{} NULL \textbar{} \textbar{}\\ \textbar{} group \textbar{}
-varchar(255) \textbar{} YES \textbar{} \textbar{} NULL \textbar{}
-\textbar{}\\ \textbar{} status \textbar{} int(1) \textbar{} YES
-\textbar{} \textbar{} NULL \textbar{} \textbar{}\\ \textbar{} battery
-\textbar{} varchar(10) \textbar{} YES \textbar{} \textbar{} NULL
-\textbar{} \textbar{}\\ \textbar{} seen \textbar{} timestamp \textbar{}
-NO \textbar{} \textbar{} CURRENT\_TIMESTAMP \textbar{} on update
-CURRENT\_TIMESTAMP \textbar{}\\ \textbar{} action \textbar{} int(1)
-\textbar{} YES \textbar{} \textbar{} NULL \textbar{} \textbar{}\\
-\textbar{} type \textbar{} varchar(255) \textbar{} YES \textbar{}
-\textbar{} NULL \textbar{} \textbar{}
-
+	\centering
+	\caption{Table 1: Devices table}
+	\label{my-label}
+	\begin{tabular}{llllll}
+		{\bf FIELD} & {\bf TYPE}   & {\bf NULL} & {\bf KEY} & {\bf Default}      & {\bf EXTRA}     \\
+		id          & int(255)     & NO         & PRI       & NULL               & auto\_increment \\
+		name        & varchar(255) & YES        &           & NULL               &                 \\
+		macid       & varchar(30)  & NO         &           & NULL               &                 \\
+		group       & varchar(255) & YES        &           & NULL               &                 \\
+		status      & int(1)       & YES        &           & NULL               &                 \\
+		battery     & int(1)       & YES        &           & NULL               &                 \\
+		timestamp   &              & NO         &           & CURRENT\_TIMESTAMP &                 \\
+		action      & varchar(255) & YES        &           & NULL               &                
+	\end{tabular}
+	
+\end{quote}
 \textbf{Group Table}
 
 \textbf{Name:} groups
 
-\textbf{\textbar{} Field \textbar{} Type \textbar{} Null \textbar{} Key
-\textbar{} Default \textbar{} Extra \textbar{}}
+\begin{quote}
+	\centering
+	\caption{Table 2: Groups table}
+	\label{my-label}
+	\begin{tabular}{llllll}
+		{\bf FIELD} & {\bf TYPE}   & {\bf NULL} & {\bf KEY} & {\bf Default} & {\bf EXTRA}     \\
+		id          & int(10)      & NO         & PRI       & NULL          & auto\_increment \\
+		name        & varchar(255) & NO         &           & NULL          &                
+	\end{tabular}
 
-id \textbar{} int(10) \textbar{} NO \textbar{} PRI \textbar{} NULL
-\textbar{} auto\_increment \textbar{}
-
-name \textbar{} varchar(255) \textbar{} NO \textbar{} \textbar{} NULL
-\textbar{} \textbar{}
-
+\end{quote}
 \textbf{Sensor Table}
 
 \textbf{Name:} sensors
 
-\textbf{\textbar{} Field \textbar{} Type \textbar{} Null \textbar{} Key
-\textbar{} Default \textbar{} Extra \textbar{}}
+\begin{quote}
+	\centering
+	\caption{Table 3: Sensors Table}
+	\label{my-label}
+	\begin{tabular}{llllll}
+		{\bf FIELD} & {\bf TYPE}   & {\bf NULL} & {\bf KEY} & {\bf Default} & {\bf EXTRA}     \\
+		id          & int(10)      & NO         & PRI       & NULL          & auto\_increment \\
+		name        & varchar(255) & NO         &           & NULL          &                
+	\end{tabular}
 
-id \textbar{} int(255) \textbar{} NO \textbar{} PRI \textbar{} NULL
-\textbar{} auto\_increment \textbar{}
-
-name \textbar{} varchar(255) \textbar{} NO \textbar{} \textbar{} NULL
-\textbar{}
-
+\end{quote}
 \textbf{Tasks Table}
 
 \textbf{Name:} tasks
+\begin{quote}
+\centering
+\caption{Table 4: Tasks Table}
+\label{my-label}
+\begin{tabular}{llllll}
+	{\bf FIELD} & {\bf TYPE}   & {\bf NULL} & {\bf KEY} & {\bf Default} & {\bf EXTRA}     \\
+	id          & int(10)      & NO         & PRI       &           & auto\_increment \\
+	item        & varchar(255) & NO         &           & NULL          &                 \\
+	start       & int(4)       & YES        &           & NULL          &                 \\
+	stop        & int(4)       & YES        &           & NULL          &                 \\
+	action      & int(1)       & YES        &           &               &                
+\end{tabular}
+\end{quote}
 
-\textbf{\textbar{} Field \textbar{} Type \textbar{} Null \textbar{} Key
-\textbar{} Default \textbar{} Extra \textbar{}}
 
-id \textbar{} int(255) \textbar{} NO \textbar{} PRI \textbar{} NULL
-\textbar{} auto\_increment \textbar{}
 
-item \textbar{} varchar(25) \textbar{} NO \textbar{} \textbar{} NULL
-\textbar{} \textbar{}
 
-start \textbar{} int(4) \textbar{} YES \textbar{} \textbar{} NULL
-\textbar{} \textbar{}
 
-stop \textbar{} int(4) \textbar{} YES \textbar{} \textbar{} NULL
-\textbar{} \textbar{}
 
-action \textbar{} int(1) \textbar{} YES \textbar{} \textbar{} NULL
-\textbar{}
-
-%\begin{center}\rule{3in}{0.4pt}\end{center}
-
-\textbf{Library used}
-
-Uses php library \textbf{SSKAJE MQTT} for communicating with MOSCA
-broker.
-
-%\href{https://sskaje.me}{SSKAJE MQTT}
-
-%\href{https://github.com/sskaje/mqtt}{GITHUB}
-
-\textbf{About the website}
-
-After studying different home automation server, we found that, we need
-to create an engine, which will work in the background performing
+\subsection{PHP core}
+After studying different home automation server, and initially setting up the system using openHAB, we found that openHAB lacks device discovery function as well as user customised time scheduling for modules. We then move to PHP core for developing a robust automation server. We created an engine, which will work in the background performing
 following automated tasks:
 
 \begin{enumerate}
@@ -1660,7 +1618,61 @@ following automated tasks:
 Tasks.php is executed every minute using cron and above other files are
 run continuously in php cli mode.
 
-\vspace{13cm}
+To use cli mode, go to terminal and type
+
+\texttt{/usr/bin/php destinationtoabovephpfiles}\\
+
+\textbf{Library used}
+
+Uses php library \textbf{SSKAJE MQTT} for communicating with MOSCA
+broker.
+
+\href{https://sskaje.me}{SSKAJE MQTT}
+
+\href{https://github.com/sskaje/mqtt}{GITHUB}\\
+\textbf{About the website/Screenshots}
+
+\texttt{Desktop version} \texttt{/Mobile version}
+
+	\begin{figure}
+		\includegraphics[width=1.2\textwidth]{images/homepage.png}
+		\caption{Home Page}
+			\includegraphics[width=0.5\textwidth]{images/menu.png}
+			\caption{Menu Bar}
+		
+	\end{figure}
+	
+	\begin{figure}
+		\includegraphics[width=1.2\textwidth]{images/schedule.png}
+		\caption{Schedule Page}
+		\includegraphics[width=0.5\textwidth]{images/schedule_page.png}
+		\caption{Schedule Page}
+	\end{figure}
+
+	\begin{figure}
+		\includegraphics[width=1.2\textwidth]{images/devices.png}
+		\caption{Devices Page}
+		\includegraphics[width=0.5\textwidth]{images/devices_page.png}
+		\caption{Devices Page}
+	\end{figure}
+
+	\begin{figure}
+		\includegraphics[width=1.2\textwidth]{images/manage1.png}
+		\caption{Manage Page-1}
+		\includegraphics[width=0.5\textwidth]{images/manage_page.png}
+		\caption{Manage Page}
+		
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=1.2\textwidth]{images/manage2.png}
+		\caption{Manage Page-2}
+		
+	\end{figure}
+	
+
+
+\vspace{20cm}
+
 
 \section{Power Analysis}
 \vspace{0.5cm}
@@ -1940,9 +1952,9 @@ consumption}
   explore the sleep modes of ESP
   
   Follow this link for additional info
-%\href{http://tinker.yeoman.com.au/2015/03/08/reducing-esp8266-power-consumption-using-deep-sleep/}{Sleep}
+\href{http://tinker.yeoman.com.au/2015/03/08/reducing-esp8266-power-consumption-using-deep-sleep/}{Sleep}
 \end{itemize}
-\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/average_current1.png}
+\includegraphics[width=1.2\textwidth]{images/average_current1.png}
 \caption{Average}
 \textbf{Key Points}
 
@@ -1971,7 +1983,7 @@ consumption}
   operations over time.Refer figure 2 
 
 \begin{figure}
-\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/peak_current1.png}
+\includegraphics[width=1.2\textwidth]{images/peak_current1.png}
 \caption{Peak}
 \textbf{Observations}
 
@@ -2004,7 +2016,7 @@ consumption}
 \item
   Wait for an update to the nodeMCU firmware
 \end{enumerate}
-\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/breakup1.png}
+\includegraphics[width=1.2\textwidth]{images/breakup1.png}
 \caption{Breakup}
 \end{figure}
   
@@ -2045,11 +2057,6 @@ the night.
 
 \subsection{YL-69 Soil Hygrometer Humidity \& Soil Moisture Detection Sensor}
 
-%\begin{figure}
-%\centering
-%\includegraphics{http://www.tiagoespinha.net/wp-content/uploads/2014/05/2014-05-09-12.51.20.jpg}
-%\caption{YL - 69 moisture sensor}
-%\end{figure}
 
 \vspace{0.3cm}
 This is an Electrical resistance Sensor. The sensor is made up of two
@@ -2167,7 +2174,7 @@ Install KICAD from the ubntu software centre along with the additional
 addons and tools.
 
 Here is a tutorial that will guide you in the making of schematics using
-%\href{https://www.youtube.com/watch?v=rkQ0nVX1q1k}{KICAD}
+\href{https://www.youtube.com/watch?v=rkQ0nVX1q1k}{KICAD}
 
 \begin{itemize}
 
@@ -2179,14 +2186,10 @@ Here is a tutorial that will guide you in the making of schematics using
   \vspace{0.2cm}
 \end{itemize}
 
-<<<<<<< HEAD
-\subsubsection{Netlists and
-footprints}
-=======
 
 \begin{figure}
 
-\includegraphics[width=1.2\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/schema.png}
+\includegraphics[width=1.2\textwidth]{images/schema.png}
 \caption{schematic}
 \end{figure}
 \vspace{0.4cm}
@@ -2196,7 +2199,6 @@ footprints}
 \subsubsection{Netlists and
 footprints}
 
->>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 \begin{itemize}
 
@@ -2212,63 +2214,54 @@ footprints}
 \item
   After associating all the components to their respective footprints
   load the netlist in PCBNEW (backup the .brd first!)
-%\item
- % A tutorial
- % \href{http://store.curiousinventor.com/guides/kicad/schematic_to_layout}{design}
+\item
+  A tutorial
+ \href{http://store.curiousinventor.com/guides/kicad/schematic_to_layout}{design}
 \end{itemize}
 
 
 
-%Here is a tutorial to generate a netlist and associate footprints
-%\href{https://www.youtube.com/watch?v=8HNMihqa844}{Tutorial}
+Here is a tutorial to generate a netlist and associate footprints
+\href{https://www.youtube.com/watch?v=8HNMihqa844}{Tutorial}
 
 \begin{itemize}
 
 \item
   Sometimes the required footprints are not available in KICAD but you
   can make your own footprints in CVPCB
-%\item
-%  Here's a link to the same
-%  \href{http://kicadhowto.wikidot.com/mcf1foot1}{footprints}
-%\item
-%  Here's a video tutorial explaining how to make your own footprint
-%  \href{https://www.youtube.com/watch?v=aVNMJVaRf6M}{video}
+\item
+ Here's a link to the same
+\href{http://kicadhowto.wikidot.com/mcf1foot1}{footprints}
+\item
+Here's a video tutorial explaining how to make your own footprint
+\href{https://www.youtube.com/watch?v=aVNMJVaRf6M}{video}
 \end{itemize}
 
-<<<<<<< HEAD
-\subsubsection{PCB designing with
-PCBNEW}
-=======
->>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 
 \subsubsection{PCB designing with
 PCBNEW}
 Here is a list of tutorials for PCB making
 
-\vspace{25cm}
-%\begin{itemize}
 
-%\item
-%  \href{http://store.curiousinventor.com/guides/kicad/pcb_layout/change_part/}{PCB}
-%\item
-%  \href{http://kicadhowto.wikidot.com/}{How \_to}
-%\item
- % \href{http://store.curiousinventor.com/guides/kicad/pcb_layout/}{PCB
-%  making}
-%\item
-%  \href{https://www.youtube.com/watch?v=TYqmmj6SO-k}{video}
-%\end{itemize}
+\begin{itemize}
 
-<<<<<<< HEAD
-\section{Cost analysis}
+\item
+\href{http://store.curiousinventor.com/guides/kicad/pcb_layout/change_part/}{PCB}
+\item
+\href{http://kicadhowto.wikidot.com/}{How \_to}
+\item
+\href{http://store.curiousinventor.com/guides/kicad/pcb_layout/}{PCB
+ making}
+\item
+\href{https://www.youtube.com/watch?v=TYqmmj6SO-k}{video}
+\end{itemize}
 
-=======
 \hfill 
 
 
 \begin{figure}
-\includegraphics[width=1\textwidth]{/home/kevin/git_IoT_WiKi/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse.wiki/images/cvpcb.png}
+\includegraphics[width=1\textwidth]{images/cvpcb.png}
 \caption{footprint association}
 \end{figure}
 
@@ -2278,7 +2271,6 @@ Here is a list of tutorials for PCB making
 
 \section{Cost analysis}
 
->>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 A table showing breakup of unit cost of a module controlling the valve: 
 
 \vspace{0.5cm}
@@ -2302,13 +2294,9 @@ With initial installations that are already in place, this becomes just a plug a
 Considering 4 plots in a farm assuming initial installations like network of pipes already in place it would take only a day's work of setup and configuration 
 and a total price of Rs.4000/- plus miscellaneous costs for installation.\\
 
-<<<<<<< HEAD
-This works out cheaper than anyother module in the market, whose installation might go up to double the price mentioned here for a farm of the same size. 
-=======
 This works out cheaper than anyother module in the market, whose installation might go up to double the price mentioned here for a farm of the same size.
 When the product is manufactured in bulk, the manufacturing price will lower further and might even end up less than Rs.500 per unit. This could
 either mean a better margin of profit or making the module available for cheap for the needy user.  
->>>>>>> 3c6942bbc242877ade4f408aa83bd9ce5f86bed1
 
 
 \vspace{15cm}
@@ -2328,7 +2316,9 @@ either mean a better margin of profit or making the module available for cheap f
 
 \subsection{Software}
 \begin{enumerate}
- \item 
+ \item While battery.php, subscribe.php, and moisture.php are running in the background, and suddenly MOSCA server crashes, then all those three files have to be restarted again, as they all starts to show warnings, and do not perform their expected jobs.
+ \item when a task is scheduled, say at 0200 (military format) time, this time is displayed as 200 in the scheduled tasks page.
+ \item if scripts written in JS is compromised, then unsolicited values can be injected into the tables.
 \end{enumerate}
 
 
@@ -2352,7 +2342,13 @@ either mean a better margin of profit or making the module available for cheap f
 
 \subsection{Software}
 \begin{enumerate}
- \item 
+ \item Adding login feature
+ \item Adding custom MQTT commands, based upon the type of sensor connected
+ \item Adding module name broadcasting feature, i.e., macid+name, so as to identify the name of module atomatically
+ \item To integrate the moisture sensor into the setup and design an algorithm that would result in effective watering
+ \item Adding PHP validation for user inputs
+ \item Improve UI display
+ \item Integrating battery.php, subscribe.php, tasks.php and moisture.php into the nodejs code for starting MOSCA server, and thus removing the need to separately start those php files.
 \end{enumerate}
 
 \end{document}
