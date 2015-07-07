@@ -15,7 +15,9 @@
        
 
        \hfill\hfill\hfill
-
+\begin{figure}
+	\centering{\includegraphics[width=1.2\textwidth]{images/eyantralogo.png}}
+\end{figure}
        {\LARGE{\textbf{e-Yantra Summer Internship-2015 \\ }}}
        
        \vspace{0.5cm}
@@ -1738,35 +1740,43 @@ broker.
 \href{https://github.com/sskaje/mqtt}{GITHUB}\\
 \textbf{About the website/Screenshots}
 
-\texttt{Desktop version}
-\begin{itemize}
-	\item{Home page}
+\texttt{Desktop version} \texttt{/Mobile version}
+
 	\begin{figure}
 		\includegraphics[width=1.2\textwidth]{images/homepage.png}
 		\caption{Home Page}
+			\includegraphics[width=0.5\textwidth]{images/menu.png}
+			\caption{Menu Bar}
+		
 	\end{figure}
-	\item{Schedule page}
+	
 	\begin{figure}
 		\includegraphics[width=1.2\textwidth]{images/schedule.png}
 		\caption{Schedule Page}
+		\includegraphics[width=0.5\textwidth]{images/schedule_page.png}
+		\caption{Schedule Page}
 	\end{figure}
-	\item{Device page}
+
 	\begin{figure}
 		\includegraphics[width=1.2\textwidth]{images/devices.png}
 		\caption{Devices Page}
+		\includegraphics[width=0.5\textwidth]{images/devices_page.png}
+		\caption{Devices Page}
 	\end{figure}
-	\item{Manage page}
+
 	\begin{figure}
 		\includegraphics[width=1.2\textwidth]{images/manage1.png}
 		\caption{Manage Page-1}
+		\includegraphics[width=0.5\textwidth]{images/manage_page.png}
+		\caption{Manage Page}
+		
 	\end{figure}
 	\begin{figure}
 		\includegraphics[width=1.2\textwidth]{images/manage2.png}
 		\caption{Manage Page-2}
+		
 	\end{figure}
-\end{itemize}
-
-\texttt{Mobile version}
+	
 
 
 \vspace{13cm}
@@ -1778,8 +1788,7 @@ broker.
 
 \vspace{0.2cm}
 
-\subsection{Modes of operation of
-ESP8266:}
+\subsection{Modes of operation of ESP8266:}
 
 \begin{itemize}
 
@@ -2023,8 +2032,7 @@ the RST pin is brought low
 
 
 \vspace{0.5cm}
-\subsection{Graphs showing current
-consumption}
+\subsection{Graphs showing current consumption}
 
 \begin{itemize}
 
@@ -2261,8 +2269,7 @@ as accurate as the analogue output.
 
 \vspace{0.5cm}
 
-\subsection{Schematic and PCB
-Design}
+\subsection{Schematic and PCB Design}
 
 
 
@@ -2440,7 +2447,7 @@ either mean a better margin of profit or making the module available for cheap f
 
 \subsection{Hardware}
 \begin{enumerate}
- \item The user has to take the trouble of installing the server in his/her system and configure the ip the device connects to
+ \item The user has to take the trouble of installing the server in his/her system and configure the ip, the device connects to
  \item The user has to configure the network he would like to connect to 
  \item The ESP8266 doesn't sleep automatically now. The user has to send it to sleep and has to manually reset to wake it up
  \item The user might have to replace the battery once in two days which could be solved by tapping into the sleep modes of the ESP8266
@@ -2450,7 +2457,9 @@ either mean a better margin of profit or making the module available for cheap f
 
 \subsection{Software}
 \begin{enumerate}
- \item 
+ \item While battery.php, subscribe.php, and moisture.php are running in the background, and suddenly MOSCA server crashes, then all those three files have to be restarted again, as they all starts to show warnings, and do not perform their expected jobs.
+ \item when a task is scheduled, say at 0200 (military format) time, this time is displayed as 200 in the scheduled tasks page.
+ \item if scripts written in JS is compromised, then unsolicited values can be injected into the tables.
 \end{enumerate}
 
 
@@ -2462,7 +2471,6 @@ either mean a better margin of profit or making the module available for cheap f
 
 \subsection{Hardware}
 \begin{enumerate}
- \item To integrate the moisture sensor into the setup and design an algorithm that would result in effective watering 
  \item To automatically scan the networks in the region and connect to the strongest one
  \item Tap into the sleep mode of the ESP8266 and make it sleep for most of the day except for the time 
  it has to water the plants
@@ -2474,7 +2482,13 @@ either mean a better margin of profit or making the module available for cheap f
 
 \subsection{Software}
 \begin{enumerate}
- \item 
+ \item Adding login feature
+ \item Adding custom MQTT commands, based upon the type of sensor connected
+ \item Adding module name broadcasting feature, i.e., macid+name, so as to identify the name of module atomatically
+ \item To integrate the moisture sensor into the setup and design an algorithm that would result in effective watering
+ \item Adding PHP validation for user inputs
+ \item Improve UI display
+ \item Integrating battery.php, subscribe.php, tasks.php and moisture.php into the nodejs code for starting MOSCA server, and thus removing the need to separately start those php files.
 \end{enumerate}
 
 \end{document}
