@@ -1611,8 +1611,9 @@ the mosca folder.
 
 \vspace{12cm}
 
-\section{Database handling and UI design\\}
-
+\section{Database handling and UI design}
+{{\textbf{UI part consist of PHP core, MySQL and phpMQTT library(SSKAJE) }}}
+\subsection{Database}
 \vspace{0.3cm}
 {\Large{\underline{\textbf{Table Description}}}}
 \vspace{0.2cm}
@@ -1634,91 +1635,78 @@ Tables in database:
 
 \textbf{Name:} device
 
-\textbf{\textbar{} Field \textbar{} Type \textbar{} Null \textbar{} Key
-\textbar{} Default \textbar{} Extra \textbar{}}
+\begin{quote}
 
-\textbar{} id \textbar{} int(255) \textbar{} NO \textbar{} PRI
-\textbar{} NULL \textbar{} auto\_increment \textbar{}
-
-\textbar{} name \textbar{} varchar(255) \textbar{} YES \textbar{}
-\textbar{} NULL \textbar{} \textbar{}
-
-\textbar{} macid \textbar{} varchar(30) \textbar{} NO \textbar{}
-\textbar{} NULL \textbar{} \textbar{}\\ \textbar{} group \textbar{}
-varchar(255) \textbar{} YES \textbar{} \textbar{} NULL \textbar{}
-\textbar{}\\ \textbar{} status \textbar{} int(1) \textbar{} YES
-\textbar{} \textbar{} NULL \textbar{} \textbar{}\\ \textbar{} battery
-\textbar{} varchar(10) \textbar{} YES \textbar{} \textbar{} NULL
-\textbar{} \textbar{}\\ \textbar{} seen \textbar{} timestamp \textbar{}
-NO \textbar{} \textbar{} CURRENT\_TIMESTAMP \textbar{} on update
-CURRENT\_TIMESTAMP \textbar{}\\ \textbar{} action \textbar{} int(1)
-\textbar{} YES \textbar{} \textbar{} NULL \textbar{} \textbar{}\\
-\textbar{} type \textbar{} varchar(255) \textbar{} YES \textbar{}
-\textbar{} NULL \textbar{} \textbar{}
-
+	\centering
+	\caption{Table 1: Devices table}
+	\label{my-label}
+	\begin{tabular}{llllll}
+		{\bf FIELD} & {\bf TYPE}   & {\bf NULL} & {\bf KEY} & {\bf Default}      & {\bf EXTRA}     \\
+		id          & int(255)     & NO         & PRI       & NULL               & auto\_increment \\
+		name        & varchar(255) & YES        &           & NULL               &                 \\
+		macid       & varchar(30)  & NO         &           & NULL               &                 \\
+		group       & varchar(255) & YES        &           & NULL               &                 \\
+		status      & int(1)       & YES        &           & NULL               &                 \\
+		battery     & int(1)       & YES        &           & NULL               &                 \\
+		timestamp   &              & NO         &           & CURRENT\_TIMESTAMP &                 \\
+		action      & varchar(255) & YES        &           & NULL               &                
+	\end{tabular}
+	
+\end{quote}
 \textbf{Group Table}
 
 \textbf{Name:} groups
 
-\textbf{\textbar{} Field \textbar{} Type \textbar{} Null \textbar{} Key
-\textbar{} Default \textbar{} Extra \textbar{}}
+\begin{quote}
+	\centering
+	\caption{Table 2: Groups table}
+	\label{my-label}
+	\begin{tabular}{llllll}
+		{\bf FIELD} & {\bf TYPE}   & {\bf NULL} & {\bf KEY} & {\bf Default} & {\bf EXTRA}     \\
+		id          & int(10)      & NO         & PRI       & NULL          & auto\_increment \\
+		name        & varchar(255) & NO         &           & NULL          &                
+	\end{tabular}
 
-id \textbar{} int(10) \textbar{} NO \textbar{} PRI \textbar{} NULL
-\textbar{} auto\_increment \textbar{}
-
-name \textbar{} varchar(255) \textbar{} NO \textbar{} \textbar{} NULL
-\textbar{} \textbar{}
-
+\end{quote}
 \textbf{Sensor Table}
 
 \textbf{Name:} sensors
 
-\textbf{\textbar{} Field \textbar{} Type \textbar{} Null \textbar{} Key
-\textbar{} Default \textbar{} Extra \textbar{}}
+\begin{quote}
+	\centering
+	\caption{Table 3: Sensors Table}
+	\label{my-label}
+	\begin{tabular}{llllll}
+		{\bf FIELD} & {\bf TYPE}   & {\bf NULL} & {\bf KEY} & {\bf Default} & {\bf EXTRA}     \\
+		id          & int(10)      & NO         & PRI       & NULL          & auto\_increment \\
+		name        & varchar(255) & NO         &           & NULL          &                
+	\end{tabular}
 
-id \textbar{} int(255) \textbar{} NO \textbar{} PRI \textbar{} NULL
-\textbar{} auto\_increment \textbar{}
-
-name \textbar{} varchar(255) \textbar{} NO \textbar{} \textbar{} NULL
-\textbar{}
-
+\end{quote}
 \textbf{Tasks Table}
 
 \textbf{Name:} tasks
-
-\textbf{\textbar{} Field \textbar{} Type \textbar{} Null \textbar{} Key
-\textbar{} Default \textbar{} Extra \textbar{}}
-
-id \textbar{} int(255) \textbar{} NO \textbar{} PRI \textbar{} NULL
-\textbar{} auto\_increment \textbar{}
-
-item \textbar{} varchar(25) \textbar{} NO \textbar{} \textbar{} NULL
-\textbar{} \textbar{}
-
-start \textbar{} int(4) \textbar{} YES \textbar{} \textbar{} NULL
-\textbar{} \textbar{}
-
-stop \textbar{} int(4) \textbar{} YES \textbar{} \textbar{} NULL
-\textbar{} \textbar{}
-
-action \textbar{} int(1) \textbar{} YES \textbar{} \textbar{} NULL
-\textbar{}
+\begin{quote}
+\centering
+\caption{Table 4: Tasks Table}
+\label{my-label}
+\begin{tabular}{llllll}
+	{\bf FIELD} & {\bf TYPE}   & {\bf NULL} & {\bf KEY} & {\bf Default} & {\bf EXTRA}     \\
+	id          & int(10)      & NO         & PRI       &           & auto\_increment \\
+	item        & varchar(255) & NO         &           & NULL          &                 \\
+	start       & int(4)       & YES        &           & NULL          &                 \\
+	stop        & int(4)       & YES        &           & NULL          &                 \\
+	action      & int(1)       & YES        &           &               &                
+\end{tabular}
+\end{quote}
 
 
 
-\textbf{Library used}
 
-Uses php library \textbf{SSKAJE MQTT} for communicating with MOSCA
-broker.
 
-\href{https://sskaje.me}{SSKAJE MQTT}
 
-\href{https://github.com/sskaje/mqtt}{GITHUB}
-
-\textbf{About the website}
-
-After studying different home automation server, we found that, we need
-to create an engine, which will work in the background performing
+\subsection{PHP core}
+After studying different home automation server, and initially setting up the system using openHAB, we found that openHAB lacks device discovery function as well as user customised time scheduling for modules. We then move to PHP core for developing a robust automation server. We created an engine, which will work in the background performing
 following automated tasks:
 
 \begin{enumerate}
@@ -1735,6 +1723,22 @@ following automated tasks:
 
 Tasks.php is executed every minute using cron and above other files are
 run continuously in php cli mode.
+
+To use cli mode, go to terminal and type
+
+\texttt{/usr/bin/php destinationtoabovephpfiles}\\
+
+\textbf{Library used}
+
+Uses php library \textbf{SSKAJE MQTT} for communicating with MOSCA
+broker.
+
+\href{https://sskaje.me}{SSKAJE MQTT}
+
+\href{https://github.com/sskaje/mqtt}{GITHUB}\\
+\textbf{About the website/Screenshots}
+
+
 
 \vspace{13cm}
 

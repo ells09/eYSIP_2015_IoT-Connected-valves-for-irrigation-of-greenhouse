@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.6.1)  7 JUL 2015 15:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.6.1)  7 JUL 2015 16:54
 entering extended mode
 **1.0-Walkthrough.tex
 
@@ -193,7 +193,17 @@ LaTeX Warning: Unused global option(s):
 
 
 (F:\Eyantra-Internship\eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenh
-ouse\tex\DOC\1.0-Walkthrough.aux)
+ouse\tex\DOC\1.0-Walkthrough.aux
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
@@ -208,8 +218,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
-
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count98
 \scratchdimen=\dimen111
@@ -284,10 +293,10 @@ ouse\tex\DOC\1.0-Walkthrough.tocpdfTeX warning (ext4): destination with the sam
 e identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 ...rotocols for communication}{27}{section.8}
-                                                   [1])
+l.41 ...rotocols for communication}{29}{section.8}
+                                                   [1] [2])
 \tf@toc=\write4
- [2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 75--79
 
  []
@@ -366,7 +375,7 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<images/mosca.jpg, id=442, 529.98pt x 179.92218pt>
+<images/mosca.jpg, id=451, 529.98pt x 179.92218pt>
 File: images/mosca.jpg Graphic file (type jpg)
  <use images/mosca.jpg>
 Package pdftex.def Info: images/mosca.jpg used on input line 459.
@@ -409,7 +418,7 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<images/latch_valve.jpg, id=478, 160.6pt x 162.6075pt>
+<images/latch_valve.jpg, id=487, 160.6pt x 162.6075pt>
 File: images/latch_valve.jpg Graphic file (type jpg)
 
 <use images/latch_valve.jpg>
@@ -469,7 +478,7 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[18] <images/ESP1.jpg, id=524, 352.31625pt x 240.14719pt>
+[18] <images/ESP1.jpg, id=533, 352.31625pt x 240.14719pt>
 File: images/ESP1.jpg Graphic file (type jpg)
 
 <use images/ESP1.jpg>
@@ -518,7 +527,7 @@ l.993 \hspace
 You've lost some text.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<images/ADC.jpeg, id=538, 169.38281pt x 169.38281pt>
+<images/ADC.jpeg, id=547, 169.38281pt x 169.38281pt>
 File: images/ADC.jpeg Graphic file (type jpg)
  <use images/ADC.jpeg>
 Package pdftex.def Info: images/ADC.jpeg used on input line 994.
@@ -536,7 +545,7 @@ l.1036 \hspace
 You've lost some text.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<images/divider.jpeg, id=539, 235.88126pt x 262.9825pt>
+<images/divider.jpeg, id=548, 235.88126pt x 262.9825pt>
 File: images/divider.jpeg Graphic file (type jpg)
 
 <use images/divider.jpeg>
@@ -575,7 +584,7 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<images/ESP8266.jpg, id=552, 3934.7pt x 2212.265pt>
+<images/ESP8266.jpg, id=561, 3934.7pt x 2212.265pt>
 File: images/ESP8266.jpg Graphic file (type jpg)
  <use images/ESP8266.jpg>
 Package pdftex.def Info: images/ESP8266.jpg used on input line 1165.
@@ -611,7 +620,7 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<images/valve.jpg, id=566, 3934.7pt x 2212.265pt>
+<images/valve.jpg, id=575, 3934.7pt x 2212.265pt>
 File: images/valve.jpg Graphic file (type jpg)
  <use images/valve.jpg>
 Package pdftex.def Info: images/valve.jpg used on input line 1251.
@@ -683,33 +692,98 @@ L/cmm/m/it/10 >\OT1/cmtt/m/n/10 client-pub.js
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1614--1614
-
+Overfull \hbox (3.54301pt too wide) in paragraph at lines 1615--1616
+\OT1/cmr/bx/n/10 UI part con-sist of PHP core, MySQL and ph-p-MQTT li-brary(SSK
+AJE)
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 1614.
+Underfull \hbox (badness 10000) in paragraph at lines 1615--1616
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 1617.
+ []
+
 [32]
-LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 1638.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 1618.
 
 
-Overfull \hbox (52.5873pt too wide) in paragraph at lines 1646--1658
-\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 seen \OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 time
-s-tamp \OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 NO \OMS/cmsy/m/n/10 j j \OT1/cmr/m/n/
-10 CUR-RENT[]TIMESTAMP \OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 on up-date CUR-RENT[]
-TIMESTAMP
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1641 	\caption
+                {Table 1: Devices table}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (118.0893pt too wide) in paragraph at lines 1641--1654
+ [][] 
+ []
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1662 	\caption
+                {Table 2: Groups table}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (27.26636pt too wide) in paragraph at lines 1662--1669
+ [][] 
+ []
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1677 	\caption
+                {Table 3: Sensors Table}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (27.26636pt too wide) in paragraph at lines 1677--1684
+ [][] 
+ []
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1691 \caption
+               {Table 4: Tasks Table}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (27.26636pt too wide) in paragraph at lines 1691--1701
+ [][] 
  []
 
 [33]
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 1726.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 1714.
 
- [34]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1729--1730
+
+ []
+
+[34]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1813.
 
@@ -734,7 +808,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1929--1931
 
  []
 
-[37] <images/average_current1.png, id=667, 831.105pt x 520.94624pt>
+[37] <images/average_current1.png, id=676, 831.105pt x 520.94624pt>
 File: images/average_current1.png Graphic file (type png)
 
 <use images/average_current1.png>
@@ -745,7 +819,7 @@ Overfull \hbox (68.99895pt too wide) in paragraph at lines 2021--2022
 [] 
  []
 
-<images/peak_current1.png, id=669, 819.06pt x 532.99126pt>
+<images/peak_current1.png, id=678, 819.06pt x 532.99126pt>
 File: images/peak_current1.png Graphic file (type png)
 
 <use images/peak_current1.png>
@@ -756,7 +830,7 @@ Overfull \hbox (68.99895pt too wide) in paragraph at lines 2050--2051
 [][] 
  []
 
-<images/breakup1.png, id=670, 780.9175pt x 552.0625pt>
+<images/breakup1.png, id=679, 780.9175pt x 552.0625pt>
 File: images/breakup1.png Graphic file (type png)
 
 <use images/breakup1.png>
@@ -795,7 +869,7 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<images/schema.png, id=712, 1203.49625pt x 555.07375pt>
+<images/schema.png, id=721, 1203.49625pt x 555.07375pt>
 File: images/schema.png Graphic file (type png)
 
 <use images/schema.png>
@@ -835,7 +909,7 @@ If that doesn't work, type  X <return>  to quit.
 
 [45] [46 <F:/Eyantra-Internship/eYSIP_2015_IoT-Connected-valves-for-irrigation-
 of-greenhouse/tex/DOC/images/schema.png>] [47]
-<images/cvpcb.png, id=736, 906.38625pt x 589.20125pt>
+<images/cvpcb.png, id=745, 906.38625pt x 589.20125pt>
 File: images/cvpcb.png Graphic file (type png)
  <use images/cvpcb.png>
 Package pdftex.def Info: images/cvpcb.png used on input line 2364.
@@ -863,21 +937,24 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2447.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2447.
 
 Package rerunfilecheck Info: File `1.0-Walkthrough.out' has not changed.
-(rerunfilecheck)             Checksum: FF37DDA592A52A62F58A4501DD8C14C4;5251.
+(rerunfilecheck)             Checksum: CF3D665921E050AD784E7AF6FE849494;5373.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2447.
  ) 
 Here is how much of TeX's memory you used:
- 5402 strings out of 493921
- 80354 string characters out of 3147280
- 158462 words of memory out of 3000000
- 8446 multiletter control sequences out of 15000+200000
+ 5405 strings out of 493921
+ 80408 string characters out of 3147280
+ 158542 words of memory out of 3000000
+ 8447 multiletter control sequences out of 15000+200000
  8386 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,9n,32p,245b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,9n,28p,367b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiK
@@ -890,9 +967,9 @@ m/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 1.0-Walkthrough.pdf (52 pages, 1663546 bytes).
+Output written on 1.0-Walkthrough.pdf (52 pages, 1665393 bytes).
 PDF statistics:
- 855 PDF objects out of 1000 (max. 8388607)
- 211 named destinations out of 1000 (max. 500000)
- 661 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 864 PDF objects out of 1000 (max. 8388607)
+ 213 named destinations out of 1000 (max. 500000)
+ 677 words of extra memory for PDF output out of 10000 (max. 10000000)
 
