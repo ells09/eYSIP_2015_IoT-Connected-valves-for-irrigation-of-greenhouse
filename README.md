@@ -23,8 +23,7 @@ Report and documentation can be found on this [Documentation](https://github.com
 * **Presentation**  presentation of the project
 * **Software** contains code for the website and MOSCA server test codes
 * **User Manual** Contains Quick Installation Guide
-* **Project Report** Doucumentation of the project
-****
+* **Project Report** Documentation of the project
 
 ##Contributors
 ***
