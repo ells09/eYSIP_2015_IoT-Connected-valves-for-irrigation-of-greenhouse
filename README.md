@@ -17,6 +17,15 @@ Latter part of this project also includes experimentation regarding moisture sen
 ***
 Report and documentation can be found on this [Documentation](https://github.com/eyantrainternship/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse/blob/master/project%20report/1.0-Walkthrough.pdf) link
 
+##Folder Tree
+***
+* **Hardware** contains codes for ESP8266 modules, schematics and datasheets
+* **Presentation**  presentation of the project
+* **Software** contains code for the website and MOSCA server test codes
+* **Project Report** Doucumentation of the project
+* **User Manual** Contains Quick Installation Guide
+****
+
 ##Contributors
 ***
   * [Jayant Solanki](https://github.com/jayantsolanki)
