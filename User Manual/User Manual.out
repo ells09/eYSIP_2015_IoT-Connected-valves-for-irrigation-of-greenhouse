@@ -1,0 +1,25 @@
+\BOOKMARK [1][-]{section.1}{Hardware}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{ESP8266 WiFi module}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{IDE for ESP8266}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Installation procedure:}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{ESPlorer IDE}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Troubleshooting}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{Server Installation}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{Ubuntu}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Installation of Apache2, PHP and MySQL \(LAMP-server\)}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Install Apache}{subsection.2.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Install MySQL}{subsection.2.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Install PHP}{subsection.2.2}% 12
+\BOOKMARK [1][-]{section.3}{MOSCA broker}{}% 13
+\BOOKMARK [2][-]{subsection.3.1}{Broker and nodejs}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.2}{Testing the broker}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.3}{Troubleshooting}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.4}{Running MOSCA}{section.3}% 17
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Configuring IP on which MOSCA has to be run.}{subsection.3.4}% 18
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Interfacing MOSCA and ESP}{subsection.3.4}% 19
+\BOOKMARK [2][-]{subsection.3.5}{Troubleshooting}{section.3}% 20
+\BOOKMARK [3][-]{subsubsection.3.5.1}{ESP8266}{subsection.3.5}% 21
+\BOOKMARK [3][-]{subsubsection.3.5.2}{MOSCA server}{subsection.3.5}% 22
+\BOOKMARK [1][-]{section.4}{Setting up the website}{}% 23
+\BOOKMARK [2][-]{subsection.4.1}{Database}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.2}{PHP core}{section.4}% 25
