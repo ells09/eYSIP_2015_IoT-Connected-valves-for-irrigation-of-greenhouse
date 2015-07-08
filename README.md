@@ -22,8 +22,8 @@ Report and documentation can be found on this [Documentation](https://github.com
 * **Hardware** contains codes for ESP8266 modules, schematics and datasheets
 * **Presentation**  presentation of the project
 * **Software** contains code for the website and MOSCA server test codes
-* **Project Report** Doucumentation of the project
 * **User Manual** Contains Quick Installation Guide
+* **Project Report** Doucumentation of the project
 ****
 
 ##Contributors
