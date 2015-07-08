@@ -19,3 +19,6 @@ Report and documentation can be found on this [Documentation](https://github.com
 ## Mentors
   * [Vishwanathan Iyer](https://github.com/vsiyer91)
   * Ajit Harpude
+
+##License
+This project is open-sourced under [MIT License](http://opensource.org/licenses/MIT)
