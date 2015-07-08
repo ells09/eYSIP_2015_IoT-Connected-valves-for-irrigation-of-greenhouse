@@ -9,7 +9,7 @@ Lua scripts to be loaded into the ESP
 5. **list.lua** : gives the list of files saved on the ESP 
 
 
-**Note** : rename the initializations files as init.lua before loading them  into the ESP826
+**Note** : rename the initializations files as _init.lua_ before loading them  into the ESP826
 
 
 ## Schematics 
