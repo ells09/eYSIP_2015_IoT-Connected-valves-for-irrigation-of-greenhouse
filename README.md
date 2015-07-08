@@ -11,3 +11,11 @@ Latter part of this project also includes experimentation regarding moisture sen
 
 ##Documentation
 Report and documentation can be found on this [Documentation](https://github.com/eyantrainternship/eYSIP_2015_IoT-Connected-valves-for-irrigation-of-greenhouse/blob/master/project%20report/1.0-Walkthrough.pdf) link
+
+##Contributors
+  * [Jayant Solanki](https://github.com/jayantsolanki)
+  * [Kevin D'Souza](https://github.com/kdsouza1496)
+  
+## Mentors
+  * [Vishwanathan Iyer](https://github.com/vsiyer91)
+  * Ajit Harpude
