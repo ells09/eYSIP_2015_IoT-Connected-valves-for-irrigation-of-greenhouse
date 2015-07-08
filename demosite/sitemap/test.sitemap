@@ -1,8 +1,0 @@
-sitemap TestMap label="LED Demo"
-{
-  Frame label="Terrace Farming"
-  {
-    Switch item=MQTTLED label="led"
-  }
-
-}

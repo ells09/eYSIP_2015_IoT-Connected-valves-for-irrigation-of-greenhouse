@@ -1,0 +1,87 @@
+Cmp-Mod V01 Created by CvPcb (2013-jul-07)-stable date = Saturday 20 June 2015 03:52:36 PM IST
+
+BeginCmp
+TimeStamp = /5582A9C5;
+Reference = BT1;
+ValeurCmp = 8V;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5582C7B4;
+Reference = JP1;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5582F083;
+Reference = P1;
+ValeurCmp = LT293D;
+IdModule  = DIP-16__300_ELL;
+EndCmp
+
+BeginCmp
+TimeStamp = /5584D826;
+Reference = P2;
+ValeurCmp = CONN_2;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5584DD93;
+Reference = P3;
+ValeurCmp = USB-A-PCB;
+IdModule  = USB_A;
+EndCmp
+
+BeginCmp
+TimeStamp = /5582A8E6;
+Reference = R1;
+ValeurCmp = 1K;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /5582A93F;
+Reference = R2;
+ValeurCmp = 1K;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /55853C9B;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /55853CF7;
+Reference = R5;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /5582AB5E;
+Reference = U1;
+ValeurCmp = LT1129CQ-3.3;
+IdModule  = TO263-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /5582A81F;
+Reference = U2;
+ValeurCmp = ESP-07;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5581C405;
+Reference = U3;
+ValeurCmp = 7805;
+IdModule  = TO220;
+EndCmp
+
+EndListe

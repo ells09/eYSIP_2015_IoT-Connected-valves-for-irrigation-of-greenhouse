@@ -1,0 +1,71 @@
+\BOOKMARK [1][-]{section.1}{Abstract}{}% 1
+\BOOKMARK [1][-]{section.2}{Objective and Deliverables}{}% 2
+\BOOKMARK [1][-]{section.3}{Research}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{The Thing system - Architecture}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{openhab}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Configuring MOSCA with openHAB}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Solenoid valves}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Latching solenoid valves}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Batteries}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.7}{Power Analysis}{section.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.7.1}{Modes of operation of ESP8266:}{subsection.3.7}% 11
+\BOOKMARK [3][-]{subsubsection.3.7.2}{WIFI sleep modes}{subsection.3.7}% 12
+\BOOKMARK [3][-]{subsubsection.3.7.3}{Implementaton}{subsection.3.7}% 13
+\BOOKMARK [3][-]{subsubsection.3.7.4}{Steps}{subsection.3.7}% 14
+\BOOKMARK [3][-]{subsubsection.3.7.5}{Graphs showing current consumption}{subsection.3.7}% 15
+\BOOKMARK [3][-]{subsubsection.3.7.6}{Future plans}{subsection.3.7}% 16
+\BOOKMARK [3][-]{subsubsection.3.7.7}{Problems}{subsection.3.7}% 17
+\BOOKMARK [2][-]{subsection.3.8}{Protocols for communication}{section.3}% 18
+\BOOKMARK [3][-]{subsubsection.3.8.1}{Material for reading}{subsection.3.8}% 19
+\BOOKMARK [3][-]{subsubsection.3.8.2}{Message queing telemetry transport}{subsection.3.8}% 20
+\BOOKMARK [2][-]{subsection.3.9}{Progress stages}{section.3}% 21
+\BOOKMARK [1][-]{section.4}{ESP8266 WiFi module}{}% 22
+\BOOKMARK [2][-]{subsection.4.1}{IDE for ESP8266}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.2}{MQTT in ESP8266}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.3}{Analog to digital conversion in ESP8266}{section.4}% 25
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Features}{subsection.4.3}% 26
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Implementation}{subsection.4.3}% 27
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Observations}{subsection.4.3}% 28
+\BOOKMARK [2][-]{subsection.4.4}{Troubleshooting}{section.4}% 29
+\BOOKMARK [1][-]{section.5}{Circuit design and testing}{}% 30
+\BOOKMARK [2][-]{subsection.5.1}{The circuit for controlling of ESP8266}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.2}{The circuit for controlling the solenoid valves}{section.5}% 32
+\BOOKMARK [1][-]{section.6}{nodeMCU firmware}{}% 33
+\BOOKMARK [2][-]{subsection.6.1}{Installation procedure:}{section.6}% 34
+\BOOKMARK [2][-]{subsection.6.2}{ESPlorer IDE}{section.6}% 35
+\BOOKMARK [2][-]{subsection.6.3}{Troubleshooting}{section.6}% 36
+\BOOKMARK [1][-]{section.7}{Installation}{}% 37
+\BOOKMARK [2][-]{subsection.7.1}{Ubuntu}{section.7}% 38
+\BOOKMARK [2][-]{subsection.7.2}{Installation of Apache2, PHP and MySQL \(LAMP-server\)}{section.7}% 39
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Install Apache}{subsection.7.2}% 40
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Install MySQL}{subsection.7.2}% 41
+\BOOKMARK [3][-]{subsubsection.7.2.3}{Install PHP}{subsection.7.2}% 42
+\BOOKMARK [2][-]{subsection.7.3}{Broker and nodejs}{section.7}% 43
+\BOOKMARK [2][-]{subsection.7.4}{Testing the broker}{section.7}% 44
+\BOOKMARK [2][-]{subsection.7.5}{Troubleshooting}{section.7}% 45
+\BOOKMARK [1][-]{section.8}{MOSCA broker}{}% 46
+\BOOKMARK [2][-]{subsection.8.1}{Running MOSCA}{section.8}% 47
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Configuring IP on which MOSCA has to be run.}{subsection.8.1}% 48
+\BOOKMARK [3][-]{subsubsection.8.1.2}{Interfacing MOSCA and ESP}{subsection.8.1}% 49
+\BOOKMARK [2][-]{subsection.8.2}{Troubleshooting}{section.8}% 50
+\BOOKMARK [3][-]{subsubsection.8.2.1}{ESP8266}{subsection.8.2}% 51
+\BOOKMARK [3][-]{subsubsection.8.2.2}{MOSCA server}{subsection.8.2}% 52
+\BOOKMARK [1][-]{section.9}{Database handling and UI design}{}% 53
+\BOOKMARK [2][-]{subsection.9.1}{Database}{section.9}% 54
+\BOOKMARK [2][-]{subsection.9.2}{PHP core}{section.9}% 55
+\BOOKMARK [1][-]{section.10}{Experimental features and notes}{}% 56
+\BOOKMARK [2][-]{subsection.10.1}{YL-69 Soil Hygrometer Humidity \046 Soil Moisture Detection Sensor}{section.10}% 57
+\BOOKMARK [3][-]{subsubsection.10.1.1}{Specifications}{subsection.10.1}% 58
+\BOOKMARK [3][-]{subsubsection.10.1.2}{Key Features}{subsection.10.1}% 59
+\BOOKMARK [3][-]{subsubsection.10.1.3}{Implementation}{subsection.10.1}% 60
+\BOOKMARK [2][-]{subsection.10.2}{Schematic and PCB Design}{section.10}% 61
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Schematics in KICAD}{subsection.10.2}% 62
+\BOOKMARK [3][-]{subsubsection.10.2.2}{Netlists and footprints}{subsection.10.2}% 63
+\BOOKMARK [3][-]{subsubsection.10.2.3}{PCB designing with PCBNEW}{subsection.10.2}% 64
+\BOOKMARK [1][-]{section.11}{Cost analysis}{}% 65
+\BOOKMARK [1][-]{section.12}{Bugs}{}% 66
+\BOOKMARK [2][-]{subsection.12.1}{Hardware}{section.12}% 67
+\BOOKMARK [2][-]{subsection.12.2}{Software}{section.12}% 68
+\BOOKMARK [1][-]{section.13}{Future work}{}% 69
+\BOOKMARK [2][-]{subsection.13.1}{Hardware}{section.13}% 70
+\BOOKMARK [2][-]{subsection.13.2}{Software}{section.13}% 71

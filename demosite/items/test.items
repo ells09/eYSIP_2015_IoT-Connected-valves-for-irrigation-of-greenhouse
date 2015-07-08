@@ -1,8 +1,0 @@
-/* Switching on led*/
-Switch MQTTLED {mqtt=">[mosca:presence:command:ON:default],>[mosca:presence:command:OFF:default]"}
-
-/*Sprinklers */
-
-Group valv_RS	"Running Status"	<run>		 (valv)
-Group valv_TGLE	"Toggle"		<togl>		 (valv)
-Group valv_SD	"Set Duration"		<settime>	 	(valv)
