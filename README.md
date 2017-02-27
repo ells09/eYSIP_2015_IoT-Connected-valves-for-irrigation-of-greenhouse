@@ -1,4 +1,4 @@
-![e-Yantra Summer Internship](http://www.gyancentral.com/images/article/eyantralogo.png)
+![e-Yantra Summer Internship](http://www.e-yantra.org/img/EyantraLogoLarge.png)
 ***
 # eYSIP_2015_IoT Connected valves for irrigation of greenhouse
 
